@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Goa — 5 Days of Quiet & Wonder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #f5efe6;
+    --deep-sand: #e8ddd0;
+    --clay: #c4916a;
+    --terracotta: #b5654a;
+    --ocean: #2d6a7f;
+    --deep-ocean: #1a4a5c;
+    --palm: #4a7c59;
+    --dark: #1c1814;
+    --muted: #7a6d63;
+    --white: #fdfaf7;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--sand);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--deep-ocean);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem 2rem 5rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 20%, rgba(45,106,127,0.6) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 10% 80%, rgba(74,124,89,0.3) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 90% 90%, rgba(196,145,106,0.25) 0%, transparent 50%);
+    animation: shimmer 8s ease-in-out infinite alternate;
+  }
+
+  @keyframes shimmer {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+  }
+
+  .wave-decoration {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 120px;
+    background: var(--sand);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.05;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 0.9s ease 0.1s both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--clay);
+  }
+
+  .hero-sub {
+    margin-top: 1.5rem;
+    color: rgba(253,250,247,0.6);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1s ease 0.2s both;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-sub span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .hero-sub span::before {
+    content: '';
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--clay);
+    display: inline-block;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── NAV PILLS ── */
+  .nav-pills {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(245,239,230,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--deep-sand);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-pills::-webkit-scrollbar { display: none; }
+
+  .nav-pill {
+    flex-shrink: 0;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    border: 1px solid var(--deep-sand);
+    background: transparent;
+    color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .nav-pill:hover, .nav-pill.active {
+    background: var(--deep-ocean);
+    border-color: var(--deep-ocean);
+    color: var(--white);
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ── INTRO STRIP ── */
+  .intro-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--deep-sand);
+    padding: 2.5rem 1.5rem;
+  }
+
+  .intro-grid {
+    max-width: 860px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .intro-stat {
+    padding: 1rem;
+  }
+
+  .intro-stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--terracotta);
+    line-height: 1;
+  }
+
+  .intro-stat .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.3rem;
+  }
+
+  /* ── DAYS ── */
+  .days-section {
+    padding: 4rem 1.5rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--deep-ocean);
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--deep-sand);
+  }
+
+  .day-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 20px rgba(28,24,20,0.06);
+    transition: box-shadow 0.3s;
+  }
+
+  .day-card:hover {
+    box-shadow: 0 6px 40px rgba(28,24,20,0.1);
+  }
+
+  .day-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--deep-sand);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .day-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--deep-sand);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2.5rem;
+    text-align: center;
+  }
+
+  .day-title-wrap { flex: 1; }
+
+  .day-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 0.3rem;
+  }
+
+  .day-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.2;
+  }
+
+  .day-toggle {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--deep-sand);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted);
+    font-size: 1rem;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+
+  .day-card.open .day-toggle {
+    background: var(--deep-ocean);
+    border-color: var(--deep-ocean);
+    color: white;
+    transform: rotate(180deg);
+  }
+
+  .day-body {
+    display: none;
+    padding: 0 2rem 2rem;
+  }
+
+  .day-card.open .day-body { display: block; }
+
+  .day-narrative {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 1.2rem 0 1.5rem;
+    border-bottom: 1px dashed var(--deep-sand);
+    margin-bottom: 1.5rem;
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* ── STOPS ── */
+  .stop {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .stop:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 36px;
+    top: 36px;
+    bottom: -20px;
+    width: 1px;
+    background: var(--deep-sand);
+  }
+
+  .stop-time {
+    text-align: center;
+    padding-top: 0.6rem;
+  }
+
+  .stop-time .time-text {
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .stop-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    margin: 0.3rem auto 0.2rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .stop-icon.beach    { background: #dbeafe; }
+  .stop-icon.food     { background: #dcfce7; }
+  .stop-icon.activity { background: #fef3c7; }
+  .stop-icon.culture  { background: #f3e8ff; }
+  .stop-icon.drink    { background: #fee2e2; }
+
+  .stop-content {}
+
+  .stop-name {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+    line-height: 1.3;
+  }
+
+  .stop-location {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 0.4rem;
+  }
+
+  .stop-note {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .stop-tip {
+    margin-top: 0.5rem;
+    background: #fff9f0;
+    border-left: 3px solid var(--clay);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.82rem;
+    color: var(--terracotta);
+  }
+
+  /* ── FOOD TABLE ── */
+  .food-section {
+    background: var(--white);
+    padding: 3rem 1.5rem;
+  }
+
+  .food-grid {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .food-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .food-card {
+    background: var(--sand);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    border: 1px solid var(--deep-sand);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .food-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(28,24,20,0.08);
+  }
+
+  .food-card-emoji { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+  .food-card-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin-bottom: 0.2rem;
+  }
+
+  .food-card-location {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--clay);
+    margin-bottom: 0.5rem;
+  }
+
+  .food-card-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .food-card-badge {
+    display: inline-block;
+    margin-top: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  .food-card-badge.feni { background: #fee2e2; color: #991b1b; }
+  .food-card-badge.bar  { background: #dbeafe; color: #1e40af; }
+
+  /* ── ACTIVITIES ── */
+  .activities-section {
+    padding: 3rem 1.5rem;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .activity-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .activity-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    border: 1px solid var(--deep-sand);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .activity-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .activity-name {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .activity-where {
+    font-size: 0.78rem;
+    color: var(--clay);
+    margin-bottom: 0.3rem;
+  }
+
+  .activity-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── TIPS ── */
+  .tips-section {
+    background: var(--deep-ocean);
+    color: var(--white);
+    padding: 3rem 1.5rem;
+  }
+
+  .tips-grid {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .tips-grid .section-title {
+    color: var(--white);
+    border-bottom-color: rgba(255,255,255,0.15);
+  }
+
+  .tips-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .tip-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+  }
+
+  .tip-card-icon { font-size: 1.5rem; margin-bottom: 0.6rem; }
+
+  .tip-card-title {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--clay);
+  }
+
+  .tip-card-desc {
+    font-size: 0.82rem;
+    color: rgba(253,250,247,0.7);
+    line-height: 1.55;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: var(--deep-sand);
+    border-top: 1px solid var(--deep-sand);
+  }
+
+  footer em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .day-header { padding: 1.2rem 1.2rem; gap: 1rem; }
+    .day-body { padding: 0 1.2rem 1.5rem; }
+    .stop { grid-template-columns: 60px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-eyebrow">Chennai → South Goa · Family Getaway</div>
+  <h1>5 Days of<br><em>Quiet &amp; Wonder</em><br>in South Goa</h1>
+  <div class="hero-sub">
+    <span>2 Adults · 1 Kid</span>
+    <span>Non-touristy beaches</span>
+    <span>Veg &amp; Vegan friendly</span>
+    <span>Feni &amp; Toddy trails</span>
+  </div>
+  <div class="wave-decoration"></div>
+</header>
+
+<!-- NAV -->
+<nav class="nav-pills">
+  <a href="#days" class="nav-pill">📅 Itinerary</a>
+  <a href="#food" class="nav-pill">🌱 Food Guide</a>
+  <a href="#activities" class="nav-pill">🏄 Activities</a>
+  <a href="#tips" class="nav-pill">💡 Tips</a>
+</nav>
+
+<!-- STATS -->
+<div class="intro-strip">
+  <div class="intro-grid">
+    <div class="intro-stat"><div class="num">5</div><div class="label">Days · Nights</div></div>
+    <div class="intro-stat"><div class="num">6</div><div class="label">Hidden Beaches</div></div>
+    <div class="intro-stat"><div class="num">5</div><div class="label">Veg / Vegan Spots</div></div>
+    <div class="intro-stat"><div class="num">1</div><div class="label">Feni Experience</div></div>
+    <div class="intro-stat"><div class="num">0</div><div class="label">Tourist Buses</div></div>
+  </div>
+</div>
+
+<!-- BASE INFO -->
+<div style="background:#fff9f0; border-bottom:1px solid var(--deep-sand); padding:1.2rem 1.5rem; text-align:center;">
+  <div style="max-width:860px; margin:0 auto; font-size:0.88rem; color:var(--terracotta);">
+    🏡 <strong>Recommended Base:</strong> Agonda or Palolem &nbsp;·&nbsp; 🚗 Hire a local driver for ₹3,000–4,000/day or rent a self-drive car &nbsp;·&nbsp; ✈️ Fly into Dabolim (GOI) or Mopa (GOX)
+  </div>
+</div>
+
+<!-- DAYS -->
+<section id="days" class="days-section">
+  <h2 class="section-title">Day-by-Day Itinerary</h2>
+
+  <!-- DAY 1 -->
+  <div class="day-card open">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">1</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Arrive</div>
+        <div class="day-title">Arrive, Decompress & First Taste</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"Land, breathe, feel the ocean air. South Goa doesn't rush you in — and you shouldn't either."</div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">2:00 PM</div>
+          <div class="stop-icon beach">🏖️</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Hollant Beach</div>
+          <div class="stop-location">Dabolim · en route south</div>
+          <div class="stop-note">A perfect pit-stop on the way down from the airport. Utterly quiet, shallow water, zero vendors. Kids can splash safely while you shake off the flight.</div>
+          <div class="stop-tip">💡 Also stop by SAHASEA Watersports here — book a sunrise kayaking slot for Day 2 or 3 in advance. Family-run, wonderful with kids.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">5:00 PM</div>
+          <div class="stop-icon beach">🌊</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Check In · Walk Your Base Beach</div>
+          <div class="stop-location">Agonda or Palolem</div>
+          <div class="stop-note">Agonda is quieter and more family-appropriate. Palolem has more restaurants within walking distance. Both are excellent. Walk the beach at golden hour — it sets the tone.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">7:30 PM</div>
+          <div class="stop-icon food">🌱</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Dinner at Zest Vegan & Vegetarian</div>
+          <div class="stop-location">Agonda Beach Road</div>
+          <div class="stop-note">One of the best pure veg restaurants in South Goa. Ramen, summer rolls, green pakoras with kale & kimchi, and a legendary 3-layered chocolate mousse. Excellent smoothies. Open 8 AM–10 PM daily.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">2</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Beaches + Culture</div>
+        <div class="day-title">Hidden Beaches & Feni Tasting</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"Two beaches nobody talks about, and the one feni experience every visitor to Goa should have."</div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">8:30 AM</div>
+          <div class="stop-icon beach">🏊</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Cola Beach</div>
+          <div class="stop-location">Kola, Canacona</div>
+          <div class="stop-note">South Goa's crown jewel. A rare freshwater lagoon meets the Arabian Sea — completely unique in India. Kayaking in the lagoon (₹800/hr). Short 1.5 km trail from parking. Swimming restricted on the sea side but the lagoon is calm and magical.</div>
+          <div class="stop-tip">💡 Go before 9 AM for zero crowd. The trail is easy; wear sandals. Shared jeeps available from parking for ₹100/person if you don't want to walk.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">11:30 AM</div>
+          <div class="stop-icon beach">🪨</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Pebbles Beach via Cabo de Rama Fort</div>
+          <div class="stop-location">Cabo de Rama, Canaguinim</div>
+          <div class="stop-note">Not sand — a dramatic pebble shoreline below crumbling Portuguese fort walls. The walk down is steep and rugged (keeps crowds away). Combine with exploring the Cabo de Rama Fort ruins above — excellent for kids to clamber around.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">4:00 PM</div>
+          <div class="stop-icon drink">🥃</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Cazulo Premium Feni — Floating Feni Experience</div>
+          <div class="stop-location">Cuelim, near Dabolim</div>
+          <div class="stop-note">Book this in advance (online). Host Tyson's storytelling about cashew feni history is reportedly one-of-a-kind — reviews consistently call it the highlight of their Goa trip. Adults get a tasting + cocktail pairing; the farm setting is green and relaxed for kids. Rated 4.8 ⭐ by 136 reviews.</div>
+          <div class="stop-tip">💡 This is THE place for feni — not a shack shot. The experience includes food pairing and lasts ~2 hrs. Book at least 3 days ahead.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">3</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Villages + Backwaters</div>
+        <div class="day-title">Sadolxem, Patnem & a Slow Evening</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"A morning at an old colonial bridge where the river bends through jungle — then a slow beach lunch and a dinner that feels like home."</div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">9:00 AM</div>
+          <div class="stop-icon culture">🌉</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Sadolxem Bridge</div>
+          <div class="stop-location">Delem Village, Canacona</div>
+          <div class="stop-note">A gorgeous old bridge over a tidal creek, framed by dense jungle — one of the most photogenic spots in the south that almost no tourist visits. Boating and kayaking available on the river (₹1,500 for boat; negotiate). Best in soft morning light. Rated 4.5 ⭐.</div>
+          <div class="stop-tip">💡 The bridge is narrow — park before it and walk across. Go on weekdays for full solitude.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">12:30 PM</div>
+          <div class="stop-icon food">🥗</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Lunch at Bibhitaki Vegan & Vegetarian Café</div>
+          <div class="stop-location">Patnem Main Road, Palolem</div>
+          <div class="stop-note">A beloved vegan café with indoor AC and a lovely courtyard. Rainbow Quinoa Bowl, Hawaiian Burger, and their almond milk hot chocolate are crowd favourites. Very family-friendly, calm, and well-priced. Rated 4.6 ⭐ by 1,800+ reviews.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">2:30 PM</div>
+          <div class="stop-icon beach">🌊</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Patnem Beach (afternoon swim)</div>
+          <div class="stop-location">Patnem, Canacona</div>
+          <div class="stop-note">Quieter and more intimate than Palolem. Small, calm, safe for kids to splash around. Walk distance from Bibhitaki — just wander down after lunch.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">7:00 PM</div>
+          <div class="stop-icon food">🍽️</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Dinner at Cafe Barefoot – Wholesomely Vegetarian</div>
+          <div class="stop-location">Near Palolem, Devabag</div>
+          <div class="stop-note">A hidden pocket with 4.9 stars. Purely vegetarian, fresh, comforting food. The Adai Dosa here comes with a story about its Tamil heritage — perfect for you! Also try the Mumbai street sandwich and Belgian waffle. Open 11 AM–11 PM.</div>
+          <div class="stop-tip">💡 The mountain backdrop and open space make it a calm dinner spot for families. No music blasting.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">4</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Hinterland + Water Sports</div>
+        <div class="day-title">Spice Farm Deep Dive & Sundowner</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"Head inland through jungle hills to one of Goa's last authentic spice farms — then return to the sea for the most family-friendly water sports in the south."</div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">10:00 AM</div>
+          <div class="stop-icon culture">🌿</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Tanshikar Spice Farm</div>
+          <div class="stop-location">Netravli, near Palolem</div>
+          <div class="stop-note">The best spice farm in South Goa — small, family-run, zero tourist bus crowds. The jungle drive up is itself scenic. Guided tour of cinnamon, cardamom, pepper, vanilla, cacao, and beekeeping. Ends with a delicious veg thali lunch served fresh. Rated 4.7 ⭐ by 791 reviews. Book ahead.</div>
+          <div class="stop-tip">💡 Total cost ~₹750/person including lunch & tour. Allow 3 hrs. The nearby Netravli Wildlife Sanctuary is accessible if you want a light waterfall trek after.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">3:00 PM</div>
+          <div class="stop-icon activity">🏄</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Prince of Sal Water Sports – Mobor Beach</div>
+          <div class="stop-location">Mobor, Cavelossim</div>
+          <div class="stop-note">Highly rated (4.8 ⭐, 664 reviews), no pushy tactics, professionally trained staff. Mobor itself is a calm, uncrowded beach. Activities: parasailing, jet ski, banana ride, ringo ride — all kid-appropriate. Go 3–5 PM for cooler temperatures.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">6:30 PM</div>
+          <div class="stop-icon drink">🍹</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Sunset at The Southern Deck – Benaulim</div>
+          <div class="stop-location">Benaulim Beach, Goa</div>
+          <div class="stop-note">A proper beachfront restobar with live music evenings, great cocktails, and veg options. Book a table in advance for the sunset-facing outdoor section. Pomfret recheado, butter garlic prawns, Poloma Fresca cocktail. Rated 4.4 ⭐ by 7,700+ reviews.</div>
+          <div class="stop-tip">💡 Closed on Tuesdays. Book by calling ahead — outdoor sunset tables fill fast on weekends.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">5</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Last Morning</div>
+        <div class="day-title">Kakolem (Tiger Beach) & Farewell Lunch</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"Save the most dramatic beach for last. A steep jungle staircase — and a waterfall on the sand. Then one final pure veg meal before the drive north."</div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">8:00 AM</div>
+          <div class="stop-icon beach">🌊</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Kakolem Beach (Tiger Beach)</div>
+          <div class="stop-location">Canacona, South Goa</div>
+          <div class="stop-note">South Goa's most dramatic hidden beach. A 15-minute steep staircase descent through jungle — and at the bottom, one of the cleanest, emptiest beaches in India with a waterfall literally on the sand. Jaw-dropping. Rated 4.7 ⭐. Almost zero crowd because of the hike.</div>
+          <div class="stop-tip">💡 Wear closed shoes for the descent. No lifeguards — swim with caution, currents can be strong. Go early and have the whole place to yourself for an hour.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time">
+          <div class="time-text">12:30 PM</div>
+          <div class="stop-icon food">🌿</div>
+        </div>
+        <div class="stop-content">
+          <div class="stop-name">Farewell Lunch – The Veggie Vibes, Varca</div>
+          <div class="stop-location">Varca, near airport belt</div>
+          <div class="stop-note">Pure veg, Jain, and vegan. Excellent chaap biryani, paneer tikka, veg Kolhapuri and dal tadka. Warm family-run service. Conveniently located near the Varca/Benaulim/airport corridor for a smooth departure.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD GUIDE -->
+<section id="food" class="food-section">
+  <div class="food-grid">
+    <h2 class="section-title" style="color:var(--deep-ocean); border-bottom:1px solid var(--deep-sand); padding-bottom:1rem; margin-bottom:0;">🌱 Veg &amp; Vegan Food Guide</h2>
+    <div class="food-cards">
+
+      <div class="food-card">
+        <div class="food-card-emoji">🥗</div>
+        <div class="food-card-name">Zest Vegan & Vegetarian</div>
+        <div class="food-card-location">Agonda Beach Road</div>
+        <div class="food-card-desc">Best all-rounder. Ramen, green pakoras, chocolate mousse, paradise smoothie. Open 8 AM–10 PM daily. Great for breakfast too.</div>
+        <span class="food-card-badge">Pure Veg / Vegan</span>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-emoji">🍳</div>
+        <div class="food-card-name">Cafe Barefoot</div>
+        <div class="food-card-location">Near Palolem, Devabag</div>
+        <div class="food-card-desc">4.9 ⭐ hidden gem. Adai Dosa, Mumbai street sandwich, Belgian waffle. The chef explains dishes' heritage. Calm mountain view. Open 11 AM–11 PM.</div>
+        <span class="food-card-badge">Wholesome Veg</span>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-emoji">🥣</div>
+        <div class="food-card-name">Bibhitaki Vegan Café</div>
+        <div class="food-card-location">Patnem Main Road</div>
+        <div class="food-card-desc">Rainbow Quinoa Bowl, Hawaiian Burger, almond milk hot chocolate. Calm courtyard + AC indoor. 4.6 ⭐ with 1,800+ reviews.</div>
+        <span class="food-card-badge">Pure Vegan</span>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-emoji">🍲</div>
+        <div class="food-card-name">The Organic Pure Veg</div>
+        <div class="food-card-location">Palolem Beach Road</div>
+        <div class="food-card-desc">The best Dal Fry and Masala Khichdi in Palolem. Family-run, fresh daily cooking, warm owner. 4.7 ⭐. Open 8:30 AM–10:30 PM.</div>
+        <span class="food-card-badge">Pure Veg / Organic</span>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-emoji">🥘</div>
+        <div class="food-card-name">The Veggie Vibes</div>
+        <div class="food-card-location">Varca (near airport)</div>
+        <div class="food-card-desc">Chaap biryani, paneer tikka, veg Kolhapuri. Jain options too. Open 24 hours. Great pre-departure or mid-trip stop.</div>
+        <span class="food-card-badge">Veg / Jain / Vegan</span>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-emoji">🌅</div>
+        <div class="food-card-name">The Southern Deck</div>
+        <div class="food-card-location">Benaulim Beach</div>
+        <div class="food-card-desc">Beachfront restobar with live music. Veg options available. Great cocktails and sundowners. Rated 4.4 ⭐ by 7,700+ guests. Book ahead.</div>
+        <span class="food-card-badge bar">Restobar</span>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-emoji">🥃</div>
+        <div class="food-card-name">Cazulo Premium Feni</div>
+        <div class="food-card-location">Cuelim, near Dabolim</div>
+        <div class="food-card-desc">THE feni tasting experience. Storytelling, food pairing, cocktails. Book online in advance. 4.8 ⭐ by 136 reviews. Not just a shot — a 2-hr experience.</div>
+        <span class="food-card-badge feni">Feni / Cashew Spirits</span>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-emoji">🌴</div>
+        <div class="food-card-name">Local Toddy Shops</div>
+        <div class="food-card-location">Villages near Cuncolim / Loutolim</div>
+        <div class="food-card-desc">No tourist signboards. Fresh neera/toddy (₹20–30/glass) at roadside village spots. Ask your driver or hotel to point you to the nearest one.</div>
+        <span class="food-card-badge feni">Toddy (Fresh)</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities" class="activities-section">
+  <h2 class="section-title">🏄 Beach Activities</h2>
+  <div class="activity-list">
+
+    <div class="activity-item">
+      <div class="activity-icon">🚣</div>
+      <div>
+        <div class="activity-name">Sea Kayaking</div>
+        <div class="activity-where">SAHASEA · Hollant Beach</div>
+        <div class="activity-desc">Family-run. Sunrise kayaking excellent with kids (a 6-yr-old reviewed it!). Instructor Callum is patient and great. ₹800/hr approx.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🛶</div>
+      <div>
+        <div class="activity-name">Lagoon Kayaking</div>
+        <div class="activity-where">Cola Beach · Kola</div>
+        <div class="activity-desc">Paddle on the freshwater lagoon where a river meets the sea. Incredibly calm, scenic, unique. ₹800/hr.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🪂</div>
+      <div>
+        <div class="activity-name">Parasailing</div>
+        <div class="activity-where">Prince of Sal · Mobor Beach</div>
+        <div class="activity-desc">4.8 ⭐ rated. Professional staff, no pushy upselling. Mobor is calm and uncrowded — the best spot for water sports in South Goa.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🛥️</div>
+      <div>
+        <div class="activity-name">Jet Ski / Banana / Ringo Ride</div>
+        <div class="activity-where">Prince of Sal · Mobor Beach</div>
+        <div class="activity-desc">All family-safe options available. Kids can do banana and ringo rides. Book directly at the beach — no online middleman markup.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">⛵</div>
+      <div>
+        <div class="activity-name">River Boating</div>
+        <div class="activity-where">Sadolxem Bridge</div>
+        <div class="activity-desc">Boat rides on a calm tidal creek through jungle. Negotiate price (₹1,500 for a boat). Peaceful, photogenic, no crowds.</div>
+      </div>
+    </div>
+
+    <div class="activity-item">
+      <div class="activity-icon">🏊</div>
+      <div>
+        <div class="activity-name">Safe Swimming Beaches</div>
+        <div class="activity-where">Agonda · Patnem · Hollant</div>
+        <div class="activity-desc">All three are calm, shallow, and family-safe. Avoid Cola sea-side and Kakolem for swimming (strong currents). Agonda has the longest stretch.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TIPS -->
+<section id="tips" class="tips-section">
+  <div class="tips-grid">
+    <h2 class="section-title">💡 Practical Tips</h2>
+    <div class="tips-cards">
+
+      <div class="tip-card">
+        <div class="tip-card-icon">📅</div>
+        <div class="tip-card-title">Best Season</div>
+        <div class="tip-card-desc">October–March is ideal. April is warm but quieter (good for deals). Avoid June–September (monsoon — most shacks close).</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-icon">🚗</div>
+        <div class="tip-card-title">Getting Around</div>
+        <div class="tip-card-desc">Hire a local driver for ₹3,000–4,000/day — best for families. Or self-drive (Zoomcar/Drivezy). Scooters don't work well with a kid.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-icon">🏡</div>
+        <div class="tip-card-title">Where to Stay</div>
+        <div class="tip-card-desc">Agonda = quieter, fewer crowds, best for families. Palolem = more restaurants walkable. Both are great. Stay 5 nights at one base — no need to move.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-icon">📞</div>
+        <div class="tip-card-title">Book in Advance</div>
+        <div class="tip-card-desc">Cazulo Feni experience (book online), Tanshikar Spice Farm (call ahead), The Southern Deck (sunset table). Everything else can be spontaneous.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-icon">🌴</div>
+        <div class="tip-card-title">Finding Toddy</div>
+        <div class="tip-card-desc">No tourist signs — just ask your driver for a local toddy shop near Cuncolim or Loutolim. Fresh neera costs ₹20–30. Drink at roadside under a tin roof.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-icon">☀️</div>
+        <div class="tip-card-title">Beach Timing</div>
+        <div class="tip-card-desc">Go to hidden beaches (Cola, Kakolem) before 9 AM for zero crowd. Afternoons are for swimming on calmer beaches (Agonda, Patnem, Hollant).</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-icon">💰</div>
+        <div class="tip-card-title">Budget Rough Guide</div>
+        <div class="tip-card-desc">Spice Farm: ₹750/head · Feni Experience: ~₹2,000/couple · Water Sports: ₹2,000–3,000 for all 3 · Veg meals: ₹400–800/meal for family.</div>
+      </div>
+
+      <div class="tip-card">
+        <div class="tip-card-icon">🧒</div>
+        <div class="tip-card-title">Kid-Friendly Picks</div>
+        <div class="tip-card-desc">Tanshikar Farm, SAHASEA kayaking, Cabo de Rama Fort ruins, Cola lagoon, Hollant Beach (shallow water), Banana/Ringo rides at Mobor.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <em>"South Goa doesn't ask you to do more. It asks you to do less, and feel everything."</em><br><br>
+  <span style="font-size:0.72rem; opacity:0.6;">Itinerary built for a quiet family trip · Chennai → Goa · 5 Days · 2 Adults + 1 Kid</span>
+</footer>
+
+<script>
+  function toggleDay(header) {
+    const card = header.closest('.day-card');
+    card.classList.toggle('open');
+  }
+
+  // Highlight nav pill on scroll
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const pills = document.querySelectorAll('.nav-pill');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        pills.forEach(p => p.classList.remove('active'));
+        const active = document.querySelector(`.nav-pill[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
