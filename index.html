@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Goa — 5 Days of Quiet & Wonder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sand: #f5efe6;
+  --deep-sand: #e8ddd0;
+  --clay: #c4916a;
+  --terracotta: #b5654a;
+  --ocean: #2d6a7f;
+  --deep-ocean: #1a4a5c;
+  --palm: #4a7c59;
+  --dark: #1c1814;
+  --muted: #7a6d63;
+  --white: #fdfaf7;
+  --card-bg: #ffffff;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--sand); color: var(--dark); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.7; overflow-x: hidden; }
+
+/* HERO */
+.hero { min-height: 100vh; background: var(--deep-ocean); position: relative; display: flex; flex-direction: column; justify-content: flex-end; padding: 4rem 2rem 5rem; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(45,106,127,0.6) 0%, transparent 60%), radial-gradient(ellipse 50% 80% at 10% 80%, rgba(74,124,89,0.3) 0%, transparent 50%), radial-gradient(ellipse 60% 40% at 90% 90%, rgba(196,145,106,0.25) 0%, transparent 50%); animation: shimmer 8s ease-in-out infinite alternate; }
+@keyframes shimmer { 0% { opacity:.8 } 100% { opacity:1 } }
+.wave-deco { position:absolute; bottom:0; left:0; right:0; height:120px; background:var(--sand); clip-path: ellipse(55% 100% at 50% 100%); }
+.hero-eyebrow { font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--clay); margin-bottom:1.5rem; position:relative; z-index:2; animation:fadeUp .8s ease both; }
+.hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,8vw,6.5rem); font-weight:300; color:var(--white); line-height:1.05; position:relative; z-index:2; animation:fadeUp .9s ease .1s both; }
+.hero h1 em { font-style:italic; color:var(--clay); }
+.hero-sub { margin-top:1.5rem; color:rgba(253,250,247,.6); font-size:.95rem; letter-spacing:.05em; position:relative; z-index:2; animation:fadeUp 1s ease .2s both; display:flex; gap:1.5rem; flex-wrap:wrap; }
+.hero-sub span { display:flex; align-items:center; gap:.4rem; }
+.hero-sub span::before { content:''; width:4px; height:4px; border-radius:50%; background:var(--clay); display:inline-block; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
+
+/* NAV */
+.nav-pills { position:sticky; top:0; z-index:100; background:rgba(245,239,230,.96); backdrop-filter:blur(8px); border-bottom:1px solid var(--deep-sand); padding:.75rem 1.5rem; display:flex; gap:.5rem; overflow-x:auto; scrollbar-width:none; }
+.nav-pills::-webkit-scrollbar { display:none; }
+.nav-pill { flex-shrink:0; padding:.4rem 1rem; border-radius:100px; border:1px solid var(--deep-sand); background:transparent; color:var(--muted); font-family:'DM Sans',sans-serif; font-size:.8rem; cursor:pointer; transition:all .2s; text-decoration:none; display:inline-block; }
+.nav-pill:hover, .nav-pill.active { background:var(--deep-ocean); border-color:var(--deep-ocean); color:var(--white); }
+
+/* STATS */
+.intro-strip { background:var(--white); border-bottom:1px solid var(--deep-sand); padding:2.5rem 1.5rem; }
+.intro-grid { max-width:900px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:1.5rem; text-align:center; }
+.intro-stat .num { font-family:'Cormorant Garamond',serif; font-size:2.8rem; font-weight:300; color:var(--terracotta); line-height:1; }
+.intro-stat .label { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-top:.3rem; }
+
+/* SECTION */
+.section-wrap { max-width:900px; margin:0 auto; padding:3rem 1.5rem; }
+.section-title { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:var(--deep-ocean); margin-bottom:2rem; padding-bottom:1rem; border-bottom:1px solid var(--deep-sand); }
+
+/* DAY CARDS */
+.day-card { background:var(--card-bg); border-radius:16px; overflow:hidden; margin-bottom:1.5rem; box-shadow:0 2px 20px rgba(28,24,20,.06); transition:box-shadow .3s; }
+.day-card:hover { box-shadow:0 6px 40px rgba(28,24,20,.10); }
+.day-header { padding:1.5rem 2rem; display:flex; align-items:center; gap:1.5rem; border-bottom:1px solid var(--deep-sand); cursor:pointer; user-select:none; }
+.day-number { font-family:'Cormorant Garamond',serif; font-size:3rem; font-weight:300; color:var(--deep-sand); line-height:1; flex-shrink:0; width:2.5rem; text-align:center; }
+.day-title-wrap { flex:1; }
+.day-tag { font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; color:var(--clay); margin-bottom:.3rem; }
+.day-title { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:400; color:var(--dark); line-height:1.2; }
+.day-toggle { width:28px; height:28px; border-radius:50%; border:1px solid var(--deep-sand); display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:1rem; transition:all .3s; flex-shrink:0; }
+.day-card.open .day-toggle { background:var(--deep-ocean); border-color:var(--deep-ocean); color:white; transform:rotate(180deg); }
+.day-body { display:none; padding:0 2rem 2rem; }
+.day-card.open .day-body { display:block; }
+.day-narrative { font-style:italic; color:var(--muted); font-size:.9rem; padding:1.2rem 0 1.5rem; border-bottom:1px dashed var(--deep-sand); margin-bottom:1.5rem; font-family:'Playfair Display',serif; }
+
+/* STOPS */
+.stop { display:grid; grid-template-columns:80px 1fr; gap:0 1.2rem; margin-bottom:1.5rem; position:relative; }
+.stop:not(:last-child)::after { content:''; position:absolute; left:36px; top:36px; bottom:-20px; width:1px; background:var(--deep-sand); }
+.stop-time { text-align:center; padding-top:.6rem; }
+.stop-time .time-text { font-size:.7rem; color:var(--muted); letter-spacing:.05em; }
+.stop-icon { width:36px; height:36px; border-radius:50%; margin:.3rem auto .2rem; display:flex; align-items:center; justify-content:center; font-size:1rem; }
+.stop-icon.beach    { background:#dbeafe; }
+.stop-icon.food     { background:#dcfce7; }
+.stop-icon.activity { background:#fef3c7; }
+.stop-icon.culture  { background:#f3e8ff; }
+.stop-icon.drink    { background:#fee2e2; }
+.stop-icon.nature   { background:#d1fae5; }
+.stop-icon.shop     { background:#fce7f3; }
+.stop-name { font-weight:500; font-size:1rem; color:var(--dark); margin-bottom:.2rem; line-height:1.3; }
+.stop-location { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--clay); margin-bottom:.4rem; }
+.stop-note { font-size:.88rem; color:var(--muted); line-height:1.6; }
+.stop-tip { margin-top:.5rem; background:#fff9f0; border-left:3px solid var(--clay); padding:.5rem .75rem; border-radius:0 6px 6px 0; font-size:.82rem; color:var(--terracotta); }
+.stop-bio { margin-top:.5rem; background:#eff6ff; border-left:3px solid #60a5fa; padding:.5rem .75rem; border-radius:0 6px 6px 0; font-size:.82rem; color:#1d4ed8; }
+
+/* TAG BADGES */
+.tag { display:inline-block; padding:.15rem .55rem; border-radius:100px; font-size:.65rem; font-weight:500; letter-spacing:.05em; margin-right:.3rem; margin-top:.4rem; }
+.tag-green  { background:#dcfce7; color:#166534; }
+.tag-blue   { background:#dbeafe; color:#1e40af; }
+.tag-orange { background:#ffedd5; color:#9a3412; }
+.tag-purple { background:#f3e8ff; color:#6b21a8; }
+
+/* GRID CARDS */
+.card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; margin-top:1.5rem; }
+.card { background:var(--white); border-radius:12px; padding:1.2rem 1.4rem; border:1px solid var(--deep-sand); transition:transform .2s, box-shadow .2s; }
+.card:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(28,24,20,.08); }
+.card-emoji { font-size:1.5rem; margin-bottom:.5rem; }
+.card-name { font-weight:500; font-size:.95rem; color:var(--dark); margin-bottom:.15rem; }
+.card-sub { font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--clay); margin-bottom:.4rem; }
+.card-desc { font-size:.82rem; color:var(--muted); line-height:1.55; }
+.card-phone { font-size:.75rem; color:var(--ocean); margin-top:.5rem; font-weight:500; }
+
+/* SAND BG SECTION */
+.sand-section { background:var(--sand); padding:3rem 1.5rem; }
+.white-section { background:var(--white); padding:3rem 1.5rem; }
+
+/* DARK SECTION */
+.dark-section { background:var(--deep-ocean); color:var(--white); padding:3rem 1.5rem; }
+.dark-section .section-title { color:var(--white); border-bottom-color:rgba(255,255,255,.15); }
+.dark-section .card { background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.12); }
+.dark-section .card-name { color:var(--white); }
+.dark-section .card-sub { color:var(--clay); }
+.dark-section .card-desc { color:rgba(253,250,247,.7); }
+
+/* RENTAL SECTION */
+.rental-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:1.5rem; }
+@media(max-width:600px) { .rental-grid { grid-template-columns:1fr; } }
+.rental-block { background:var(--white); border-radius:14px; padding:1.5rem; border:1px solid var(--deep-sand); }
+.rental-block h3 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--deep-ocean); margin-bottom:1rem; display:flex; align-items:center; gap:.5rem; }
+.rental-item { padding:.75rem 0; border-bottom:1px dashed var(--deep-sand); }
+.rental-item:last-child { border-bottom:none; padding-bottom:0; }
+.rental-name { font-weight:500; font-size:.9rem; margin-bottom:.2rem; }
+.rental-detail { font-size:.8rem; color:var(--muted); line-height:1.5; }
+.rental-phone { font-size:.78rem; color:var(--ocean); font-weight:500; margin-top:.25rem; }
+.rental-stars { color:var(--clay); font-size:.8rem; }
+
+/* LIQUOR BOX */
+.liquor-box { background:linear-gradient(135deg, #1a4a5c 0%, #2d6a7f 100%); border-radius:16px; padding:2rem; color:var(--white); margin-top:1.5rem; }
+.liquor-box h3 { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; margin-bottom:1rem; }
+.liquor-rule { background:rgba(255,255,255,.1); border-radius:10px; padding:1rem 1.2rem; margin-bottom:.75rem; font-size:.85rem; color:rgba(253,250,247,.85); line-height:1.6; }
+.liquor-rule strong { color:var(--clay); }
+.liquor-warning { background:rgba(196,145,106,.2); border:1px solid rgba(196,145,106,.4); border-radius:10px; padding:1rem 1.2rem; margin-top:1rem; font-size:.82rem; color:rgba(253,250,247,.9); }
+
+/* TABLE */
+.info-table { width:100%; border-collapse:collapse; margin-top:1rem; font-size:.85rem; }
+.info-table th { background:var(--deep-ocean); color:var(--white); padding:.6rem 1rem; text-align:left; font-weight:500; font-size:.75rem; letter-spacing:.05em; }
+.info-table td { padding:.6rem 1rem; border-bottom:1px solid var(--deep-sand); color:var(--muted); vertical-align:top; }
+.info-table tr:last-child td { border-bottom:none; }
+.info-table td:first-child { color:var(--dark); font-weight:500; }
+
+/* BIOLUM CALLOUT */
+.biolum-box { background:linear-gradient(135deg,#0f172a,#1e3a5f); border-radius:14px; padding:1.5rem; color:white; margin-top:1rem; }
+.biolum-box h4 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:300; margin-bottom:.5rem; color:#93c5fd; }
+.biolum-box p { font-size:.85rem; color:rgba(255,255,255,.75); line-height:1.6; }
+
+/* FOOTER */
+footer { text-align:center; padding:2rem; font-size:.78rem; color:var(--muted); background:var(--deep-sand); border-top:1px solid #d8cfc6; }
+footer em { font-family:'Playfair Display',serif; font-style:italic; }
+
+@media(max-width:600px) {
+  .day-header { padding:1.2rem; gap:1rem; }
+  .day-body { padding:0 1.2rem 1.5rem; }
+  .stop { grid-template-columns:60px 1fr; }
+  .hero { padding:3rem 1.5rem 4rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-eyebrow">Chennai → South Goa · Family Getaway · v2.0 Complete</div>
+  <h1>5 Days of<br><em>Quiet &amp; Wonder</em><br>in South Goa</h1>
+  <div class="hero-sub">
+    <span>2 Adults · 1 Kid</span>
+    <span>Hidden beaches · Forests · Feni</span>
+    <span>Veg &amp; Vegan friendly</span>
+    <span>Dolphin spotting · Bioluminescence</span>
+  </div>
+  <div class="wave-deco"></div>
+</header>
+
+<!-- NAV -->
+<nav class="nav-pills">
+  <a href="#days"       class="nav-pill">📅 Itinerary</a>
+  <a href="#sea"        class="nav-pill">🐬 Sea Activities</a>
+  <a href="#food"       class="nav-pill">🌱 Food Guide</a>
+  <a href="#rentals"    class="nav-pill">🛵 Rentals</a>
+  <a href="#shopping"   class="nav-pill">🛍️ Shopping</a>
+  <a href="#liquor"     class="nav-pill">🍾 Liquor Guide</a>
+  <a href="#tips"       class="nav-pill">💡 Tips</a>
+</nav>
+
+<!-- STATS -->
+<div class="intro-strip">
+  <div class="intro-grid">
+    <div class="intro-stat"><div class="num">5</div><div class="label">Days</div></div>
+    <div class="intro-stat"><div class="num">8+</div><div class="label">Hidden Spots</div></div>
+    <div class="intro-stat"><div class="num">7</div><div class="label">Veg Restaurants</div></div>
+    <div class="intro-stat"><div class="num">1</div><div class="label">Feni Experience</div></div>
+    <div class="intro-stat"><div class="num">5★</div><div class="label">Rental Services</div></div>
+    <div class="intro-stat"><div class="num">0</div><div class="label">Tourist Buses</div></div>
+  </div>
+</div>
+
+<div style="background:#fff9f0;border-bottom:1px solid var(--deep-sand);padding:1.1rem 1.5rem;text-align:center;">
+  <div style="max-width:900px;margin:0 auto;font-size:.88rem;color:var(--terracotta);">
+    🏡 <strong>Base:</strong> Agonda or Palolem &nbsp;·&nbsp;
+    ✈️ Fly into Dabolim (GOI) or Mopa (GOX) &nbsp;·&nbsp;
+    🚗 Hire driver ₹3,000–4,000/day <em>or</em> rent a self-drive car &nbsp;·&nbsp;
+    🛵 Scooter for local beach hops — rental contacts below
+  </div>
+</div>
+
+<!-- ITINERARY -->
+<section id="days" class="section-wrap">
+  <h2 class="section-title">📅 Day-by-Day Itinerary</h2>
+
+  <!-- DAY 1 -->
+  <div class="day-card open">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">1</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Arrive · Settle · First Taste</div>
+        <div class="day-title">Land, Breathe & Hollant Beach Stop</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"Land, breathe, feel the ocean air. South Goa doesn't rush you in — and you shouldn't either."</div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">2:00 PM</div><div class="stop-icon beach">🏖️</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Hollant Beach</div>
+          <div class="stop-location">Dabolim · en route south</div>
+          <div class="stop-note">A perfect pit-stop on the way from the airport. Utterly quiet, shallow, no vendors. Kids can safely splash. Reset from the flight here.</div>
+          <div class="stop-tip">💡 Also find <strong>SAHASEA Watersports</strong> right here — book a sunrise kayaking slot for Day 3 or 4. Family-run, great with kids (6-yr-olds reviewed it!). Call +91 86693 94907</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">4:00 PM</div><div class="stop-icon beach">🌊</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Check In · Golden Hour Beach Walk</div>
+          <div class="stop-location">Agonda or Palolem</div>
+          <div class="stop-note">Agonda = quieter, lifeguards, long sand, best for families. Palolem = more walkable restaurants. Both are excellent. Walk the beach at golden hour — it sets the tone for everything.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">6:30 PM</div><div class="stop-icon activity">🛵</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Pick Up Your Scooter / Sort Rental Car</div>
+          <div class="stop-location">Agonda / Palolem</div>
+          <div class="stop-note">Contact <strong>Teju (Bike for Rent, Agonda)</strong> — rated 5★, delivers to your stay, picks it up too. Or <strong>Rohan (South Goa Scooter Rentals, Palolem)</strong> — same 5★, 24/7. Book the evening you arrive so you're mobile from Day 2 morning.</div>
+          <div class="stop-tip">📞 Teju (Agonda): +91 97646 32421 &nbsp;|&nbsp; Rohan (Palolem): +91 90220 68454</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">7:30 PM</div><div class="stop-icon food">🌱</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Dinner — Zest Vegan & Vegetarian</div>
+          <div class="stop-location">Agonda Beach Road · ⭐ 4.6 · 1,827 reviews</div>
+          <div class="stop-note">One of the best pure veg restaurants in South Goa. Ramen, green pakoras with kale & kimchi, 3-layered chocolate mousse, Paradise smoothie. Open 8 AM–10 PM daily.</div>
+          <span class="tag tag-green">Pure Veg / Vegan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">2</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Beaches · Heritage · Feni</div>
+        <div class="day-title">Hidden Beaches, Fort Ruins & Feni Tasting</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"Two beaches nobody talks about, a 500-year-old fort the wind owns, and the one feni experience every visitor to Goa owes themselves."</div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">8:30 AM</div><div class="stop-icon beach">🏊</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Cola Beach — Freshwater Lagoon</div>
+          <div class="stop-location">Kola, Canacona · ⭐ 4.6 · 11,900+ reviews</div>
+          <div class="stop-note">South Goa's crown jewel. A rare freshwater lagoon meets the Arabian Sea — completely unique in India. Kayaking in the lagoon (₹800/hr). Walk 1.5 km trail from parking or shared jeep ₹100/person.</div>
+          <div class="stop-tip">💡 Go before 9 AM — you'll have it to yourself. Swimming restricted sea-side (strong currents) but the lagoon is magical and calm.</div>
+          <span class="tag tag-blue">Secret Beach</span><span class="tag tag-green">Kayaking</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">11:00 AM</div><div class="stop-icon culture">🏰</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Cabo de Rama Fort + Pebbles Beach</div>
+          <div class="stop-location">Canaguinim · ⭐ 4.4 · 16,300+ reviews</div>
+          <div class="stop-note">A ruined Portuguese fort with a raw 180° Arabian Sea view — dramatic, windswept, almost no one here. Explore the fort walls and small church inside (great for kids to clamber). Then descend the rocky trail to Pebbles Beach below — a unique pebble-stone shoreline with no sand, framed by jungle cliffs.</div>
+          <span class="tag tag-purple">Portuguese Heritage</span><span class="tag tag-blue">Free Entry</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">1:00 PM</div><div class="stop-icon food">🌿</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Lunch — Kamaya Restaurant at Serenity Resort</div>
+          <div class="stop-location">Agonda Beach · ⭐ 4.8 · 594 reviews</div>
+          <div class="stop-note">Right on the beach, occasional live music, warm personal service. Great pastas, salads, Goan-style food. Tables on the sand. Perfect mid-trip lunch stop heading back from the fort.</div>
+          <span class="tag tag-green">Veg Options</span><span class="tag tag-blue">Beachfront</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">3:30 PM</div><div class="stop-icon drink">🥃</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Cazulo Premium Feni — Floating Feni Experience</div>
+          <div class="stop-location">Cuelim, near Dabolim · ⭐ 4.8 · 136 reviews</div>
+          <div class="stop-note">THE feni experience in Goa — not just a shot at a shack. Host Tyson's storytelling about cashew feni history is genuinely extraordinary. ~2 hours, adults get tasting + cocktail food pairing, farm setting is lush for kids too.</div>
+          <div class="stop-tip">💡 Book online at least 3–4 days ahead. Ask for travel-sealed gift packaging when you buy bottles to take home to TN.</div>
+          <span class="tag tag-orange">Book in Advance</span><span class="tag tag-green">GI-tagged Feni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">3</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Wildlife · Sunrise Temple · Bioluminescence</div>
+        <div class="day-title">Ancient Temple, Cotigao Forest & Night Kayaking</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"A 2,500-year-old hilltop temple at sunrise, a forest where leopards still roam, and — if the moon cooperates — glowing water at night."</div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">6:30 AM</div><div class="stop-icon culture">⛩️</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Chandreshwar Bhootnath Temple — Paroda Hill</div>
+          <div class="stop-location">Paroda, Quepem · ⭐ 4.7 · 1,485 reviews</div>
+          <div class="stop-note">One of Goa's oldest temples (~2,500 years), dedicated to Lord Shiva, perched atop Chandranath Hill with a sweeping view over South Goa's villages and forest. Almost zero tourists. Morning puja is deeply peaceful. The Shiva linga is said to seep water droplets on full moon nights. Short uphill drive through a majestic gate, then a small walk.</div>
+          <div class="stop-tip">💡 45 min from Agonda/Palolem. Go at sunrise — the light over the valley is extraordinary. Carry a shawl; it can be cool at 6:30 AM. Beware of monkeys — don't carry open food.</div>
+          <span class="tag tag-purple">2,500 Year Old Temple</span><span class="tag tag-blue">Zero Tourist Crowds</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">9:30 AM</div><div class="stop-icon food">🍳</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Breakfast — Serena by the Sea</div>
+          <div class="stop-location">Agonda · ⭐ 4.8 · 805 reviews</div>
+          <div class="stop-note">Multiple reviewers say they came every single day of their stay. Fresh, warm, welcoming — the ideal start after your early temple morning. Open 8:30 AM.</div>
+          <span class="tag tag-green">Veg Options</span><span class="tag tag-blue">Beachside</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">11:00 AM</div><div class="stop-icon nature">🦋</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Cotigao Wildlife Sanctuary</div>
+          <div class="stop-location">Canacona · ⭐ 4.2 · 767 reviews · 35 min from Palolem</div>
+          <div class="stop-note">Goa's most serene and least-visited sanctuary. No network, no noise, no crowds — just dense forest. Drive through the jungle and spot flying squirrels, slender loris, four-horned antelope, kingfishers, and hornbills. A butterfly park shows the full lifecycle up close — kids love it. Treehouse watchtower for wildlife spotting. Open 7 AM–5:30 PM, entry ₹100/adult.</div>
+          <div class="stop-tip">💡 Bring binoculars if you have them. Best wildlife sightings at 7–9 AM or 4–5 PM. Plastic strictly prohibited. Silence is enforced — wonderful.</div>
+          <span class="tag tag-green">No Crowds</span><span class="tag tag-blue">Kid Friendly</span><span class="tag tag-orange">Plastic Free Zone</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">1:00 PM</div><div class="stop-icon food">🥗</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Lunch — Bibhitaki Vegan & Vegetarian Café</div>
+          <div class="stop-location">Patnem Main Road · ⭐ 4.6 · 1,839 reviews</div>
+          <div class="stop-note">Rainbow Quinoa Bowl, Hawaiian Burger, almond milk hot chocolate. AC indoor + calm courtyard. Relaxed family atmosphere.</div>
+          <span class="tag tag-green">Pure Vegan</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">2:30 PM</div><div class="stop-icon beach">🌊</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Patnem Beach — Afternoon Swim</div>
+          <div class="stop-location">Patnem, Canacona</div>
+          <div class="stop-note">Small, calm, safe for kids. Walk distance from Bibhitaki. No vendors, no noise — just waves and soft sand.</div>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">9:00 PM</div><div class="stop-icon activity">✨</div></div>
+        <div class="stop-content">
+          <div class="stop-name">🌊 Bioluminescence Night Kayaking (If Dark Moon)</div>
+          <div class="stop-location">Talpona / Galgibaga backwaters or Hollant Beach</div>
+          <div class="stop-note">The Talpona and Galgibaga rivers near Palolem light up with bioluminescent plankton — every paddle stroke and splash glows electric blue. This is real, not a light show.</div>
+          <div class="biolum-box">
+            <h4>🌙 Bioluminescence — What You Need to Know</h4>
+            <p>Best in <strong>Oct–Nov</strong> and sometimes <strong>Jan–Feb</strong> on <strong>new/dark moon nights</strong>. Not guaranteed every night — depends on plankton bloom and zero light pollution. Book via <strong>SAHASEA (Hollant)</strong> or <strong>Prashant Kayaking & Bike Rental (Talpona Beach)</strong> — WhatsApp ahead asking specifically for "bioluminescence kayaking" and confirm the moon phase. Budget ₹1,000–1,500/person. If the moon is too bright, reschedule to the darkest night of your trip.</p>
+          </div>
+          <div class="stop-tip">📞 SAHASEA: +91 86693 94907 &nbsp;|&nbsp; Prashant (Talpona): +91 79727 83898</div>
+          <span class="tag tag-purple">Seasonal · New Moon Only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">4</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Dolphins · Spice Farm · Liquor Shop · Sunset Bar</div>
+        <div class="day-title">Dolphins at Dawn, Netravali Deep & Sundowner</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"Start with dolphins in golden morning light. Go deep into the jungle and a bubbling sacred lake. End with cocktails as the sun sinks into the sea."</div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">6:30 AM</div><div class="stop-icon activity">🐬</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Dolphin Spotting + Butterfly Beach Boat Trip</div>
+          <div class="stop-location">Talpona Jetty / Palolem · Depart 6:30–7:00 AM</div>
+          <div class="stop-note">Spinner and bottlenose dolphins are spotted almost daily Oct–Mar. The 1.5–2 hr trip covers dolphin spotting, Butterfly Beach (only reachable by boat — a horseshoe cove of impossible blue water), Honeymoon Beach, Turtle Rock, and eagle feeding on the river. One of the most magical mornings you'll have.</div>
+          <div class="stop-tip">
+            📞 <strong>Sagar Boating Goa</strong> (⭐ 5.0 · 188 reviews!) — Talpona Jetty, private trips, eagle feeding, the best operator in South Goa: +91 96731 68832<br><br>
+            📞 <strong>Dolphin Boat Trips Palolem</strong> (⭐ 4.9 · 231 reviews) — Near Rajbag, wheelchair-friendly, baby-safe, safety-first: +91 89992 56328
+          </div>
+          <span class="tag tag-blue">Book Evening Before</span><span class="tag tag-orange">~₹2,500 for 2 adults</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">10:00 AM</div><div class="stop-icon nature">🌿</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Tanshikar Spice Farm — Netravli</div>
+          <div class="stop-location">Netravli · ⭐ 4.7 · 791 reviews · Book ahead</div>
+          <div class="stop-note">The best spice farm in South Goa — small, family-run, no tourist bus crowds. Jungle drive up is itself stunning. Guided tour of cinnamon, cardamom, pepper, vanilla, cacao and beekeeping. Ends with a fresh veg thali lunch. Kids love it — the guide explains species with quizzes and stories.</div>
+          <div class="stop-tip">💡 ~₹750/person (tour + lunch). Allow 3 hrs. Call: +91 94211 84114</div>
+          <span class="tag tag-orange">Book Ahead</span><span class="tag tag-green">Veg Thali Included</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">1:30 PM</div><div class="stop-icon nature">🫧</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Netravali Bubbling Lake (Budbudyachi Tali)</div>
+          <div class="stop-location">Netravli · ⭐ 4.3 · 1,326 reviews · 10 min from Tanshikar</div>
+          <div class="stop-note">A small sacred lake inside a Krishna temple compound where the water mysteriously bubbles when you clap near it — believed to be a natural spring below. Crystal clear water, peacocks spotted nearby, serene forest surroundings. More of a spiritual curiosity than a tourist site — maintain silence and soak in the peace.</div>
+          <div class="stop-tip">💡 Open 9 AM–6:30 PM. Don't make a dedicated trip for this alone — but since you're already at Tanshikar (10 min away), it's a perfect add-on.</div>
+          <span class="tag tag-purple">Sacred Site</span><span class="tag tag-blue">Crystal Clear Water</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">3:30 PM</div><div class="stop-icon activity">🏄</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Water Sports — Prince of Sal, Mobor Beach</div>
+          <div class="stop-location">Mobor, Cavelossim · ⭐ 4.8 · 664 reviews</div>
+          <div class="stop-note">4.8 stars, no pushy upselling, professionally trained staff. Parasailing, jet ski, banana ride, ringo ride. Mobor itself is calm and uncrowded. Best for families — afternoon slot 3–5 PM is cooler.</div>
+          <span class="tag tag-blue">Kid Safe</span><span class="tag tag-orange">No Pushy Staff</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">5:00 PM</div><div class="stop-icon shop">🍾</div></div>
+        <div class="stop-content">
+          <div class="stop-name">🍾 Vaz Enterprises — Liquor Shopping</div>
+          <div class="stop-location">Margao–Colva Road, near Colva · ⭐ 4.6 · 1,731 reviews</div>
+          <div class="stop-note">South Goa's finest liquor supermarket — 2 floors, massive collection of cashew feni, coconut feni, Paul John Goan single malt, Old Monk, premium wines, and international brands all at Goa prices (40–50% cheaper than TN). Bulk discounts on 3+ bottles of the same type. Staff very helpful. Mon–Sat, closes 8 PM sharp.</div>
+          <div class="stop-tip">💡 Ask for gift/travel packaging for feni bottles. Buy max 2L per adult for smooth entry into TN. See the Liquor Guide section below for rules.</div>
+          <span class="tag tag-orange">Closes 8 PM · Closed Sunday</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">6:30 PM</div><div class="stop-icon drink">🌅</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Sundowner — The Southern Deck, Benaulim</div>
+          <div class="stop-location">Benaulim Beach · ⭐ 4.4 · 7,777 reviews</div>
+          <div class="stop-note">Beachfront restobar with live music, great cocktails, veg options. Book a sunset-facing table in advance. Vibrant, lively, but not chaotic. The perfect end to a full day.</div>
+          <div class="stop-tip">💡 Closed Tuesdays. Book ahead for outdoor sunset table. Call: +91 86687 42826</div>
+          <span class="tag tag-blue">Live Music</span><span class="tag tag-green">Veg Options</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-number">5</div>
+      <div class="day-title-wrap">
+        <div class="day-tag">Culture · Backwaters · Final Beach · Shopping</div>
+        <div class="day-title">Big Foot Museum, Sal Kayaking & Kakolem Farewell</div>
+      </div>
+      <div class="day-toggle">▾</div>
+    </div>
+    <div class="day-body">
+      <div class="day-narrative">"A morning of Goan village heritage, a quiet backwater paddle through mangroves, and one final — jaw-dropping — secret beach before Chennai calls you home."</div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">9:00 AM</div><div class="stop-icon culture">🏛️</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Big Foot Goa (Ancestral Goa Museum) — Loutolim</div>
+          <div class="stop-location">Loutolim, Salcete · ⭐ 4.1 · 8,753 reviews</div>
+          <div class="stop-note">A living heritage museum in a South Goa village showing traditional Goan life through life-sized sculptures, old Portuguese-era houses, folk art, tools, and a working model of a cashew feni distillery. Audio guide available. Very good for kids — interactive, visual, and educational. Entry ₹150/head. Open 9 AM–6 PM.</div>
+          <div class="stop-tip">💡 Combine with a walk past the nearby Figueiredo Mansion — a 400-year-old Portuguese ancestral home, one of the finest in Goa, on the same village road.</div>
+          <span class="tag tag-purple">Heritage · Audio Guide</span><span class="tag tag-blue">₹150/person</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">11:30 AM</div><div class="stop-icon activity">🛶</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Sal Backwaters Kayaking — Mangroves Magic</div>
+          <div class="stop-location">Sal River, South Goa · ⭐ 4.5 · 487 reviews</div>
+          <div class="stop-note">The Sal River flows through South Goa's quietest backwaters — pink and white water lilies, kingfishers, herons, village banks, and absolute silence. Goa Kayaking's "Mangroves Magic" tour has guides who point out wildlife throughout. Homemade samosas and tea served at the end. Completely different from sea activities. Family-reviewed as one of the most peaceful Goa experiences.</div>
+          <div class="stop-tip">📞 Goa Kayaking: +91 94220 56037 · Book the day before · ~₹1,200/person · Suitable for all ages</div>
+          <span class="tag tag-green">Family Safe</span><span class="tag tag-blue">Mangroves + Birds</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">1:30 PM</div><div class="stop-icon shop">🛍️</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Shopping Stop — Royale Goan Cashews & Palolem Beach Road</div>
+          <div class="stop-location">Benaulim branch (⭐ 5.0 · 343 reviews) or Colva branch (⭐ 4.9 · 200 reviews)</div>
+          <div class="stop-note">The best cashew shop in South Goa — drum-roasted salted cashews, Goan bebinca sweet, cashew chocolates (wine, rum, mango flavours), masala kaju. Fresh, quality-tested, fair prices with discounts. Also stop at Palolem beach road for silver jewellery, Goan cotton clothing, spice kits, and kokum.</div>
+          <div class="stop-tip">💡 For Goan spices and masalas at local prices, detour to <strong>M.S. Masala, Margao</strong> (⭐ 4.8) near Gandhi Market — best Goan garam masala and fresh spices to take home to Chennai.</div>
+          <span class="tag tag-orange">Best Cashew Quality</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">3:30 PM</div><div class="stop-icon beach">🌊</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Kakolem Beach (Tiger Beach) — Final Farewell</div>
+          <div class="stop-location">Canacona · ⭐ 4.7 · 1,145 reviews</div>
+          <div class="stop-note">South Goa's most dramatic hidden beach — a 15-minute steep staircase descent through jungle, and at the bottom: one of the cleanest, emptiest beaches in India with a waterfall literally on the sand. Go for the experience, not for swimming (currents are strong). Almost zero people.</div>
+          <div class="stop-tip">💡 Wear closed shoes for the descent. Go before 5 PM for safe return trek. Parking ₹50. No lifeguards — observe from the shore with kids.</div>
+          <span class="tag tag-blue">Waterfall on the Beach</span><span class="tag tag-green">Zero Crowds</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">7:00 PM</div><div class="stop-icon food">🍽️</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Farewell Dinner — Café Barefoot, Palolem</div>
+          <div class="stop-location">Devabag, near Palolem · ⭐ 4.9 · 38 reviews</div>
+          <div class="stop-note">A hidden gem. 100% vegetarian. The Adai Dosa here comes with the chef explaining its Tamil heritage — perfect for you as Chennaites! Mumbai street sandwich, Belgian waffle, fresh mountain view. The most heartfelt dinner you'll have in Goa.</div>
+          <span class="tag tag-green">Tamil Heritage Adai Dosa</span><span class="tag tag-blue">Pure Veg</span>
+        </div>
+      </div>
+
+      <div class="stop">
+        <div class="stop-time"><div class="time-text">Next AM</div><div class="stop-icon food">🌿</div></div>
+        <div class="stop-content">
+          <div class="stop-name">Pre-Flight Lunch — The Veggie Vibes, Varca</div>
+          <div class="stop-location">Varca, near airport corridor · ⭐ 4.6 · 1,113 reviews</div>
+          <div class="stop-note">Pure veg, Jain-friendly, vegan options. Chaap biryani, paneer tikka, dal tadka. Open 24 hours. Convenient for a final meal before heading to Dabolim airport.</div>
+          <span class="tag tag-green">Veg / Jain / Vegan · Open 24 hrs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEA ACTIVITIES -->
+<section id="sea" class="white-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="section-title">🐬 Sea Activities — Complete Guide</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-emoji">🐬</div>
+        <div class="card-name">Dolphin Spotting + Butterfly Beach</div>
+        <div class="card-sub">Sagar Boating · Talpona Jetty · ⭐ 5.0</div>
+        <div class="card-desc">Best operator in South Goa. Private trips, dolphin spotting, Butterfly Beach, Honeymoon Beach, eagle feeding. ~₹2,500 for 2 adults. Depart 6:30 AM.</div>
+        <div class="card-phone">📞 +91 96731 68832</div>
+        <span class="tag tag-orange">Book evening before</span>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🐬</div>
+        <div class="card-name">Dolphin Trips — Family Safe</div>
+        <div class="card-sub">Dolphin Boat Trips Palolem · ⭐ 4.9</div>
+        <div class="card-desc">Baby and wheelchair friendly. Patient, safety-first guides. Includes Butterfly + Honeymoon beaches. Near Rajbag, south of Palolem.</div>
+        <div class="card-phone">📞 +91 89992 56328</div>
+        <span class="tag tag-blue">Kid + Baby friendly</span>
+      </div>
+      <div class="card">
+        <div class="card-emoji">✨</div>
+        <div class="card-name">Bioluminescence Night Kayaking</div>
+        <div class="card-sub">SAHASEA / Prashant Kayaking · Seasonal</div>
+        <div class="card-desc">Talpona/Galgibaga rivers glow electric blue when you paddle. New/dark moon nights only. Oct–Nov best, Jan–Feb sometimes. ~₹1,200–1,500/person.</div>
+        <div class="card-phone">📞 SAHASEA: +91 86693 94907 | Prashant: +91 79727 83898</div>
+        <span class="tag tag-purple">Dark Moon Nights Only</span>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🛶</div>
+        <div class="card-name">Sunrise Sea Kayaking</div>
+        <div class="card-sub">SAHASEA · Hollant Beach · ⭐ 4.7</div>
+        <div class="card-desc">Family-run, Instructor Callum is patient & wonderful with kids (6-yr-olds reviewed it!). Dolphins often spotted from the kayak. Open 7 AM–7 PM.</div>
+        <div class="card-phone">📞 +91 86693 94907</div>
+        <span class="tag tag-green">Great with Kids</span>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🚣</div>
+        <div class="card-name">Backwaters Mangrove Kayaking</div>
+        <div class="card-sub">Goa Kayaking · Sal River · ⭐ 4.5</div>
+        <div class="card-desc">Pink & white lilies, kingfishers, herons, total silence. Tea & samosas at the end. Family-friendly, calm water. 2 hr session. Book ahead.</div>
+        <div class="card-phone">📞 +91 94220 56037</div>
+        <span class="tag tag-blue">Mangroves + Birdlife</span>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🪂</div>
+        <div class="card-name">Parasailing / Jet Ski / Banana Ride</div>
+        <div class="card-sub">Prince of Sal · Mobor Beach · ⭐ 4.8</div>
+        <div class="card-desc">4.8 stars, no pushy upselling. Professional staff. Parasailing, jet ski, banana ride, ringo ride — all family-safe. Calm uncrowded beach.</div>
+        <div class="card-phone">📞 +91 99211 44420</div>
+        <span class="tag tag-orange">Most Recommended</span>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🚣</div>
+        <div class="card-name">Lagoon Kayaking — Cola Beach</div>
+        <div class="card-sub">On-site operators · Cola Beach</div>
+        <div class="card-desc">Freshwater lagoon where the river meets the sea — uniquely calm and stunning. ₹800/hr. Combined with your Cola Beach visit on Day 2.</div>
+        <span class="tag tag-blue">Most Unique Setting</span>
+      </div>
+      <div class="card">
+        <div class="card-emoji">⛵</div>
+        <div class="card-name">River Boating — Sadolxem Bridge</div>
+        <div class="card-sub">Local operators · Sadolxem</div>
+        <div class="card-desc">Gentle boat ride on a jungle-framed tidal creek. No tourist setup — just local fishermen, lush scenery, and perfect silence. ~₹1,500/boat (negotiate).</div>
+        <span class="tag tag-green">Offbeat Gem</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD GUIDE -->
+<section id="food" class="sand-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="section-title">🌱 Veg & Vegan Food Guide</h2>
+    <div class="card-grid">
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🥗</div>
+        <div class="card-name">Zest Vegan & Vegetarian</div>
+        <div class="card-sub">Agonda Beach Road · ⭐ 4.6 · 1,827 reviews</div>
+        <div class="card-desc">Best all-rounder. Ramen, green pakoras, 3-layer chocolate mousse, Paradise smoothie. Excellent breakfast too. Open 8 AM–10 PM daily.</div>
+        <span class="tag tag-green">Pure Veg / Vegan</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🍳</div>
+        <div class="card-name">Cafe Barefoot</div>
+        <div class="card-sub">Devabag, near Palolem · ⭐ 4.9 · 38 reviews</div>
+        <div class="card-desc">Hidden gem. 4.9 stars. Adai Dosa (Tamil heritage), Mumbai street sandwich, Belgian waffle. Mountain view, peaceful. Open 11 AM–11 PM.</div>
+        <span class="tag tag-green">Wholesome Veg</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🥣</div>
+        <div class="card-name">Bibhitaki Vegan Café</div>
+        <div class="card-sub">Patnem Main Road · ⭐ 4.6 · 1,839 reviews</div>
+        <div class="card-desc">Rainbow Quinoa Bowl, Hawaiian Burger, almond milk hot choc. AC + courtyard. Very family-friendly.</div>
+        <span class="tag tag-green">Pure Vegan</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🍲</div>
+        <div class="card-name">The Organic Pure Veg</div>
+        <div class="card-sub">Palolem Beach Road · ⭐ 4.7 · 87 reviews</div>
+        <div class="card-desc">Best Dal Fry & Masala Khichdi in Palolem. Family-run, fresh daily cooking. Open 8:30 AM–10:30 PM.</div>
+        <span class="tag tag-green">Pure Veg / Organic</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🌅</div>
+        <div class="card-name">The Southern Deck</div>
+        <div class="card-sub">Benaulim Beach · ⭐ 4.4 · 7,777 reviews</div>
+        <div class="card-desc">Beachfront restobar, live music, great cocktails, veg options. Book sunset table ahead. Closed Tuesdays.</div>
+        <div class="card-phone">📞 +91 86687 42826</div>
+        <span class="tag tag-blue">Restobar · Live Music</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🏖️</div>
+        <div class="card-name">Serena by the Sea</div>
+        <div class="card-sub">Agonda · ⭐ 4.8 · 805 reviews</div>
+        <div class="card-desc">Most-loved all-day spot in Agonda. Reviewers came every single day. Breakfast to dinner, excellent everything. Open 8:30 AM–10:30 PM.</div>
+        <span class="tag tag-green">Veg Options</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🪨</div>
+        <div class="card-name">On the Rocks</div>
+        <div class="card-sub">Agonda Beach Road · ⭐ 4.8 · 539 reviews</div>
+        <div class="card-desc">Built on a rock — climb 20 steps carved into stone. Mediterranean-inspired veg food: falafel, quinoa bowl, ragi falafel, hummus. Unique, memorable. Open 11 AM–10:30 PM.</div>
+        <span class="tag tag-green">Great Veg Menu</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🌿</div>
+        <div class="card-name">The Veggie Vibes, Varca</div>
+        <div class="card-sub">Varca · ⭐ 4.6 · 1,113 reviews</div>
+        <div class="card-desc">Chaap biryani, paneer tikka, veg Kolhapuri, Jain options. Open 24 hours. Near airport corridor — perfect pre-flight stop.</div>
+        <span class="tag tag-green">Veg / Jain / Vegan · 24 hrs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RENTALS -->
+<section id="rentals" class="white-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="section-title">🛵 Scooter & Car Rentals</h2>
+    <p style="color:var(--muted);font-size:.9rem;margin-bottom:1.5rem;max-width:680px;">All operators below are rated 4.9–5.0 ⭐ with hundreds of reviews. They deliver to your hotel and pick up — no need to go to a shop. Book by WhatsApp the evening before you need the vehicle.</p>
+    <div class="rental-grid">
+      <div class="rental-block">
+        <h3>🛵 Scooter / Bike Rental</h3>
+        <div class="rental-item">
+          <div class="rental-name">Teju — Bike for Rent, Agonda</div>
+          <div class="rental-stars">⭐ 5.0 · 225 reviews</div>
+          <div class="rental-detail">The #1 rental in Agonda. Delivers to your stay, picks up on checkout. Also arranges dolphin trips, cab rides, and morning boat tours. Returned lost glasses to a guest! Honest and kind.</div>
+          <div class="rental-phone">📞 +91 97646 32421 (WhatsApp)</div>
+        </div>
+        <div class="rental-item">
+          <div class="rental-name">South Goa Scooter Rentals — Rohan, Palolem</div>
+          <div class="rental-stars">⭐ 5.0 · 306 reviews</div>
+          <div class="rental-detail">Premier scooter & car rental in Palolem/Canacona area. 24/7 assistance. Delivers and picks up. Also arranges early morning taxi to railway stations (5:30 AM).</div>
+          <div class="rental-phone">📞 +91 90220 68454 (24/7)</div>
+        </div>
+        <div class="rental-item">
+          <div class="rental-name">Speed Scooter Rental — Rahul, Palolem</div>
+          <div class="rental-stars">⭐ 5.0 · 91 reviews</div>
+          <div class="rental-detail">Flexible pickup/drop locations including bus station. Good long-term rates. Very polite. Well-maintained vehicles.</div>
+          <div class="rental-phone">📞 +91 80872 61884</div>
+        </div>
+        <div class="rental-item">
+          <div class="rental-name">Prashant Kayaking & Bike Rental — Talpona</div>
+          <div class="rental-stars">⭐ 4.9 · 176 reviews</div>
+          <div class="rental-detail">Also offers kayaking + boat trips. Good combo if you want to book rentals and water activities from one person. South of Palolem.</div>
+          <div class="rental-phone">📞 +91 79727 83898</div>
+        </div>
+      </div>
+      <div class="rental-block">
+        <h3>🚗 Car Rental / Taxi</h3>
+        <div class="rental-item">
+          <div class="rental-name">Nanu Rent a Car — Palolem</div>
+          <div class="rental-stars">⭐ 5.0 · 79 reviews</div>
+          <div class="rental-detail">Highly responsive. Rented a Thar, Swift, Activa — all well-maintained. Ultra-responsive team. Half-month rentals available. The go-to for a self-drive car in South Goa.</div>
+          <div class="rental-phone">📞 +91 70666 04097</div>
+        </div>
+        <div class="rental-item">
+          <div class="rental-name">Diljit Car Rental — Palolem</div>
+          <div class="rental-stars">⭐ 5.0 · 61 reviews</div>
+          <div class="rental-detail">Self-drive Baleno available. No prior booking needed — called and got car in 30 mins. No hidden charges. Clean, professional. Based near Colomb Bay.</div>
+          <div class="rental-phone">📞 +91 96659 04207</div>
+        </div>
+        <div class="rental-item">
+          <div class="rental-name">Palolem Rent Car — Self-Drive</div>
+          <div class="rental-stars">⭐ 4.9 · 45 reviews</div>
+          <div class="rental-detail">New Baleno automatic with hill-start assist. Clean, well-equipped. Convenient pickup and drop. No hidden charges. Good for airport runs too.</div>
+          <div class="rental-phone">📞 +91 77099 35532</div>
+        </div>
+        <div class="rental-item">
+          <div class="rental-name">Love Star Cab — Lavesh, Palolem</div>
+          <div class="rental-stars">⭐ 4.9 · 360 reviews</div>
+          <div class="rental-detail">If you'd rather have a driver than self-drive — Lavesh is the most trusted driver in South Goa. Takes photos for you, gives great recommendations, honest pricing. Airport to Palolem, full-day hire, sightseeing.</div>
+          <div class="rental-phone">📞 +91 83907 50874</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:1rem 1.2rem;margin-top:1.2rem;font-size:.85rem;color:#166534;">
+      💡 <strong>Tip for families:</strong> With a kid, a self-drive car (Baleno/Swift) is more practical than 2 scooters. Nanu or Diljit are both 5★. Alternatively, hire Lavesh (Love Star Cab) as a full-time driver for ₹3,000–4,000/day — he'll handle navigation, parking, and local tips while you relax with the family.
+    </div>
+  </div>
+</section>
+
+<!-- SHOPPING -->
+<section id="shopping" class="sand-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="section-title">🛍️ Shopping Guide</h2>
+    <div class="card-grid">
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🥜</div>
+        <div class="card-name">Royale Goan Cashews — Benaulim</div>
+        <div class="card-sub">Benaulim branch · ⭐ 5.0 · 343 reviews</div>
+        <div class="card-desc">The best cashew shop in South Goa. Drum-roasted salted cashews, Goan bebinca, cashew chocolates (wine/rum/mango flavours). Fresh, honest prices. Also at Colva branch (⭐ 4.9 · 200 reviews).</div>
+        <div class="card-phone">📞 +91 72799 04444 (Benaulim)</div>
+        <span class="tag tag-orange">Must Buy · Best Quality</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🌶️</div>
+        <div class="card-name">M.S. Masala — Margao</div>
+        <div class="card-sub">Gandhi Market Rd, Margao · ⭐ 4.8</div>
+        <div class="card-desc">Best Goan spices at local prices. Homemade Goan garam masala, xacuti mix, kokum, fresh ground pepper. Far better quality than tourist shops. Take home for Chennai cooking!</div>
+        <div class="card-phone">📞 +91 92700 73547</div>
+        <span class="tag tag-green">Local Prices · Authentic</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🛒</div>
+        <div class="card-name">Margao Municipal Market</div>
+        <div class="card-sub">Comba, New Market, Margao · ⭐ 4.1</div>
+        <div class="card-desc">South Goa's largest local market. Real local prices, not tourist markup. Fresh coconut oil, local cashews, Goan sweets (bebinca, dodol), spices, clothing. Narrow lanes, vibrant, authentic. Go weekday mornings.</div>
+        <span class="tag tag-green">Local Prices</span><span class="tag tag-blue">Authentic Goan</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🌊</div>
+        <div class="card-name">Palolem Beach Road Boutiques</div>
+        <div class="card-sub">Palolem Beach Road</div>
+        <div class="card-desc">Best for: silver jewellery (handmade, bargain hard), Goan cotton clothing, boho beachwear, spice kits, feni bottles, printed sarongs. Start at 40–50% of asking price when bargaining.</div>
+        <span class="tag tag-orange">Bargain Firmly</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🏛️</div>
+        <div class="card-name">Tanshikar Farm Shop</div>
+        <div class="card-sub">Netravli (Day 4 stop)</div>
+        <div class="card-desc">Organic spices, coconut oil, local honey, and cacao products from the farm itself. Best quality guarantee since you see the source. Buy on your visit — limited availability outside.</div>
+        <span class="tag tag-green">Organic · Farm Direct</span>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🏪</div>
+        <div class="card-name">Cazulo Feni Boutique</div>
+        <div class="card-sub">Cuelim (Day 2 stop)</div>
+        <div class="card-desc">Buy premium bottled feni + cashew wine directly from the maker. Ask for travel-sealed packaging for flight. Best quality feni you can take home to TN legally.</div>
+        <span class="tag tag-orange">Travel-Sealed Available</span>
+      </div>
+    </div>
+
+    <div style="margin-top:2rem;">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--deep-ocean);margin-bottom:1rem;">🎁 What to Buy — Chennai Checklist</h3>
+      <table class="info-table">
+        <thead><tr><th>Item</th><th>Where to Buy</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Cashews — roasted / masala</td><td>Royale Goan Cashews</td><td>Vacuum packed, long shelf life. Best quality in South Goa.</td></tr>
+          <tr><td>Cashew Feni + Coconut Feni</td><td>Cazulo / Vaz Enterprises</td><td>GI-tagged Goan product. 2L/adult allowed into TN.</td></tr>
+          <tr><td>Paul John Single Malt (Goan)</td><td>Vaz Enterprises, Colva</td><td>Goa-distilled Indian single malt, 40–50% cheaper than TN price.</td></tr>
+          <tr><td>Goan Spice Kits</td><td>M.S. Masala, Margao / Tanshikar Farm</td><td>Garam masala, xacuti mix, cafreal. Far better than airport shops.</td></tr>
+          <tr><td>Kokum (dried)</td><td>Margao Market / M.S. Masala</td><td>For kokum sharbat at home — far better quality than Chennai.</td></tr>
+          <tr><td>Goan Bebinca (sweet)</td><td>Royale Goan Cashews</td><td>Traditional Goan layered sweet. Vacuum-packed versions travel well.</td></tr>
+          <tr><td>Silver Jewellery</td><td>Palolem Beach Road</td><td>Handmade, bargain to 40–50% of asking price.</td></tr>
+          <tr><td>Goan Cotton Clothing</td><td>Palolem Beach Road</td><td>Lightweight, cheap, beach-style. Good for kids too.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- LIQUOR GUIDE -->
+<section id="liquor" class="dark-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="section-title">🍾 Liquor Buying Guide — Goa to Tamil Nadu</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+      <div class="card">
+        <div class="card-emoji">🏪</div>
+        <div class="card-name">Vaz Enterprises, Colva</div>
+        <div class="card-sub">Margao–Colva Road · ⭐ 4.6 · 1,731 reviews</div>
+        <div class="card-desc">South Goa's best liquor supermarket. 2 floors, massive selection of feni, whisky, rum, gin, wine, international brands. Bulk discount on 3+ same-type bottles. Mon–Sat 9:30 AM – 8 PM sharp.</div>
+        <div class="card-phone">📞 +91 86050 08185</div>
+      </div>
+      <div class="card">
+        <div class="card-emoji">🥃</div>
+        <div class="card-name">Spec's Liquor Stores, Orlim</div>
+        <div class="card-sub">Orlim, near Cavelossim · ⭐ 4.8 · 119 reviews</div>
+        <div class="card-desc">Sells at MRP, knowledgeable staff, great for feni and wines. South Goa convenient location. Open daily 10 AM–10:30 PM.</div>
+        <div class="card-phone">📞 +91 70303 98745</div>
+      </div>
+    </div>
+
+    <div class="liquor-box">
+      <h3>✈️ Taking Liquor from Goa to Tamil Nadu — The Rules</h3>
+
+      <div class="liquor-rule">
+        <strong>✅ Legal Allowance:</strong> Tamil Nadu allows 2 litres of IMFL (Indian Made Foreign Liquor) or feni per adult for personal use without a permit or declaration. With 2 adults, you can bring <strong>4 litres total</strong> comfortably within limits.
+      </div>
+      <div class="liquor-rule">
+        <strong>✈️ How to carry on a flight:</strong> Always pack in <strong>checked-in baggage only</strong> — never cabin/hand luggage (DGCA rules). Wrap bottles well in clothes or bubble wrap (bottle bags available at Goa airport shops). Bottles must be sealed. Keep within your total baggage weight limit.
+      </div>
+      <div class="liquor-rule">
+        <strong>📦 Packaging tip:</strong> Ask at Cazulo and Vaz Enterprises for <strong>travel-sealed gift packaging</strong> specifically for the flight. Tamper-evident seals help with both safety and customs optics.
+      </div>
+      <div class="liquor-rule">
+        <strong>🧾 Keep your receipt</strong> from the shop — especially for premium or multiple bottles. You won't need to declare for personal quantities, but it's good to have proof of purchase.
+      </div>
+      <div class="liquor-rule">
+        <strong>🎁 Smart buys for TN:</strong> Cashew Feni (GI product, unique to Goa, can't get elsewhere) · Coconut Feni · Paul John Indian Single Malt (40–50% cheaper than TN price) · Premium rums or gins at Goa rates.
+      </div>
+      <div class="liquor-warning">
+        ⚠️ <strong>Beyond 2L/adult is a grey area.</strong> Air arrivals in Chennai are rarely checked for personal quantities, but legally, anything beyond 2L per adult is liable to confiscation under TN Prohibition Act. Don't risk it — stick to 2L per adult and enjoy the savings on what you do bring.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section id="tips" class="sand-section">
+  <div style="max-width:900px;margin:0 auto;">
+    <h2 class="section-title">💡 Practical Tips</h2>
+    <div class="card-grid">
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">📅</div>
+        <div class="card-name">Best Season</div>
+        <div class="card-desc">Oct–Mar ideal. Nov is best for bioluminescence. April is warm but quieter and cheaper. Avoid June–Sept (monsoon — beaches close, shacks shut).</div>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🏡</div>
+        <div class="card-name">Where to Stay</div>
+        <div class="card-desc">Agonda = quietest, lifeguards, family-perfect. Palolem = more walkable restaurants. Stay in one base the full 5 nights — no need to move. Both are 20 min apart by scooter.</div>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🚗</div>
+        <div class="card-name">Getting Around</div>
+        <div class="card-desc">Self-drive car (Nanu/Diljit) for full itinerary flexibility. Or Lavesh (Love Star Cab) as a dedicated driver. Teju/Rohan for a scooter for local beach hops. Don't rely on local autos — they're scarce in South Goa.</div>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">📞</div>
+        <div class="card-name">Book in Advance</div>
+        <div class="card-desc">Must pre-book: Cazulo Feni Experience · Tanshikar Spice Farm · Southern Deck sunset table · Dolphin boat trip (evening before) · Bioluminescence kayaking (check moon phase).</div>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🌙</div>
+        <div class="card-name">Bioluminescence Timing</div>
+        <div class="card-desc">Check moon phase before you travel. Schedule your night kayak on the darkest night of your trip (new moon ±3 days). Oct–Nov is peak season for it.</div>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">☀️</div>
+        <div class="card-name">Beach Timing</div>
+        <div class="card-desc">Hidden beaches (Cola, Kakolem) before 9 AM — zero crowd. Dolphin boat trips leave 6:30–7 AM. Afternoons for swimming at Agonda/Patnem/Hollant (calm waves).</div>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">🧒</div>
+        <div class="card-name">Best Spots for the Kid</div>
+        <div class="card-desc">Tanshikar Farm · Cotigao butterfly park · Cabo de Rama fort ruins · Cola lagoon kayak · SAHASEA sunrise kayak · Banana/Ringo rides at Mobor · Big Foot Museum audio guide.</div>
+      </div>
+      <div class="card" style="background:var(--white);">
+        <div class="card-emoji">💰</div>
+        <div class="card-name">Budget Rough Guide</div>
+        <div class="card-desc">Feni experience: ~₹2,000/couple · Spice farm: ₹750/head · Dolphin boat: ~₹2,500 · Water sports: ₹2,000–3,000 · Veg meals: ₹400–800/family · Kayaking: ₹800–1,200/session.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <em>"South Goa doesn't ask you to do more. It asks you to do less, and feel everything."</em><br><br>
+  <span style="opacity:.6;font-size:.72rem;">Complete Itinerary · Chennai → South Goa · 5 Days · 2 Adults + 1 Kid · v2.0 with Sea Activities, Rentals, Shopping & Liquor Guide</span>
+</footer>
+
+<script>
+function toggleDay(header) {
+  header.closest('.day-card').classList.toggle('open');
+}
+const sections = document.querySelectorAll('section[id]');
+const pills = document.querySelectorAll('.nav-pill');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      pills.forEach(p => p.classList.remove('active'));
+      const a = document.querySelector(`.nav-pill[href="#${e.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { threshold: 0.2 });
+sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
