@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Goa — 5 Days from The Bay Agonda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#f5efe6;--dsand:#e8ddd0;--clay:#c4916a;--terra:#b5654a;--ocean:#2d6a7f;--docean:#1a4a5c;--dark:#1c1814;--muted:#7a6d63;--white:#fdfaf7;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--sand);color:var(--dark);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;}
+.hero{min-height:100vh;background:var(--docean);position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 2rem 5rem;overflow:hidden;}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 20%,rgba(45,106,127,.6) 0%,transparent 60%),radial-gradient(ellipse 50% 80% at 10% 80%,rgba(74,124,89,.3) 0%,transparent 50%),radial-gradient(ellipse 60% 40% at 90% 90%,rgba(196,145,106,.25) 0%,transparent 50%);animation:shimmer 8s ease-in-out infinite alternate;}
+@keyframes shimmer{0%{opacity:.8}100%{opacity:1}}
+.wdeco{position:absolute;bottom:0;left:0;right:0;height:120px;background:var(--sand);clip-path:ellipse(55% 100% at 50% 100%);}
+.heyebrow{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--clay);margin-bottom:1.5rem;position:relative;z-index:2;animation:fu .8s ease both;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,6rem);font-weight:300;color:var(--white);line-height:1.05;position:relative;z-index:2;animation:fu .9s ease .1s both;}
+.hero h1 em{font-style:italic;color:var(--clay);}
+.hsub{margin-top:1.5rem;color:rgba(253,250,247,.6);font-size:.9rem;position:relative;z-index:2;animation:fu 1s ease .2s both;display:flex;gap:1.2rem;flex-wrap:wrap;}
+.hsub span{display:flex;align-items:center;gap:.4rem;}
+.hsub span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--clay);display:inline-block;}
+.hbadge{position:relative;z-index:2;margin-top:1rem;display:inline-block;background:rgba(196,145,106,.2);border:1px solid rgba(196,145,106,.4);border-radius:100px;padding:.35rem 1rem;font-size:.75rem;color:var(--clay);animation:fu 1s ease .3s both;}
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.nav{position:sticky;top:0;z-index:100;background:rgba(245,239,230,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--dsand);padding:.75rem 1.5rem;display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.np{flex-shrink:0;padding:.4rem 1rem;border-radius:100px;border:1px solid var(--dsand);background:transparent;color:var(--muted);font-size:.78rem;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-block;}
+.np:hover,.np.active{background:var(--docean);border-color:var(--docean);color:var(--white);}
+.istrip{background:var(--white);border-bottom:1px solid var(--dsand);padding:2.5rem 1.5rem;}
+.igrid{max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1.5rem;text-align:center;}
+.istat .num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:300;color:var(--terra);line-height:1;}
+.istat .lbl{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;}
+.sw{max-width:980px;margin:0 auto;padding:3rem 1.5rem;}
+.st{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--docean);margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid var(--dsand);}
+.dc{background:#fff;border-radius:16px;overflow:hidden;margin-bottom:1.5rem;box-shadow:0 2px 20px rgba(28,24,20,.06);transition:box-shadow .3s;}
+.dc:hover{box-shadow:0 6px 40px rgba(28,24,20,.10);}
+.dh{padding:1.5rem 2rem;display:flex;align-items:center;gap:1.5rem;border-bottom:1px solid var(--dsand);cursor:pointer;user-select:none;}
+.dn{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--dsand);line-height:1;flex-shrink:0;width:2.5rem;text-align:center;}
+.dtw{flex:1;}
+.dtag{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin-bottom:.3rem;}
+.dtitle{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--dark);line-height:1.2;}
+.dtog{width:28px;height:28px;border-radius:50%;border:1px solid var(--dsand);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:1rem;transition:all .3s;flex-shrink:0;}
+.dc.open .dtog{background:var(--docean);border-color:var(--docean);color:white;transform:rotate(180deg);}
+.db{display:none;padding:0 2rem 2rem;}
+.dc.open .db{display:block;}
+.dnarr{font-style:italic;color:var(--muted);font-size:.9rem;padding:1.2rem 0 1.5rem;border-bottom:1px dashed var(--dsand);margin-bottom:1.5rem;font-family:'Playfair Display',serif;}
+.stop{display:grid;grid-template-columns:72px 1fr;gap:0 1.2rem;margin-bottom:1.5rem;position:relative;}
+.stop:not(:last-child)::after{content:'';position:absolute;left:33px;top:38px;bottom:-20px;width:1px;background:var(--dsand);}
+.stime{text-align:center;padding-top:.6rem;}
+.stime .tt{font-size:.68rem;color:var(--muted);}
+.si{width:34px;height:34px;border-radius:50%;margin:.3rem auto .2rem;display:flex;align-items:center;justify-content:center;font-size:.95rem;}
+.ib{background:#dbeafe;}.if{background:#dcfce7;}.ia{background:#fef3c7;}.ic{background:#f3e8ff;}.id{background:#fee2e2;}.in{background:#d1fae5;}.is{background:#fce7f3;}.inight{background:#1e1b4b;font-size:.85rem;}
+.sn{font-weight:500;font-size:.97rem;color:var(--dark);margin-bottom:.2rem;line-height:1.3;}
+.sl{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);margin-bottom:.4rem;}
+.sno{font-size:.85rem;color:var(--muted);line-height:1.6;}
+.stip{margin-top:.5rem;background:#fff9f0;border-left:3px solid var(--clay);padding:.5rem .75rem;border-radius:0 6px 6px 0;font-size:.8rem;color:var(--terra);}
+.sinfo{margin-top:.5rem;background:#f0fdf4;border-left:3px solid #4ade80;padding:.5rem .75rem;border-radius:0 6px 6px 0;font-size:.8rem;color:#166534;}
+.sbio{margin-top:.5rem;background:#eff6ff;border-left:3px solid #60a5fa;padding:.5rem .75rem;border-radius:0 6px 6px 0;font-size:.8rem;color:#1d4ed8;}
+.tag{display:inline-block;padding:.15rem .55rem;border-radius:100px;font-size:.63rem;font-weight:500;letter-spacing:.05em;margin:.3rem .2rem 0 0;}
+.tg{background:#dcfce7;color:#166534;}.tb{background:#dbeafe;color:#1e40af;}.to{background:#ffedd5;color:#9a3412;}.tp{background:#f3e8ff;color:#6b21a8;}.tr{background:#fee2e2;color:#991b1b;}
+.fbox{background:#fff8f0;border:1px solid #fde8cc;border-radius:12px;padding:1.2rem;margin-top:1rem;}
+.fbox-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--docean);margin-bottom:.75rem;border-bottom:1px dashed var(--dsand);padding-bottom:.5rem;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+@media(max-width:560px){.frow{grid-template-columns:1fr;}}
+.fitem{background:var(--white);border-radius:8px;padding:.7rem .9rem;border:1px solid var(--dsand);}
+.fname{font-weight:500;font-size:.87rem;color:var(--dark);margin-bottom:.1rem;}
+.frating{font-size:.7rem;color:var(--clay);margin-bottom:.25rem;}
+.fdesc{font-size:.78rem;color:var(--muted);line-height:1.5;}
+.fphone{font-size:.72rem;color:var(--ocean);margin-top:.3rem;font-weight:500;}
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-top:1.5rem;}
+.card{background:var(--white);border-radius:12px;padding:1.2rem 1.4rem;border:1px solid var(--dsand);transition:transform .2s,box-shadow .2s;}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(28,24,20,.08);}
+.ce{font-size:1.4rem;margin-bottom:.5rem;}.cn{font-weight:500;font-size:.92rem;color:var(--dark);margin-bottom:.15rem;}.cs{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--clay);margin-bottom:.4rem;}.cd{font-size:.79rem;color:var(--muted);line-height:1.55;}.cp{font-size:.74rem;color:var(--ocean);margin-top:.5rem;font-weight:500;}
+.rt{width:100%;border-collapse:collapse;margin-top:1rem;font-size:.8rem;}
+.rt th{background:var(--docean);color:var(--white);padding:.55rem .9rem;text-align:left;font-weight:500;font-size:.7rem;letter-spacing:.05em;}
+.rt td{padding:.6rem .9rem;border-bottom:1px solid var(--dsand);vertical-align:top;color:var(--muted);}
+.rt tr:last-child td{border-bottom:none;}.rt td:first-child{color:var(--dark);font-weight:500;}.rt tr:hover td{background:#fafaf8;}
+.bg{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem;margin-top:1.5rem;}
+.bc{background:var(--white);border-radius:12px;padding:1.2rem 1.4rem;border:1px solid var(--dsand);}
+.bn{font-weight:500;font-size:.92rem;color:var(--docean);margin-bottom:.3rem;}
+.bdist{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--clay);margin-bottom:.35rem;}
+.bd{font-size:.79rem;color:var(--muted);line-height:1.55;}
+.rg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;}
+@media(max-width:640px){.rg{grid-template-columns:1fr;}}
+.rb{background:var(--white);border-radius:14px;padding:1.5rem;border:1px solid var(--dsand);}
+.rb h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--docean);margin-bottom:1rem;}
+.ri{padding:.7rem 0;border-bottom:1px dashed var(--dsand);}
+.ri:last-child{border-bottom:none;padding-bottom:0;}
+.rn{font-weight:500;font-size:.87rem;margin-bottom:.15rem;}
+.rd{font-size:.77rem;color:var(--muted);line-height:1.5;}
+.rp{font-size:.74rem;color:var(--ocean);font-weight:500;margin-top:.25rem;}
+.ws{background:var(--white);padding:3rem 1.5rem;}
+.ss{background:var(--sand);padding:3rem 1.5rem;}
+.ds{background:var(--docean);color:var(--white);padding:3rem 1.5rem;}
+.ds .st{color:var(--white);border-bottom-color:rgba(255,255,255,.15);}
+.ds .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);}
+.ds .cn{color:var(--white);}.ds .cd{color:rgba(253,250,247,.7);}
+.lbox{background:linear-gradient(135deg,#1a4a5c,#2d6a7f);border-radius:16px;padding:2rem;color:var(--white);margin-top:1.5rem;}
+.lbox h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;margin-bottom:1rem;}
+.lrule{background:rgba(255,255,255,.10);border-radius:10px;padding:.9rem 1.1rem;margin-bottom:.7rem;font-size:.83rem;color:rgba(253,250,247,.85);line-height:1.6;}
+.lrule strong{color:var(--clay);}
+.lwarn{background:rgba(196,145,106,.2);border:1px solid rgba(196,145,106,.4);border-radius:10px;padding:.9rem 1.1rem;margin-top:1rem;font-size:.81rem;color:rgba(253,250,247,.9);}
+.biolum{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:12px;padding:1.2rem;color:white;margin-top:.75rem;}
+.biolum h4{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:300;margin-bottom:.4rem;color:#93c5fd;}
+.biolum p{font-size:.81rem;color:rgba(255,255,255,.75);line-height:1.6;}
+.sh3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--docean);margin:1.75rem 0 .75rem;}
+
+.ftabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.ftab{padding:.5rem 1.1rem;border-radius:100px;border:1px solid var(--dsand);background:transparent;color:var(--muted);font-size:.8rem;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.ftab:hover,.ftab.active{background:var(--docean);border-color:var(--docean);color:var(--white);}
+.ftab-content{display:none;}
+.ftab-content.active{display:block;}
+.rcg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:.75rem;}
+.rcard{background:var(--white);border-radius:12px;padding:1.1rem 1.3rem;border:1px solid var(--dsand);transition:transform .2s,box-shadow .2s;}
+.rcard:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(28,24,20,.08);}
+.rcard.vc-vegan{border-left:3px solid #4ade80;}
+.rcard.vc-veg{border-left:3px solid #86efac;}
+.rcard-head{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-bottom:.2rem;flex-wrap:wrap;}
+.rcard-name{font-weight:500;font-size:.93rem;color:var(--dark);}
+.rcard-stars{font-size:.7rem;color:var(--clay);flex-shrink:0;}
+.rcard-loc{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--clay);margin-bottom:.5rem;}
+.rcard-body{font-size:.8rem;color:var(--muted);line-height:1.55;margin-bottom:.4rem;}
+.rcard-tags{margin-top:.3rem;}
+.rcard-phone{font-size:.73rem;color:var(--ocean);font-weight:500;margin-top:.4rem;}
+
+.ntabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.ntab{padding:.5rem 1.1rem;border-radius:100px;border:1px solid var(--dsand);background:transparent;color:var(--muted);font-size:.8rem;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.ntab:hover,.ntab.active{background:var(--docean);border-color:var(--docean);color:var(--white);}
+.ntab-content{display:none;}
+.ntab-content.active{display:block;}
+.ncg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:.75rem;}
+.ncard{background:var(--white);border-radius:12px;padding:1.1rem 1.3rem;border:1px solid var(--dsand);transition:transform .2s,box-shadow .2s;display:flex;gap:.85rem;align-items:flex-start;}
+.ncard:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(28,24,20,.08);}
+.ncard-hero{grid-column:1/-1;background:linear-gradient(135deg,#f0fdf4,var(--white));border-color:#bbf7d0;border-width:1.5px;}
+.ncard-emoji{font-size:2rem;flex-shrink:0;margin-top:.2rem;}
+.ncard-info{flex:1;}
+.ncard-name{font-weight:500;font-size:.95rem;color:var(--dark);margin-bottom:.2rem;line-height:1.3;}
+.ncard-sub{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--clay);margin-bottom:.45rem;}
+.ncard-body{font-size:.8rem;color:var(--muted);line-height:1.6;margin-bottom:.45rem;}
+.ncard-tags{margin-bottom:.4rem;}
+.ncard-dist{font-size:.74rem;color:var(--ocean);font-weight:500;margin-top:.3rem;}
+
+
+footer{text-align:center;padding:2rem;font-size:.77rem;color:var(--muted);background:var(--dsand);}
+footer em{font-family:'Playfair Display',serif;font-style:italic;}
+@media(max-width:600px){.dh{padding:1.2rem;gap:1rem;}.db{padding:0 1.2rem 1.5rem;}.stop{grid-template-columns:56px 1fr;}.hero{padding:3rem 1.2rem 4rem;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="hbg"></div>
+<div class="heyebrow">Chennai ✈ Dabolim → South Goa &nbsp;·&nbsp; The Bay Agonda &nbsp;·&nbsp; Family of 3</div>
+<h1>5 Days of<br><em>Quiet &amp; Wonder</em><br>in South Goa</h1>
+<div class="hsub">
+<span>2 Adults · 1 Kid</span><span>The Bay Agonda Resort</span><span>Veg · Non-veg · Cocktails</span><span>Dolphins · Surf · Bioluminescence</span>
+</div>
+<div class="hbadge">🏡 The Bay Agonda &nbsp;·&nbsp; 📞 +91 86003 13111 &nbsp;·&nbsp; Treetop Tava restaurant on-site</div>
+<div class="wdeco"></div>
+</header>
+
+<nav class="nav">
+<a href="#days"     class="np">📅 Itinerary</a>
+<a href="#beaches"  class="np">🏖️ Beaches</a>
+<a href="#food"     class="np">🍽️ All Restaurants</a>
+<a href="#sea"      class="np">🐬 Activities</a>
+<a href="#rentals"  class="np">🛵 Rentals</a>
+<a href="#shopping" class="np">🛍️ Shopping</a>
+<a href="#nature"   class="np">🌿 Nature Guide</a>
+<a href="#liquor"   class="np">🍾 Liquor Guide</a>
+<a href="#tips"     class="np">💡 Tips</a>
+</nav>
+
+<div class="istrip">
+<div class="igrid">
+<div class="istat"><div class="num">5</div><div class="lbl">Days</div></div>
+<div class="istat"><div class="num">10+</div><div class="lbl">Beaches</div></div>
+<div class="istat"><div class="num">30+</div><div class="lbl">Restaurants</div></div>
+<div class="istat"><div class="num">3</div><div class="lbl">Surf Schools</div></div>
+<div class="istat"><div class="num">1</div><div class="lbl">Silent Disco</div></div>
+<div class="istat"><div class="num">10+</div><div class="lbl">Nature Spots</div></div>
+<div class="istat"><div class="num">0</div><div class="lbl">Tourist Buses</div></div>
+</div>
+</div>
+
+<div style="background:#fff9f0;border-bottom:1px solid var(--dsand);padding:1rem 1.5rem;text-align:center;">
+<div style="max-width:980px;margin:0 auto;font-size:.85rem;color:var(--terra);">
+✈️ <strong>Flight lands 2:30 PM at Dabolim (GOI)</strong> · Clear by ~3:15 PM · Lunch near airport before driving south &nbsp;·&nbsp;
+🏡 <strong>Base: The Bay Agonda</strong> · 📞 +91 86003 13111 &nbsp;·&nbsp;
+🚗 Hire driver ₹3–4k/day or self-drive · Rental contacts below
+</div>
+</div>
+
+<!-- ═══ ITINERARY ═══ -->
+<section id="days" class="sw">
+<h2 class="st">📅 Day-by-Day Itinerary</h2>
+
+<!-- ── DAY 1 ── -->
+<div class="dc open">
+<div class="dh" onclick="toggleDay(this)">
+<div class="dn">1</div>
+<div class="dtw"><div class="dtag">Land · Airport Lunch · Drive to Agonda</div>
+<div class="dtitle">Arrive, Lunch at Arossim & First Night at The Bay</div></div>
+<div class="dtog">▾</div>
+</div>
+<div class="db">
+<div class="dnarr">"Your first Goa meal should be exceptional, not airport-adjacent mediocre. Arossim is 15 minutes south — worth every minute."</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">~3:15 PM</div><div class="si ib">✈️</div></div>
+<div>
+<div class="sn">Land & Clear Dabolim Airport</div>
+<div class="sl">Dabolim (GOI) · Collect bags · Meet driver or pick up rental car</div>
+<div class="sno">Flight lands 2:30 PM, realistically out by 3:00–3:15 PM. Head straight to Arossim Beach Road — 15 min drive south. Do NOT eat at the airport.</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">3:30 PM</div><div class="si if">🍽️</div></div>
+<div>
+<div class="sn">🏆 Lunch — Bonita or Mama Miso, Arossim</div>
+<div class="sl">Arossim Beach Road, Cansaulim · 15 min from airport</div>
+<div class="sno">Two of the best restaurants near Dabolim, side by side on the same road. Pick one.</div>
+<div class="fbox">
+<div class="fbox-title">Choose Your First Goa Meal</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">🌟 Bonita</div>
+<div class="frating">⭐ 4.8 · 2,551 reviews · Open noon–11 PM</div>
+<div class="fdesc">Elegant bistro with beautiful interiors. Dirty Martini Grilled Prawns, Calamari Fritos, Chicken Confit, Oink Pizza (add hot honey — 10/10). Wild Mushroom Soup + Mushroom Pâté for veg. Cadillac cocktail is the house signature. Valet parking. "An absolute gem."</div>
+<div class="fphone">📞 +91 74100 42991</div>
+</div>
+<div class="fitem">
+<div class="fname">🍣 Mama Miso</div>
+<div class="frating">⭐ 4.8 · 3,897 reviews · Open noon–11 PM</div>
+<div class="fdesc">Pan-Asian inside Heritage Village Resort. Veg sushi boats, veg tempura with creamy dipping sauce, tofu ramen bowl (exceptional), mango boba. Reviewers from Vancouver say it tastes as authentic as Japan. Stunning calm interior.</div>
+<div class="fphone">📞 +91 91751 89149</div>
+</div>
+</div>
+<div style="margin-top:.6rem;font-size:.78rem;color:var(--muted);">⚡ <strong>If you want fastest option:</strong> Filomena's Kitchen, Bogmalo (⭐4.4, 10 min from airport, no detour needed). Kadai paneer, xacuti mushroom, calamari recheado. 📞 +91 95112 61312</div>
+</div>
+<span class="tag to">Best First Meal in Goa</span><span class="tag tb">15 min from airport</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">5:30 PM</div><div class="si ib">🏖️</div></div>
+<div>
+<div class="sn">Brief Stop — Hollant Beach (Optional)</div>
+<div class="sl">En route south · 10 min detour</div>
+<div class="sno">Quiet shallow beach for a leg-stretch. Also find SAHASEA Watersports here — book kayaking or bioluminescence sessions. Skip if you're tired and want to get to Agonda directly.</div>
+<div class="stip">📞 SAHASEA: +91 86693 94907</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">6:30 PM</div><div class="si ib">🏡</div></div>
+<div>
+<div class="sn">Check In — The Bay Agonda Resort</div>
+<div class="sl">Agonda · ⭐ 4.6 · 1,195 reviews · 📞 +91 86003 13111</div>
+<div class="sno">Beachfront, quiet north end of Agonda. Sea-facing rooms open directly to the beach. Staff are warm — ask for <strong>Johnny Bhai</strong> for local tips. Rooms have great AC, no mosquitoes. Walk the beach at golden hour — sets the tone beautifully.</div>
+<div class="stip">💡 Ask for a sea-facing room. Tell staff your plans — they arrange dolphin trips, surfing, horse riding and cabs.</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">7:30 PM</div><div class="si if">🌳</div></div>
+<div>
+<div class="sn">Sort Vehicle Rental & Dinner</div>
+<div class="sl">Agonda</div>
+<div class="sno">WhatsApp Teju (scooter, Agonda) or Nanu (car) so you're mobile from tomorrow morning. Then dinner at Treetop Tava — no need to go anywhere tonight.</div>
+<div class="fbox">
+<div class="fbox-title">🍽️ Dinner Options — Night 1</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">🌳 Treetop Tava (The Bay) — ON-SITE</div>
+<div class="frating">⭐ 4.6 · 1,543 reviews · 8:30 AM–10:30 PM</div>
+<div class="fdesc">Your own resort restaurant is genuinely one of Agonda's best. Stunning backwater + beach view. People sit for 5 hours without noticing. Indian, Goan, Continental. Great lobster, fresh fish, paneer dishes. Zero travel effort after a flight — perfect Night 1.</div>
+</div>
+<div class="fitem">
+<div class="fname">🌊 Kamaya at Serenity Resort</div>
+<div class="frating">⭐ 4.8 · 610 reviews · Beach tables</div>
+<div class="fdesc">Candle-lit tables on the sand. Pre-order lobster (they cook it to perfection). Great pasta, Goan seafood, Greek salad. Occasional live music. Staff described as "exceptional." 10 min walk from The Bay.</div>
+</div>
+</div>
+</div>
+<div class="stip">📞 Teju (scooter): +91 97646 32421 &nbsp;|&nbsp; Nanu (car): +91 70666 04097</div>
+</div>
+</div>
+
+</div></div>
+
+<!-- ── DAY 2 ── -->
+<div class="dc">
+<div class="dh" onclick="toggleDay(this)">
+<div class="dn">2</div>
+<div class="dtw"><div class="dtag">Surf · Butterfly Beach · Palolem · Silent Disco</div>
+<div class="dtitle">Morning Waves, Butterfly Beach & Palolem Nights</div></div>
+<div class="dtog">▾</div>
+</div>
+<div class="db">
+<div class="dnarr">"Start in the waves right outside your door. Chase a butterfly-shaped cove through the jungle. End the night dancing in silence under stars."</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">7 AM</div><div class="si ia">🏄</div></div>
+<div>
+<div class="sn">Surfing Lesson — Agonda Beach</div>
+<div class="sl">Right outside The Bay Agonda</div>
+<div class="sno">Three world-class surf schools all rated 4.9–5★ on Agonda beach. Agonda is one of the better beginner beaches in South Goa.</div>
+<div class="sinfo">🏄 <strong>Mumu Surf School</strong> ⭐5.0 · 143 reviews — Best for kids (5.5-yr-old surfed here!). 📞 +91 97898 44191<br><br>🏄 <strong>Agonda Surf by Mithun</strong> ⭐5.0 · 133 reviews — All levels, hard-top boards. Father+8yr-old daughter did first lesson together. 📞 +91 80807 13302<br><br>🏄 <strong>Aloha Surf India</strong> ⭐4.9 · 108 reviews — Great instructors. 📞 +91 90226 05112</div>
+<span class="tag tg">Kids from age 5+</span><span class="tag tb">~₹1,500–2,000/session</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">9 AM</div><div class="si if">☕</div></div>
+<div>
+<div class="sn">Breakfast — Serena by the Sea or On the Rocks</div>
+<div class="sl">Agonda Beach Road</div>
+<div class="sno"><strong>Serena</strong> ⭐4.8 · 805 reviews — Most loved in Agonda, reviewers came every single day.<br><strong>On the Rocks</strong> ⭐4.8 · 539 reviews — Built on a rock with 20 carved stone steps. Mediterranean veg menu: ragi falafel, quinoa bowl, hummus nachos chaat. Open 11 AM.</div>
+<span class="tag tg">Veg Friendly</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">10:30 AM</div><div class="si ib">🦋</div></div>
+<div>
+<div class="sn">Butterfly Beach</div>
+<div class="sl">Between Agonda & Palolem · ⭐4.4 · 2,339 reviews</div>
+<div class="sno">Tiny Instagram-iconic crescent cove. Three ways to reach:<br>• <strong>Scooter + Trek</strong> — Save location offline, rough road, park ₹100, short rocky trek.<br>• <strong>Shared Jeep</strong> — From the village trailhead.<br>• <strong>Boat from Palolem</strong> — Combined with dolphins + Honeymoon Beach.</div>
+<div class="stip">⚠️ Save offline map — no signal on the road. Go before 10 AM for empty beach. Carry water — no shops at the beach.</div>
+<span class="tag to">Save Offline Map First</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">1 PM</div><div class="si ia">🚣</div></div>
+<div>
+<div class="sn">Agonda Backwaters Kayaking + Palolem Drive</div>
+<div class="sl">Agonda then Palolem</div>
+<div class="sno">Quick backwater kayak behind Agonda (calm, mangrove-lined, family-safe — ask The Bay front desk), then drive 20 min to Palolem for the afternoon.</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">3 PM</div><div class="si is">🛍️</div></div>
+<div>
+<div class="sn">Palolem Beach Walk + Market Shopping</div>
+<div class="sl">Palolem Beach Road</div>
+<div class="sno">South Goa's most scenic crescent beach. Walk it, then shop the beach road: silver jewellery, Goan cotton, spice kits, feni bottles. Bargain hard — start at 40% of asking. Sunset kayaking from the beach also available (just walk up to operators on the sand).</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">6 PM</div><div class="si if">🍽️</div></div>
+<div>
+<div class="sn">Dinner — Palolem & Colomb Area</div>
+<div class="sl">Colomb Bay / Palolem</div>
+<div class="fbox">
+<div class="fbox-title">🍽️ Dinner Options — Night 2 (Pick One)</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">🔝 Upper Deck Cafe</div>
+<div class="frating">⭐ 4.7 · 72 reviews · Enter from Colomb end</div>
+<div class="fdesc">Best views in Palolem — literally overhanging the sea. "Most magical spot." Fresh tandoor prawns, great cocktails, good veg options. Sunset table is essential. Open 8 AM–11 PM.</div>
+</div>
+<div class="fitem">
+<div class="fname">🌊 Kala Bahia</div>
+<div class="frating">⭐ 4.3 · 926 reviews · Colomb Bay cliff</div>
+<div class="fdesc">Mediterranean, Italian, cocktail bar. Mezze platter is "10/10." Pizza, calamari. NYE favourite of regulars. Stunning cliff views. Great cocktails.</div>
+<div class="fphone">📞 +91 97663 50744</div>
+</div>
+<div class="fitem">
+<div class="fname">🍕 Bella Kitchen & Bar</div>
+<div class="frating">⭐ 4.8 · 78 reviews · Open 2 PM–midnight</div>
+<div class="fdesc">Wood-fired pizza on Palolem beach road. Reviewers call it "best pizza in India." Diavola, boscaiola pizzas. Good wine list. Great for families.</div>
+</div>
+<div class="fitem">
+<div class="fname">🌿 The Mill Café</div>
+<div class="frating">⭐ 4.3 · 1,589 reviews · Closes 6 PM</div>
+<div class="fdesc">Go late afternoon before dinner. Ocean Blue Smoothie Bowl, smashed pea toast with hummus & feta, ceremonial cacao. Most aesthetic vegan café in Palolem.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">10 PM</div><div class="si inight">🎧</div></div>
+<div>
+<div class="sn">Palolem Silent Disco Night Club</div>
+<div class="sl">Palolem Beach · Neptune's Point area · Seasonal</div>
+<div class="sno">Iconic Palolem experience — everyone in wireless headphones on different DJ channels. From outside, it's dozens of people dancing in total silence. Hilarious and fun. Peak season Nov–Mar, ~10 PM onwards. Ask at Palolem beach on arrival for current location and night.</div>
+<span class="tag tp">Adults only after midnight · ~₹300–500 entry</span>
+</div>
+</div>
+
+</div></div>
+
+<!-- ── DAY 3 ── -->
+<div class="dc">
+<div class="dh" onclick="toggleDay(this)">
+<div class="dn">3</div>
+<div class="dtw"><div class="dtag">Netravali Waterfalls · Spice Farm · Galgibaga · Talpona Evening</div>
+<div class="dtitle">Jungle Waterfalls, Spice Farm & Goa's Last Wild Beach</div></div>
+<div class="dtog">▾</div>
+</div>
+<div class="db">
+<div class="dnarr">"Head deep into the jungle before the heat builds. Three waterfalls, a bubbling sacred lake, a legendary spice farm — and end at the most pristine beach in all of Goa."</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">7 AM</div><div class="si in">💧</div></div>
+<div>
+<div class="sn">Netravali Wildlife Sanctuary — Waterfall Trail</div>
+<div class="sl">Netravali · ~1 hour from Agonda · ⚠️ NO SIGNAL</div>
+<div class="sno">Do all stops in this order:<br><br>💧 <strong>Bhupar Waterfall</strong> — Road access, no trek, safe to swim. Best for kids.<br>💧 <strong>Bamanbudo Waterfall</strong> — Roadside between Bhupar and Savari. Quick stop, great photos.<br>💧 <strong>Savari Waterfall</strong> — 15–20 min trek. Most dramatic. Wear shoes.<br>🫧 <strong>Netravali Bubbling Lake</strong> — Sacred Krishna temple pond that mysteriously bubbles when you clap. Crystal clear water. Peaceful.</div>
+<div class="stip">⚠️ <strong>DOWNLOAD OFFLINE MAP TONIGHT.</strong> Zero signal in Netravali. Carry cash, water, snacks. Open 8:30 AM–4:30 PM.</div>
+<span class="tag tr">Download Offline Map Tonight!</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">11 AM</div><div class="si in">🌿</div></div>
+<div>
+<div class="sn">Tanshikar Spice Farm + Natural Swimming Pool + Veg Thali Lunch</div>
+<div class="sl">Netravali · ⭐4.7 · 791 reviews · 10 min from Savari</div>
+<div class="sno">Best spice farm in South Goa. Guided tour (cinnamon, cardamom, vanilla, cacao, bees) + fresh Goan veg thali lunch + natural swimming pool. Kids love it. Postcard Hideaway and Mangal Farmstay are two alternative lunch options in the same area.</div>
+<div class="stip">📞 Book ahead: +91 94211 84114. ~₹750/person incl. lunch.</div>
+<span class="tag to">Book Ahead</span><span class="tag tg">Veg Thali + Pool</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">3:30 PM</div><div class="si ib">🐢</div></div>
+<div>
+<div class="sn">Galgibaga Beach — Southernmost Beach of Goa</div>
+<div class="sl">Poingunin · ⭐4.6 · 648 reviews</div>
+<div class="sno">Most pristine, untouched beach in Goa. Zero shacks, hotels, vendors. Olive Ridley turtle nesting site. Extraordinary sunsets. Then head to Talpona (5 min away) for the evening.</div>
+<span class="tag tg">Most Pristine in Goa</span><span class="tag tp">Turtle Season Dec–Jan</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">6 PM</div><div class="si if">🌱</div></div>
+<div>
+<div class="sn">Sundowner & Dinner — Talpona Area</div>
+<div class="sl">Talpona Beach</div>
+<div class="fbox">
+<div class="fbox-title">🍽️ Dinner Options — Night 3</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">🌱 Zest at Talpona</div>
+<div class="frating">Talpona Beach · Great sea vibe evenings</div>
+<div class="fdesc">Sister café to Zest Agonda. Full veg/vegan menu, smoothies, direct sea view. Perfect sunset spot after Galgibaga. One of the most relaxed evening settings in South Goa.</div>
+</div>
+<div class="fitem">
+<div class="fname">🎸 Sage 'N' Salt</div>
+<div class="frating">⭐ 4.7 · 53 reviews · Rajbag Road, near Talpona</div>
+<div class="fdesc">Brilliant little restaurant with live music. Huge juicy prawns never overcooked. Kadhai is the best reviewers have had. A couple went 8–9 times in one trip. Great for coffee and drinks too.</div>
+<div class="fphone">📞 +91 70516 14119</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>
+
+<!-- ── DAY 4 ── -->
+<div class="dc">
+<div class="dh" onclick="toggleDay(this)">
+<div class="dn">4</div>
+<div class="dtw"><div class="dtag">Dolphins · Horse Riding · Kakolem · Cabo de Rama · Colomb Feast</div>
+<div class="dtitle">Dolphins at Dawn, Tiger Beach, Fort Ruins & Colomb Night</div></div>
+<div class="dtog">▾</div>
+</div>
+<div class="db">
+<div class="dnarr">"Dolphins in golden morning light. A beach with a waterfall you reach by jungle hike. A Portuguese fort on a cliff above the sea. End in Colomb — South Goa's best restaurant strip."</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">6:30 AM</div><div class="si ia">🐬</div></div>
+<div>
+<div class="sn">Dolphin Spotting + Butterfly & Honeymoon Beach Boat Trip</div>
+<div class="sl">Talpona Jetty or Palolem · Book the night before</div>
+<div class="sinfo">🚤 <strong>Sagar Boating Goa</strong> ⭐5.0 · 188 reviews — Private, eagle feeding, best operator in South Goa. 📞 +91 96731 68832<br><br>🚤 <strong>Dolphin Boat Trips Palolem</strong> ⭐4.9 · 231 reviews — Baby-safe, safety-first. Near Rajbag. 📞 +91 89992 56328<br><br>🚤 <strong>Parental Umbrage</strong> ⭐4.9 · 43 reviews — Great prices. Near Lalit/Rajbag. 📞 +91 98340 47217</div>
+<span class="tag to">Book the night before</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">9:30 AM</div><div class="si ia">🐎</div></div>
+<div>
+<div class="sn">Horse Riding — Agonda Beach</div>
+<div class="sl">Agonda Adventures (Padam) · ⭐4.9 · 237 reviews</div>
+<div class="sno">Swim with horses at sunset, beach rides, or jungle rides. Padam's horses are gentle and well-loved. Kids from 7+. Sunrise or sunset timing most magical.</div>
+<div class="stip">📞 +91 89754 12667. Book a day ahead.</div>
+<span class="tag tg">Kids from 7+</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">11:30 AM</div><div class="si ib">🌊</div></div>
+<div>
+<div class="sn">Kakolem Beach (Tiger Beach) + Waterfall</div>
+<div class="sl">Canacona · On the way to Cabo de Rama</div>
+<div class="sno">10-minute jungle hike. Pristine beach with a waterfall flowing onto the sand. Zero crowd. Wear shoes. Don't swim — just stand in the waterfall spray.</div>
+<span class="tag tb">Waterfall on Beach</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">1 PM</div><div class="si ic">🏰</div></div>
+<div>
+<div class="sn">Cabo de Rama — Fort + Beach + Cave + Kayaking</div>
+<div class="sl">Canaguinim · ⭐4.4 · 16,300+ reviews · Free entry</div>
+<div class="sno">🏰 <strong>The Fort</strong> — Ruined Portuguese battlements, 180° sea view, small church inside.<br>🌊 <strong>Cabo de Rama Beach</strong> — Hike down from the fort, kayaking in backwaters.<br>🪨 <strong>Pebbles Beach</strong> — Trek from the fort, unique pebble shoreline.<br>🌊 <strong>Cabo de Rama Cave</strong> ⭐4.7 — 15 min walk, crystal-blue cove. Best at sunset.</div>
+<div class="stip">💡 Be at the cave/fort for sunset (5–6 PM). Extraordinary light.</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">4:30 PM</div><div class="si if">🍽️</div></div>
+<div>
+<div class="sn">Late Lunch at Cabo de Rama</div>
+<div class="sl">Cliff-top restaurants with ocean views</div>
+<div class="fbox">
+<div class="fbox-title">🍽️ Cabo de Rama Restaurants (All Have Veg Options)</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">⭐ The Cape Goa</div>
+<div class="frating">⭐ 4.7 · 12,918 reviews · Open 24 hrs</div>
+<div class="fdesc">Every table floats above the Arabian Sea. Butter sauté mushroom, palak paneer, garlic bread, mocktails (best veg options). Exceptional service — ask for Anil. Most popular restaurant in the area.</div>
+<div class="fphone">📞 +91 99889 03111</div>
+</div>
+<div class="fitem">
+<div class="fname">🌊 Obrigado by Craftels</div>
+<div class="frating">⭐ 4.7 · 1,011 reviews · Open 24 hrs</div>
+<div class="fdesc">Boutique eco-resort restaurant on the cliffs. Cave-style décor, sea-facing jacuzzi. Fresh, outstanding food. More intimate and romantic. Good veg options.</div>
+<div class="fphone">📞 +91 92260 81241</div>
+</div>
+<div class="fitem">
+<div class="fname">🦀 Red Crab Eco Resort</div>
+<div class="frating">⭐ 4.4 · 206 reviews · Cliff-top</div>
+<div class="fdesc">Serenity and romance with breathtaking uninterrupted sea views. Staff praised for warmth. Good seafood and Goan food. Shanker and Nanda are excellent hosts.</div>
+<div class="fphone">📞 +91 84599 31645</div>
+</div>
+<div class="fitem">
+<div class="fname">💡 Pro Tip</div>
+<div class="frating">All three are within 5 min of the fort</div>
+<div class="fdesc">The Cape Goa is the safest choice for best food + veg options. Obrigado for most romantic. Red Crab for the most secluded feeling. All have great sunset views from the cliff.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">8:30 PM</div><div class="si if">🌿</div></div>
+<div>
+<div class="sn">Dinner — Colomb Bay (The Best Restaurant Strip in South Goa)</div>
+<div class="sl">Colomb area between Palolem & Patnem</div>
+<div class="fbox">
+<div class="fbox-title">🍽️ Colomb Dinner Options — Night 4</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">🌱 Cantine Indienne</div>
+<div class="frating">⭐ 4.7 · 470 reviews · Vegan canteen</div>
+<div class="fdesc">Tanjore roots. Pesarattu dosa, adai, pumpkin masala dosa, smoky mushroom noodles, kokum drink, coconut filter coffee. Live music Thursdays. Regulars go 4x/week. The best pure veg option in Colomb.</div>
+<div class="fphone">📞 +91 87678 91557</div>
+</div>
+<div class="fitem">
+<div class="fname">🏔️ Pahadi Roots</div>
+<div class="frating">⭐ 4.8 · 309 reviews · North Indian</div>
+<div class="fdesc">Best North Indian in South Goa. Pahadi dham dish, live kirtans, open mic nights. Chocolate orange torte is legendary. Warm host Meddy, 2 resident dogs. Great cocktails.</div>
+</div>
+<div class="fitem">
+<div class="fname">🇮🇹 La Fetta</div>
+<div class="frating">⭐ 4.6 · 1,441 reviews · Colomb/Patnem</div>
+<div class="fdesc">Authentic Italian. Tortellini, bruschetta, wood-fired pizza (order half-and-half two flavours). Legendary cheesecake. Live music Fridays. Closed Tuesdays. Book ahead on weekends.</div>
+<div class="fphone">📞 +91 96041 82207</div>
+</div>
+<div class="fitem">
+<div class="fname">🍸 Ourem 88</div>
+<div class="frating">⭐ 4.7 · 289 reviews · European</div>
+<div class="fdesc">British-run hidden gem near Palolem. Reviewers say "one of the best meals of my life." Pork ribs, sea bass, calamari stuffed with Goan sausages. Great cheesecake. Must book in advance — tiny restaurant.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div></div>
+
+<!-- ── DAY 5 ── -->
+<div class="dc">
+<div class="dh" onclick="toggleDay(this)">
+<div class="dn">5</div>
+<div class="dtw"><div class="dtag">Temple · Cola Beach · Feni · Patnem Dining · Bioluminescence</div>
+<div class="dtitle">Sacred Temple, Cola Lagoon, Feni & Glowing Water</div></div>
+<div class="dtog">▾</div>
+</div>
+<div class="db">
+<div class="dnarr">"A 2,500-year-old hilltop temple at sunrise. The freshwater lagoon of Cola. The finest feni in Goa. And — if the moon cooperates — a river that glows electric blue at night."</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">6:30 AM</div><div class="si ic">⛩️</div></div>
+<div>
+<div class="sn">Chandreshwar Bhootnath Temple — Paroda Hill</div>
+<div class="sl">Paroda, Quepem · ⭐4.7 · 1,485 reviews · 45 min from Agonda</div>
+<div class="sno">2,500-year-old Shiva temple on Chandranath Hill. Sweeping sunrise view over South Goa's forests. Almost zero tourists. Morning puja is deeply peaceful. Short drive up through a grand gate, small walk to the temple.</div>
+<div class="stip">💡 Bring a shawl — cool at dawn. Don't carry open food — monkeys! 45 min drive via Quepem road.</div>
+<span class="tag tp">2,500 Year Old Temple · Zero Crowds</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">9 AM</div><div class="si ib">🏊</div></div>
+<div>
+<div class="sn">Cola Beach — Freshwater Lagoon Kayaking</div>
+<div class="sl">Kola, Canacona · ⭐4.6 · 11,900+ reviews</div>
+<div class="sno">Freshwater lagoon where a river meets the Arabian Sea — unique in India. Walk 1.5 km trail from parking or shared jeep (₹100). Kayaking in the calm lagoon (₹800/hr). Sea-side swimming restricted but lagoon is magical and safe for kids.</div>
+<div class="stip">💡 Go before 9:30 AM. Download offline map the night before — road is rough and narrow.</div>
+<span class="tag tb">Lagoon Kayaking · Instagram Iconic</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">12 PM</div><div class="si if">🌺</div></div>
+<div>
+<div class="sn">Lunch — Patnem Area</div>
+<div class="sl">Patnem Beach</div>
+<div class="fbox">
+<div class="fbox-title">🍽️ Lunch Options — Day 5</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">🌺 Casa Jaali</div>
+<div class="frating">⭐ 4.6 · 929 reviews · North end Patnem</div>
+<div class="fdesc">Beachfront, Spanish-style. One of the loveliest dining spots in South Goa. French toast, North Indian, fresh juices, iced coffee. Open-mic on weekends. Access by 2-wheeler, park 100m away.</div>
+<div class="fphone">📞 +91 93095 91796</div>
+</div>
+<div class="fitem">
+<div class="fname">🌿 Bibhitaki Vegan Café</div>
+<div class="frating">⭐ 4.6 · 1,839 reviews · Colomb/Patnem Road</div>
+<div class="fdesc">Rainbow Quinoa Bowl, Hawaiian Burger, almond milk hot chocolate. Pure vegan, AC + courtyard. Family-friendly and consistently excellent.</div>
+<div class="fphone">📞 +91 87678 91557</div>
+</div>
+<div class="fitem">
+<div class="fname">🐟 Elite Palolem Restaurant</div>
+<div class="frating">⭐ 4.8 · 366 reviews · Palolem</div>
+<div class="fdesc">Best seafood in the area. Crab, rava fish fry, lobster, rava pomfret. Ask for Akash — exceptional service. Came back two days in a row, reviewers report. Sea view setting on Palolem beach.</div>
+<div class="fphone">📞 +91 77097 70458</div>
+</div>
+<div class="fitem">
+<div class="fname">🍜 Mr. Singh Goa</div>
+<div class="frating">⭐ 4.7 · 2,058 reviews · Palolem</div>
+<div class="fdesc">King fish thali, mackerel rawa fry, prawn golden fry, chicken vindaloo, tuna salad. Bebinca for dessert. Great veg options including dal makhani. Staff very friendly.</div>
+<div class="fphone">📞 +91 98220 59709</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">2:30 PM</div><div class="si id">🥃</div></div>
+<div>
+<div class="sn">Cazulo Premium Feni — Floating Feni Experience</div>
+<div class="sl">Cuelim, near Dabolim · ⭐4.8 · 136 reviews</div>
+<div class="sno">THE feni experience. Host Tyson's storytelling + cocktail pairing + lush farm. ~2 hrs. Ask for travel-sealed packaging for bottles to fly back to TN.</div>
+<div class="stip">💡 Book online 3–4 days ahead. On your return route toward Agonda.</div>
+<span class="tag to">Book in Advance</span><span class="tag tr">GI-Tagged Feni</span>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">6 PM</div><div class="si if">🍽️</div></div>
+<div>
+<div class="sn">Dinner — Palolem Area: Best of the Best</div>
+<div class="sl">Palolem / Colomb</div>
+<div class="fbox">
+<div class="fbox-title">🍽️ Dinner Options — Night 5 (Your Last Goa Dinner — Make It Count)</div>
+<div class="frow">
+<div class="fitem">
+<div class="fname">⭐ Ourem 88</div>
+<div class="frating">⭐ 4.7 · 289 reviews · Must Book Ahead</div>
+<div class="fdesc">If you haven't been yet — go tonight. British-run. "One of the best meals of my life." Pork ribs, kingfish with apple chutney, sea bass. The cheesecake alone is worth the trip. Tiny place — <strong>reservations essential.</strong></div>
+</div>
+<div class="fitem">
+<div class="fname">🍽️ The Singh Family Restaurant</div>
+<div class="frating">⭐ 4.7 · 8,104 reviews · Palolem Main St</div>
+<div class="fdesc">Best for a big family feast. Dal makhani, butter chicken, special veg thali, fish thali, live music, vibrant atmosphere. Enormous menu, reliable, open 8 AM–11:45 PM. Perfect if Ourem 88 is full.</div>
+<div class="fphone">📞 +91 95452 90888</div>
+</div>
+<div class="fitem">
+<div class="fname">🌿 Cafe Barefoot</div>
+<div class="frating">⭐ 4.9 · 38 reviews · Near Palolem</div>
+<div class="fdesc">100% veg hidden gem. 4.9 stars. Adai Dosa with Tamil heritage story (chef explains it!). Mumbai street sandwich, Belgian waffle. Mountain view. Open 11 AM–11 PM. Perfect farewell dinner for a Chennai family.</div>
+</div>
+<div class="fitem">
+<div class="fname">🍹 Bobby's Bar (After Dinner)</div>
+<div class="frating">⭐ 4.9 · 191 reviews · Agonda · 6 PM–1 AM</div>
+<div class="fdesc">Best bar in Agonda. Bobby and Gagan make curated cocktails based on your mood — ask and they craft something personal. Rustic vintage bar, very community feel. Best 6–10 PM for families.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="stop">
+<div class="stime"><div class="tt">9:30 PM</div><div class="si inight">✨</div></div>
+<div>
+<div class="sn">Bioluminescence Night Kayaking (If Dark Moon)</div>
+<div class="sl">Talpona / Galgibaga backwaters</div>
+<div class="biolum">
+<h4>🌙 Bioluminescence — What You Need to Know</h4>
+<p>The Talpona and Galgibaga rivers glow electric blue on dark moon nights — every paddle stroke and splash lights up. Best in <strong>Oct–Nov</strong>, sometimes <strong>Jan–Feb</strong>. Only on <strong>new/dark moon nights</strong>. Check moon calendar before travel and schedule this on your darkest night.<br><br>
+📞 <strong>SAHASEA</strong>: +91 86693 94907 &nbsp;|&nbsp; <strong>Prashant Kayaking (Talpona)</strong>: +91 79727 83898 &nbsp;|&nbsp; ~₹1,000–1,500/person</p>
+</div>
+<span class="tag tp">New Moon Nights Only · Check Calendar</span>
+</div>
+</div>
+
+</div></div>
+</section>
+
+<!-- ═══ BEACHES ═══ -->
+<section id="beaches" class="ws">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">🏖️ South Goa Beaches — Complete Guide</h2>
+<div class="bg">
+<div class="bc"><div class="bn">🏖️ Agonda — Your Base</div><div class="bdist">0 min · Lifeguards · Calm waves</div><div class="bd">Long clean beach. Safe swimming. Quiet — no party culture. Great restaurants. Backwater kayaking, horse riding, surfing. Loved by foreigners for its vibe.</div><span class="tag tg">Swim Safe · Surf · Horses</span></div>
+<div class="bc"><div class="bn">🦋 Butterfly Beach</div><div class="bdist">~25 min · Instagram famous</div><div class="bd">Tiny crescent cove. Trek, jeep, or boat from Palolem. Save offline map — rough road, no signal. Good swimming inside the cove. Before 10 AM for empty beach.</div><span class="tag to">Save Offline Map</span></div>
+<div class="bc"><div class="bn">🌊 Palolem</div><div class="bdist">~20 min · Most popular</div><div class="bd">Scenic crescent bay. Safe swimming. Sunset kayaking, dolphin boats. Best shopping road. Silent disco nights. Best restaurant scene in South Goa.</div><span class="tag tg">Swim Safe · Shopping</span></div>
+<div class="bc"><div class="bn">🌿 Colomb Bay</div><div class="bdist">Between Palolem & Patnem</div><div class="bd">Horseshoe-shaped quiet bay. Best restaurant cluster. Upper Deck, Kala Bahia, Cantine Indienne, Pahadi Roots, La Fetta. Bohemian vibe. Not a swimming beach.</div><span class="tag tp">Best Restaurants</span></div>
+<div class="bc"><div class="bn">🏊 Patnem</div><div class="bdist">~22 min · Quieter than Palolem</div><div class="bd">Good for a swim. Less crowded. Casa Jaali at north end is one of South Goa's best dining spots. Open-mic on weekends. Family friendly.</div><span class="tag tg">Swim Safe</span></div>
+<div class="bc"><div class="bn">💧 Cola Beach</div><div class="bdist">~30 min · Freshwater lagoon</div><div class="bd">Freshwater lagoon meets the sea — unique in India. Famous kayaking. No sea swimming (currents). Park at top, trek or jeep down. Go early.</div><span class="tag tb">Lagoon Kayaking</span></div>
+<div class="bc"><div class="bn">🌊 Kakolem (Tiger Beach)</div><div class="bdist">~35 min · On way to Cabo</div><div class="bd">10-min jungle hike. Waterfall on the sand. Pristine, almost zero people. No swimming. Wear shoes. Before 5 PM for safe return.</div><span class="tag tb">Waterfall on Beach</span></div>
+<div class="bc"><div class="bn">🏰 Cabo de Rama</div><div class="bdist">~40 min · Fort + Beach + Cave</div><div class="bd">Beach below fort (hike down). Backwaters with kayaking. Pebbles Beach trek. Cave viewpoint for sunset. Three cliff-top restaurants.</div><span class="tag tg">Fort + Cave + Kayaking</span></div>
+<div class="bc"><div class="bn">🌴 Talpona</div><div class="bdist">~30 min south</div><div class="bd">Long, beautiful, very few people. Zest cafe for evening drinks and sunsets. Good for strolls. Lifeguard on duty.</div><span class="tag tg">Zest Cafe Evenings</span></div>
+<div class="bc"><div class="bn">🐢 Galgibaga</div><div class="bdist">~40 min south · Southernmost</div><div class="bd">Most pristine beach in Goa. Zero shacks, vendors, hotels. Olive Ridley turtle nesting site (Dec–Jan). Pure nature. Extraordinary sunsets.</div><span class="tag tg">Most Pristine in Goa</span></div>
+</div>
+</div>
+</section>
+
+<!-- ═══ FOOD GUIDE ═══ -->
+<section id="food" class="ss">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">🍽️ Complete Restaurant & Café Guide</h2>
+<p style="color:var(--muted);font-size:.87rem;margin-bottom:2rem;">Organised into four categories — scroll to what works for you today.</p>
+
+<!-- TABS -->
+<div class="ftabs">
+  <button class="ftab active" onclick="showTab(this,'tab-nonveg')">🦐 Non-Veg & Seafood</button>
+  <button class="ftab" onclick="showTab(this,'tab-veg')">🌿 Vegetarian (with Non-Veg Option)</button>
+  <button class="ftab" onclick="showTab(this,'tab-pureveg')">🥗 Pure Veg & Vegan Only</button>
+  <button class="ftab" onclick="showTab(this,'tab-cafes')">☕ Cafés</button>
+</div>
+
+<!-- ──── NON-VEG & SEAFOOD ──── -->
+<div id="tab-nonveg" class="ftab-content active">
+<p style="color:var(--muted);font-size:.83rem;margin-bottom:1.2rem;">All restaurants below serve great non-veg and also have solid vegetarian options.</p>
+
+<h3 class="sh3">✈️ Near Airport — Day 1 Lunch</h3>
+<div class="rcg">
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌟 Bonita</span><span class="rcard-stars">⭐ 4.8 · 2,551 reviews</span></div><div class="rcard-loc">Arossim Beach Rd, Cansaulim · 15 min from airport · Noon–11 PM</div><div class="rcard-body">European bistro with beautiful interiors. Valet parking. Dirty Martini Grilled Prawns, Calamari Fritos, Chicken Confit, Oink Pizza with hot honey. Wild Mushroom Soup + Mushroom Pâté for veg. Cadillac cocktail is the house signature.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tb">Cocktails</span></div><div class="rcard-phone">📞 +91 74100 42991</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍣 Mama Miso</span><span class="rcard-stars">⭐ 4.8 · 3,897 reviews</span></div><div class="rcard-loc">Arossim Beach Rd · 15 min from airport · Noon–11 PM</div><div class="rcard-body">Pan-Asian inside Heritage Village Resort. Veg + non-veg sushi, crispy lamb, chilli chicken, tofu ramen bowl. Reviewers from Vancouver say the veg sushi is as authentic as Japan.</div><div class="rcard-tags"><span class="tag tg">Full Veg Sushi Menu</span><span class="tag tb">Pan-Asian</span></div><div class="rcard-phone">📞 +91 91751 89149</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍳 Filomena's Kitchen</span><span class="rcard-stars">⭐ 4.4 · 647 reviews</span></div><div class="rcard-loc">Bogmalo Road · 10 min from airport · 11 AM–11 PM</div><div class="rcard-body">Fastest airport option. Calamari recheado, xacuti mushroom, Goan pulao, kadai paneer, sausage chilli fry. Warm staff, generous portions.</div><div class="rcard-tags"><span class="tag tg">Veg Options Available</span></div><div class="rcard-phone">📞 +91 95112 61312</div></div>
+</div>
+
+<h3 class="sh3">🏖️ Agonda</h3>
+<div class="rcg">
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌳 Treetop Tava (The Bay)</span><span class="rcard-stars">⭐ 4.6 · 1,544 reviews</span></div><div class="rcard-loc">On-site at The Bay Agonda · 8:30 AM–10:30 PM</div><div class="rcard-body">Your resort restaurant and genuinely one of the best in Agonda. Chicken Stroganoff Steak, lobster, Goan fish curries. Great paneer dishes, Indian mains for veg. Stunning backwater + beach view — people sit for 5 hours. Staff remembered guests across visits.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tb">Best View</span></div><div class="rcard-phone">📞 +91 77962 63782</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🕯️ Kamaya at Serenity Resort</span><span class="rcard-stars">⭐ 4.8 · 610 reviews</span></div><div class="rcard-loc">Agonda Beach · All day</div><div class="rcard-body">Candle-lit tables on the sand. Pre-order lobster — cooked to perfection. Great pasta, seafood, Greek salad. Occasional live music. Staff exceptional — "made our anniversary unforgettable."</div><div class="rcard-tags"><span class="tag tg">Veg Options</span><span class="tag tp">Special Occasions</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌊 Sea Breeze</span><span class="rcard-stars">⭐ 4.8 · 574 reviews</span></div><div class="rcard-loc">Agonda Beach Rd · 8:30 AM–10 PM</div><div class="rcard-body">Consistently outstanding for 10+ years. Pomfret, lobster, Goan seafood. Paneer tikka masala, aubergine masala, chef's special for veg. Beach shack vibe with restaurant quality. Sharma the waiter — ask for him.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tb">10 Years Strong</span></div><div class="rcard-phone">📞 +91 77983 82264</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌅 Goa Sunset Restaurant</span><span class="rcard-stars">⭐ 4.8 · 244 reviews</span></div><div class="rcard-loc">Agonda Beach front · 8:30 AM–10:30 PM</div><div class="rcard-body">Seafront on Agonda beach, right by the waves. Reviewers from Melbourne say it matches any restaurant back home. Great cocktails, fresh seafood, full menu. Reviewers came every day of their stay.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">Seafront</span></div><div class="rcard-phone">📞 +91 79060 48646</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌊 Serena by the Sea</span><span class="rcard-stars">⭐ 4.8 · 805 reviews</span></div><div class="rcard-loc">Agonda Beach Rd · 8:30 AM–10:30 PM</div><div class="rcard-body">Most-loved all-day shack in Agonda. Reviewers ate here every single day. Breakfast through dinner, consistently excellent — Goan fish, chicken, grills, and great veg dishes.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span></div></div>
+</div>
+
+<h3 class="sh3">🌊 Palolem & Colomb</h3>
+<div class="rcg">
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🐟 Elite Palolem Restaurant</span><span class="rcard-stars">⭐ 4.8 · 366 reviews</span></div><div class="rcard-loc">Ourem Rd, Palolem · 8 AM–11 PM</div><div class="rcard-body">Best seafood in Palolem. Crab, lobster, rava pomfret, Indian shark, rava fish fry. Reviewers came back two days running. Ask for Akash — exceptional server. Sea view on Palolem beach.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tr">Seafood Specialist</span></div><div class="rcard-phone">📞 +91 77097 70458</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍜 Mr. Singh Goa</span><span class="rcard-stars">⭐ 4.7 · 2,058 reviews</span></div><div class="rcard-loc">Ourem Rd, Palolem · 8 AM–11:30 PM</div><div class="rcard-body">King fish thali, mackerel rawa fry, prawn golden fry, chicken vindaloo, tuna salad. Bebinca for dessert. Great veg options — dal makhani. Staff very friendly.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span></div><div class="rcard-phone">📞 +91 98220 59709</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍛 The Singh Family Restaurant</span><span class="rcard-stars">⭐ 4.7 · 8,104 reviews</span></div><div class="rcard-loc">Main Street, Palolem · 8 AM–11:45 PM</div><div class="rcard-body">Most reviewed restaurant in Palolem. Fish thali, butter chicken, North Indian feast. Live music. Dal makhani, special veg thali also excellent. Extremely reliable — perfect for a big family meal.</div><div class="rcard-tags"><span class="tag tg">Great Veg Thali</span><span class="tag tb">Live Music</span></div><div class="rcard-phone">📞 +91 95452 90888</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🫙 The Olives Multi-Cuisine</span><span class="rcard-stars">⭐ 4.8 · 2,487 reviews</span></div><div class="rcard-loc">Palolem Main Road · 7:30 AM–11:30 PM</div><div class="rcard-body">AC, family-friendly. White snapper tandoori, prawns masala, fried calamari, butter chicken. Mango lassi is a must. Great thalis.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">AC · Family</span></div><div class="rcard-phone">📞 +91 92262 97155</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🎧 Dropadi (Draupadi) Bar & Restaurant</span><span class="rcard-stars">⭐ 4.0 · 2,654 reviews</span></div><div class="rcard-loc">Palolem Beach · Noon–10:30 PM</div><div class="rcard-body">One of only two shacks directly on Palolem Beach. Great location for drinks + people watching. Pomfret rawa fry, prawn masala, chicken biryani. Veg biryani, garlic naan also good. Cocktails and milkshakes.</div><div class="rcard-tags"><span class="tag tg">Veg Options</span><span class="tag tb">Right on Beach</span></div><div class="rcard-phone">📞 +91 96735 01912</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍕 Bella Kitchen & Bar</span><span class="rcard-stars">⭐ 4.8 · 78 reviews</span></div><div class="rcard-loc">Palolem Beach Road · 2 PM–midnight</div><div class="rcard-body">Wood-fired pizza. Reviewers call it "best pizza in India." Diavola, boscaiola. Good wine list. Great veg pizza options.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">Best Pizza</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🔝 Upper Deck Cafe</span><span class="rcard-stars">⭐ 4.7 · 72 reviews</span></div><div class="rcard-loc">Southern Palolem, enter from Colomb · 8 AM–11 PM</div><div class="rcard-body">Best views of Palolem — literally overhanging the sea. "Most magical spot" say reviewers. Tandoor prawns, fresh seafood, great cocktails, good veg dishes. Sunset table is essential.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tp">Best Sunset View</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌊 Kala Bahia</span><span class="rcard-stars">⭐ 4.3 · 926 reviews</span></div><div class="rcard-loc">Colomb Bay cliff</div><div class="rcard-body">Mediterranean, Italian, cocktail bar. Mezze platter rated 10/10. Grilled seafood, pizza. NYE favourite of regulars. Excellent cocktails and cliff views.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">Cocktail Bar</span></div><div class="rcard-phone">📞 +91 97663 50744</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🏔️ Pahadi Roots</span><span class="rcard-stars">⭐ 4.8 · 309 reviews</span></div><div class="rcard-loc">Colomb / Patnem Road</div><div class="rcard-body">Best North Indian in South Goa. Pahadi chicken, live kirtans, open mic. Chocolate orange torte is legendary. 2 resident dogs. Warm host (Meddy). Great cocktails.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tp">Live Music</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🇮🇹 La Fetta</span><span class="rcard-stars">⭐ 4.6 · 1,441 reviews</span></div><div class="rcard-loc">Colomb/Patnem Rd · Closed Tuesdays</div><div class="rcard-body">Authentic Italian. Tortellini, bruschetta, pizza (order half+half). Legendary cheesecake. Live music Fridays. Book ahead on weekends.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tb">Live Music Fri</span></div><div class="rcard-phone">📞 +91 96041 82207</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">⭐ Ourem 88</span><span class="rcard-stars">⭐ 4.7 · 289 reviews</span></div><div class="rcard-loc">Ourem, near Palolem · Must book in advance</div><div class="rcard-body">British-run hidden gem. "One of the best meals of my life" — reviewers. Pork ribs, sea bass, kingfish with apple chutney, Goan sausage stuffed calamari. Legendary cheesecake. Tiny — <strong>reservations essential.</strong></div><div class="rcard-tags"><span class="tag tr">Must Book Ahead</span><span class="tag tb">European Fine Dining</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🎸 Sage 'N' Salt</span><span class="rcard-stars">⭐ 4.7 · 53 reviews</span></div><div class="rcard-loc">Rajbag Road, near Talpona</div><div class="rcard-body">Live music restaurant. Giant juicy prawns, seafood. Reviewers went 8–9 times in one trip. Kadhai (best they've ever had). Great coffee too.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tp">Live Music</span></div><div class="rcard-phone">📞 +91 70516 14119</div></div>
+</div>
+
+<h3 class="sh3">🏰 Cabo de Rama Area</h3>
+<div class="rcg">
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">⛰️ The Cape Goa</span><span class="rcard-stars">⭐ 4.7 · 12,918 reviews</span></div><div class="rcard-loc">Cabo de Rama cliff · Open 24 hrs</div><div class="rcard-body">Every table floats above the Arabian Sea. Goan seafood, mackerel, fresh catch. Butter sauté mushroom, palak paneer for veg. Exceptional service. Most popular in the area.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tb">Best Ocean View</span></div><div class="rcard-phone">📞 +91 99889 03111</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌊 Obrigado by Craftels</span><span class="rcard-stars">⭐ 4.7 · 1,011 reviews</span></div><div class="rcard-loc">Cabo de Rama cliff · Open 24 hrs</div><div class="rcard-body">Boutique eco-resort restaurant. Cave-style décor, sea-facing jacuzzi. Fresh seafood, good veg options. Most romantic of the three.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tp">Most Romantic</span></div><div class="rcard-phone">📞 +91 92260 81241</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🦀 Red Crab Eco Resort</span><span class="rcard-stars">⭐ 4.4 · 206 reviews</span></div><div class="rcard-loc">Cabo de Rama Beach Rd</div><div class="rcard-body">Secluded cliff-top dining. Breathtaking uninterrupted sea views. Seafood and Goan food. Staff warm and attentive. Shanker and Nanda are exceptional hosts.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">Most Secluded</span></div><div class="rcard-phone">📞 +91 84599 31645</div></div>
+</div>
+
+<h3 class="sh3">🌴 Patnem · Talpona · Others</h3>
+<div class="rcg">
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌺 Casa Jaali</span><span class="rcard-stars">⭐ 4.6 · 929 reviews</span></div><div class="rcard-loc">North end Patnem Beach · Park 100m away</div><div class="rcard-body">Spanish-style beachfront. One of South Goa's loveliest dining spots. French toast, North Indian, Goan seafood, fresh juices, iced coffee. Open-mic on weekends.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tp">Open-Mic Weekends</span></div><div class="rcard-phone">📞 +91 93095 91796</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌅 The Southern Deck</span><span class="rcard-stars">⭐ 4.4 · 7,777 reviews</span></div><div class="rcard-loc">Benaulim Beach · Closed Tuesdays</div><div class="rcard-body">Beachfront restobar. Live music. Seafood, Goan fish. Great cocktails and sundowners. Book sunset table ahead.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">Live Music · Sundowners</span></div><div class="rcard-phone">📞 +91 86687 42826</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌱 Zest at Talpona</span><span class="rcard-stars">Talpona Beach</span></div><div class="rcard-loc">Talpona Beach · Evenings</div><div class="rcard-body">Sister café to Zest Agonda. Full veg/vegan menu, fresh seafood, smoothies. Beautiful sea view in the evenings. Best place in Talpona for a sundowner.</div><div class="rcard-tags"><span class="tag tg">Great Veg & Vegan</span></div></div>
+</div>
+</div>
+
+<!-- ──── VEGETARIAN (WITH NON-VEG OPTIONS AVAILABLE) ──── -->
+<div id="tab-veg" class="ftab-content">
+<p style="color:var(--muted);font-size:.83rem;margin-bottom:1.2rem;">These restaurants are primarily loved for vegetarian food but also serve non-veg — best of both worlds.</p>
+<div class="rcg">
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🪨 On the Rocks</span><span class="rcard-stars">⭐ 4.8 · 539 reviews</span></div><div class="rcard-loc">Agonda Beach Rd · 11 AM–10:30 PM</div><div class="rcard-body">Built ON a rock with 20 carved stone steps. Mediterranean-inspired. Ragi falafel, quinoa bowl, hummus nachos chaat. Calamari fritas + grilled fish for non-veg. Unique experience that kids love climbing up to. Excellent cocktails.</div><div class="rcard-tags"><span class="tag tg">Veg-Forward Menu</span><span class="tag tb">Unique Location</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌱 Zest Vegan & Vegetarian</span><span class="rcard-stars">⭐ 4.6 · 1,827 reviews</span></div><div class="rcard-loc">Agonda Beach Rd · 8 AM–10 PM daily</div><div class="rcard-body">Best pure veg/vegan in Agonda. Ramen, green pakoras, 3-layer chocolate mousse, Paradise smoothie. Some egg dishes available. No meat. A daily favourite for all diet types.</div><div class="rcard-tags"><span class="tag tg">Veg / Vegan</span><span class="tag tb">Eggs Available</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌳 Avocado Garden</span><span class="rcard-stars">⭐ 4.3 · 855 reviews</span></div><div class="rcard-loc">Palolem area · Open evenings</div><div class="rcard-body">Lovely garden setting, good for family dinners. Veg sizzler, mango smoothie, vegan pancakes. Sizzlers in chicken/seafood for non-veg. Full bar.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tb">Garden Setting</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌱 Cantine Indienne</span><span class="rcard-stars">⭐ 4.7 · 470 reviews</span></div><div class="rcard-loc">Colomb area · Live music Thursdays</div><div class="rcard-body">Vegan Tanjore cuisine canteen. Pesarattu dosa, adai, pumpkin masala dosa, smoky mushroom noodles, kokum drink, coconut filter coffee. Regulars go 4x/week.</div><div class="rcard-tags"><span class="tag tg">Vegan / Veg Focused</span><span class="tag tp">Tanjore Roots</span></div><div class="rcard-phone">📞 +91 87678 91557</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌺 Casa Jaali</span><span class="rcard-stars">⭐ 4.6 · 929 reviews</span></div><div class="rcard-loc">North end Patnem Beach</div><div class="rcard-body">Famous for vegetarian-leaning menu but serves seafood too. French toast, North Indian dishes, fresh juices, iced coffee. Spanish style, beachfront. Open-mic weekends.</div><div class="rcard-tags"><span class="tag tg">Veg-Forward</span><span class="tag tb">Beachfront</span></div><div class="rcard-phone">📞 +91 93095 91796</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍽️ Cafe Barefoot</span><span class="rcard-stars">⭐ 4.9 · 37 reviews</span></div><div class="rcard-loc">Between Palolem & Agonda · 11 AM–11 PM</div><div class="rcard-body">100% vegetarian, hidden gem with 4.9 stars. Adai Dosa (chef explains its Tamil heritage!), Mumbai street sandwich, Belgian waffle, matar mushroom paratha. Mountain view, calm.</div><div class="rcard-tags"><span class="tag tg">Pure Veg · Jain Options</span><span class="tag tp">Tamil Heritage Adai</span></div><div class="rcard-phone">📞 +91 92707 98908</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌱 Zest at Talpona</span><span class="rcard-stars">Talpona Beach · Evenings</span></div><div class="rcard-loc">Talpona Beach</div><div class="rcard-body">Sister to Zest Agonda. Great veg/vegan menu + some seafood options. Beautiful sea view evenings. Best evening spot in Talpona.</div><div class="rcard-tags"><span class="tag tg">Veg / Vegan</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">☕ Javi Café</span><span class="rcard-stars">⭐ 5.0 · 168 reviews</span></div><div class="rcard-loc">Patnem Road, next to Tubki Resort · 10 AM–9 PM</div><div class="rcard-body">Israeli-run café. Shakshuka with feta, garden salad, best oat milk flat white in India, home-made bread, smoothie bowls. Couples went 3 times. Warm, home-like vibe.</div><div class="rcard-tags"><span class="tag tg">Vegetarian Menu</span><span class="tag tb">Best Coffee in Patnem</span></div><div class="rcard-phone">📞 +91 77028 55657</div></div>
+</div>
+</div>
+
+<!-- ──── PURE VEG & VEGAN ──── -->
+<div id="tab-pureveg" class="ftab-content">
+<p style="color:var(--muted);font-size:.83rem;margin-bottom:1.2rem;">Zero meat on the menu — pure vegetarian, vegan, or both.</p>
+<div class="rcg">
+<div class="rcard vc-vegan"><div class="rcard-head"><span class="rcard-name">🍃 Bibhitaki Vegan Café</span><span class="rcard-stars">⭐ 4.6 · 1,871 reviews</span></div><div class="rcard-loc">Patnem Main Rd / Colomb · 9 AM–11 PM</div><div class="rcard-body">Rainbow Quinoa Bowl, Hawaiian Burger, almond milk hot chocolate, pumpkin salad, hummus plate. Pure vegan. AC interior + calm courtyard. Family-friendly. Local delivery available.</div><div class="rcard-tags"><span class="tag tg">100% Vegan</span><span class="tag tb">AC & Courtyard</span></div><div class="rcard-phone">📞 +91 97394 63723</div></div>
+<div class="rcard vc-vegan"><div class="rcard-head"><span class="rcard-name">🌿 The Mill Café</span><span class="rcard-stars">⭐ 4.3 · 1,590 reviews</span></div><div class="rcard-loc">Palolem Rd · 9 AM–6 PM (closes early!)</div><div class="rcard-body">Most aesthetic vegan café in Palolem. Ocean Blue Smoothie Bowl, smashed pea toast with hummus + feta, ceremonial cacao, Vietnamese coffee. Old village aesthetic. Go before 5 PM.</div><div class="rcard-tags"><span class="tag tg">Vegan / Veg · Eggs</span><span class="tag tb">Closes 6 PM</span></div><div class="rcard-phone">📞 +91 75176 83611</div></div>
+<div class="rcard vc-vegan"><div class="rcard-head"><span class="rcard-name">💚 Blue Planet Café</span><span class="rcard-stars">⭐ 4.3 · 153 reviews</span></div><div class="rcard-loc">Agonda (in a forest, slightly off-road)</div><div class="rcard-body">100% vegan, fully organic, hidden in a forest with jungle sounds at dinner. Home-made wheat bread, carrot-coconut cake, choco banana smoothie. Yoga shala and pool on site. Utterly peaceful.</div><div class="rcard-tags"><span class="tag tg">100% Vegan · Organic</span><span class="tag tp">Forest Setting</span></div></div>
+<div class="rcard vc-veg"><div class="rcard-head"><span class="rcard-name">🥗 Cafe Barefoot</span><span class="rcard-stars">⭐ 4.9 · 37 reviews</span></div><div class="rcard-loc">Between Palolem & Agonda · 11 AM–11 PM</div><div class="rcard-body">Hidden gem. 4.9 stars. Adai Dosa (Tamil heritage story!), Mumbai street sandwich, Belgian waffle, matar mushroom paratha, aloo paratha. Jain + Swaminarayan options. Calm mountain view.</div><div class="rcard-tags"><span class="tag tg">Pure Veg · Jain Options</span></div><div class="rcard-phone">📞 +91 92707 98908</div></div>
+<div class="rcard vc-veg"><div class="rcard-head"><span class="rcard-name">🏔️ Sher-e-Punjab Pure Veg</span><span class="rcard-stars">⭐ 4.3 · 397 reviews</span></div><div class="rcard-loc">Near Reema Store, Agonda · 8 AM–10:30 PM</div><div class="rcard-body">One of the few pure veg restaurants in Agonda. Dal makhani, butter naan, chole bhature, Hyderabadi masala, crispy corn. Good for a North Indian fix with no compromise on veg.</div><div class="rcard-tags"><span class="tag tg">Pure Veg · North Indian</span></div><div class="rcard-phone">📞 +91 82192 57291</div></div>
+<div class="rcard vc-veg"><div class="rcard-head"><span class="rcard-name">☀️ Agonda Sunset Restaurant</span><span class="rcard-stars">⭐ 4.6 · 679 reviews</span></div><div class="rcard-loc">Agonda Beach front · 7 AM–11 PM</div><div class="rcard-body">Beachfront, clean, family-friendly. Reviewers call it the best food in South Goa. Full veg-friendly menu, great seafood too. Perfect beach view at sunset.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">Beachfront</span></div><div class="rcard-phone">📞 +91 93097 31375</div></div>
+<div class="rcard vc-vegan"><div class="rcard-head"><span class="rcard-name">🌱 Cantine Indienne</span><span class="rcard-stars">⭐ 4.7 · 470 reviews</span></div><div class="rcard-loc">Colomb area · Live music Thursdays</div><div class="rcard-body">Vegan canteen with Tanjore roots. Pesarattu dosa, adai, pumpkin masala dosa, kokum drink, coconut filter coffee. Regulars go 4x/week. No meat, no eggs.</div><div class="rcard-tags"><span class="tag tg">100% Vegan</span><span class="tag tp">Tanjore Heritage</span></div><div class="rcard-phone">📞 +91 87678 91557</div></div>
+<div class="rcard vc-veg"><div class="rcard-head"><span class="rcard-name">☕ Cafe Krishnam</span><span class="rcard-stars">⭐ 4.7 · 376 reviews</span></div><div class="rcard-loc">Patnem Main Rd · 9 AM–10 PM</div><div class="rcard-body">Homely Indian veg. Best palak paneer dosa + masala dosa for breakfast. Gluten-free ragi roti available. Dal makhani is "to die for." Divya the host "feeds you with love." Calm space, stray dogs around.</div><div class="rcard-tags"><span class="tag tg">Pure Veg · Gluten-Free</span><span class="tag tp">Soul Food</span></div><div class="rcard-phone">📞 +91 95574 16199</div></div>
+<div class="rcard vc-vegan"><div class="rcard-head"><span class="rcard-name">💚 Happy Belly</span><span class="rcard-stars">⭐ 5.0 · 21 reviews</span></div><div class="rcard-loc">Sawntwada, Patnem area · 8:30 AM–10:30 PM</div><div class="rcard-body">Perfect 5-star rating. Favourite post-yoga brunch spot. Fresh, tasty, consistent. Peaceful vibe, well-maintained. Small but excellent.</div><div class="rcard-tags"><span class="tag tg">Vegan / Veg · 5 Stars</span></div></div>
+<div class="rcard vc-veg"><div class="rcard-head"><span class="rcard-name">🌿 The Organic Pure Veg</span><span class="rcard-stars">⭐ 4.7 · 87 reviews</span></div><div class="rcard-loc">Palolem Beach Rd · 8:30 AM–10:30 PM</div><div class="rcard-body">Best dal fry and masala khichdi in Palolem. Family-run, fresh daily cooking. Organic, pure veg. Reliable, affordable, wholesome.</div><div class="rcard-tags"><span class="tag tg">Pure Veg · Organic</span></div></div>
+<div class="rcard vc-veg"><div class="rcard-head"><span class="rcard-name">🌿 The Veggie Vibes</span><span class="rcard-stars">⭐ 4.6 · 1,113 reviews</span></div><div class="rcard-loc">Varca (near airport) · Open 24 hrs</div><div class="rcard-body">Pure veg, Jain, vegan options. Chaap biryani, paneer tikka, veg Kolhapuri. Open 24 hours — great pre-flight meal stop.</div><div class="rcard-tags"><span class="tag tg">Pure Veg / Jain / Vegan</span><span class="tag tb">Open 24 Hrs</span></div></div>
+</div>
+</div>
+
+<!-- ──── CAFÉS ──── -->
+<div id="tab-cafes" class="ftab-content">
+<p style="color:var(--muted);font-size:.83rem;margin-bottom:1.2rem;">Best cafés for coffee, breakfast, slow mornings, and working remotely.</p>
+<div class="rcg">
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">☕ PAS Specialty Coffee</span><span class="rcard-stars">⭐ 5.0 · 639 reviews</span></div><div class="rcard-loc">Agonda Beach Rd · 7:30 AM–10:30 PM</div><div class="rcard-body">The best café in Agonda. Cranberry cold brew, iced hazelnut latte, beetroot burger. Clean tropical aesthetic, breezy terrace. Vikash explains the bean-to-barista process. Complimentary coconut water. Reviewers who visited "just for coffee" ended up having lunch. <strong>Don't miss this.</strong></div><div class="rcard-tags"><span class="tag to">Must Visit · 5 Stars</span><span class="tag tg">Veg Food Available</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">☕ Javi Café</span><span class="rcard-stars">⭐ 5.0 · 168 reviews</span></div><div class="rcard-loc">Patnem Road, next to Tubki Resort · 10 AM–9 PM</div><div class="rcard-body">Israeli-run. Best oat milk flat white in all of India (freshly ground beans). Home-made bread, shakshuka with feta, garden salad, smoothie bowls. Couples came back 3 times. Warm, home-like, deeply relaxed.</div><div class="rcard-tags"><span class="tag to">Best Coffee in Patnem</span><span class="tag tg">Vegetarian</span></div><div class="rcard-phone">📞 +91 77028 55657</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">☕ Cà Phê Nam</span><span class="rcard-stars">⭐ 4.7 · 139 reviews</span></div><div class="rcard-loc">Colomb Beach Road, near Palolem · 8:30 AM–6 PM</div><div class="rcard-body">Only place in India doing authentic Vietnamese salt coffee (cà phê muối). Proper robusta phin filter — not espresso over condensed milk like everyone else. Best croissants in India (dough imported from France). Free library. Woman-owned.</div><div class="rcard-tags"><span class="tag to">Best Coffee in Colomb</span><span class="tag tp">Vietnamese Specialty</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌿 The Mill Café</span><span class="rcard-stars">⭐ 4.3 · 1,590 reviews</span></div><div class="rcard-loc">Palolem Rd · 9 AM–6 PM · Closes early!</div><div class="rcard-body">Aesthetic vegan/veg café with earthy old-village look. Ocean Blue Smoothie Bowl, smashed pea toast, ceremonial cacao, Vietnamese coffee. Instagram-worthy, quiet, great for slow mornings. Go before 4 PM.</div><div class="rcard-tags"><span class="tag tg">Vegan / Veg</span><span class="tag tb">Most Aesthetic</span></div><div class="rcard-phone">📞 +91 75176 83611</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍞 German Bakery</span><span class="rcard-stars">⭐ 4.0 · 1,573 reviews</span></div><div class="rcard-loc">Ourem Rd, near Palolem Inn · 7 AM–11 PM</div><div class="rcard-body">Legendary Palolem institution. Fresh flaky croissants (including apfelstrudel!), amazing cakes, aloo paratha, masala chai, Tibetan-style dishes, thukpa. Reviewers had 4 of 6 meals here. Great for early breakfast.</div><div class="rcard-tags"><span class="tag tg">Great Veg Options</span><span class="tag tb">Open 7 AM · Bakery</span></div><div class="rcard-phone">📞 +91 83510 08160</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🌳 Avocado Garden</span><span class="rcard-stars">⭐ 4.3 · 855 reviews</span></div><div class="rcard-loc">Palolem area · Garden setting</div><div class="rcard-body">Garden café-restaurant. Vegan pancakes, mango smoothie, smoothie bowls, avocado toast. Also full dinner menu. Great for slow breakfasts in a lush outdoor setting.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">☕ Kinis Bistro</span><span class="rcard-stars">⭐ 4.4 · 333 reviews</span></div><div class="rcard-loc">Agonda Beach Rd · 9 AM–11 PM</div><div class="rcard-body">Indie Breakfast (ordered twice by same guests!), pancakes, pita bread with hummus, lassi. Board games available. Pure veg friendly zone in Agonda — no beef or pork on menu.</div><div class="rcard-tags"><span class="tag tg">Veg Friendly · Pure Veg</span><span class="tag tb">Board Games</span></div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">☕ Cafe Krishnam</span><span class="rcard-stars">⭐ 4.7 · 376 reviews</span></div><div class="rcard-loc">Patnem Main Rd · 9 AM–10 PM</div><div class="rcard-body">Best slow morning café in Patnem. Palak paneer dosa, masala dosa, gluten-free ragi roti, poha, dal makhani. Stray dogs create a homely atmosphere. Divya the host cooks with love. Calm and soulful.</div><div class="rcard-tags"><span class="tag tg">Pure Veg · Gluten-Free</span><span class="tag tp">Most Soulful</span></div><div class="rcard-phone">📞 +91 95574 16199</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">🍰 Espresso Eats</span><span class="rcard-stars">⭐ 4.6 · 63 reviews</span></div><div class="rcard-loc">Behind Ciaran's, Palolem · 9 AM–6 PM</div><div class="rcard-body">Great avocado toast, best coffee in town (Vikas the barista is talented). Cocktails too. Cute furry dogs at this Instagram-worthy boho spot. Music events and game nights.</div><div class="rcard-tags"><span class="tag tg">Good Veg Options</span><span class="tag tb">Boho Vibe</span></div><div class="rcard-phone">📞 +91 95039 58116</div></div>
+<div class="rcard"><div class="rcard-head"><span class="rcard-name">💚 Blue Planet Café</span><span class="rcard-stars">⭐ 4.3 · 153 reviews</span></div><div class="rcard-loc">Agonda (forest location, off the road)</div><div class="rcard-body">Hidden organic vegan café in a forest. Carrot-coconut cake, choco banana smoothie, organic home-made bread. Cricket sounds at dinner. Yoga shala + pool. Peaceful beyond belief.</div><div class="rcard-tags"><span class="tag tg">100% Vegan · Organic</span><span class="tag tp">Forest Hideaway</span></div></div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ═══ ACTIVITIES ═══ -->
+<section id="sea" class="ws">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">🐬 Sea & Water Activities</h2>
+<div class="cg">
+<div class="card"><div class="ce">🐬</div><div class="cn">Dolphin + Butterfly Beach Boat</div><div class="cs">Sagar Boating · ⭐5.0 · 188 reviews</div><div class="cd">Best operator. Private, eagle feeding, dolphins, Butterfly + Honeymoon beaches. Talpona Jetty. Depart 6:30 AM.</div><div class="cp">📞 +91 96731 68832</div></div>
+<div class="card"><div class="ce">🐬</div><div class="cn">Dolphin Trips — Family Safe</div><div class="cs">Dolphin Boat Trips Palolem · ⭐4.9</div><div class="cd">Baby and wheelchair friendly. Safety-first. Near Rajbag beach.</div><div class="cp">📞 +91 89992 56328</div></div>
+<div class="card"><div class="ce">🏄</div><div class="cn">Surfing — Mumu Surf School</div><div class="cs">Agonda · ⭐5.0 · 143 reviews</div><div class="cd">Best for kids — 5.5-year-old surfed here! Exceptional instructor. Near The Bay resort.</div><div class="cp">📞 +91 97898 44191</div></div>
+<div class="card"><div class="ce">🏄</div><div class="cn">Surfing — Agonda by Mithun</div><div class="cs">Agonda · ⭐5.0 · 133 reviews</div><div class="cd">All levels, hard-top boards. Father + 8-year-old daughter did first lesson here together.</div><div class="cp">📞 +91 80807 13302</div></div>
+<div class="card"><div class="ce">🐎</div><div class="cn">Horse Riding — Agonda Beach</div><div class="cs">Agonda Adventures · ⭐4.9 · 237 reviews</div><div class="cd">Swim with horses at sunset. Jungle rides. Kids from 7+. Book a day ahead.</div><div class="cp">📞 +91 89754 12667</div></div>
+<div class="card"><div class="ce">✨</div><div class="cn">Bioluminescence Kayaking</div><div class="cs">SAHASEA / Prashant · Seasonal</div><div class="cd">Talpona/Galgibaga rivers glow electric blue on dark moon nights. Oct–Nov best. Confirm conditions 2 days ahead.</div><div class="cp">📞 SAHASEA: +91 86693 94907</div></div>
+<div class="card"><div class="ce">🚣</div><div class="cn">Cola Lagoon Kayaking</div><div class="cs">Cola Beach on-site operators</div><div class="cd">Freshwater lagoon where river meets sea. Most unique kayaking setting in South Goa. ₹800/hr.</div><span class="tag tb">Most Unique Setting</span></div>
+<div class="card"><div class="ce">🛶</div><div class="cn">Agonda Backwaters Kayaking</div><div class="cs">Agonda backwaters</div><div class="cd">Calm, mangrove-lined. Family-safe. Ask The Bay front desk for operators.</div><span class="tag tg">Family Safe · Near Resort</span></div>
+<div class="card"><div class="ce">🛶</div><div class="cn">Sal Backwaters — Mangrove Magic</div><div class="cs">Goa Kayaking · ⭐4.5 · 487 reviews</div><div class="cd">Pink & white lilies, kingfishers, herons. Tea + samosas after. Most peaceful Goa experience.</div><div class="cp">📞 +91 94220 56037</div></div>
+<div class="card"><div class="ce">🪂</div><div class="cn">Parasailing / Jet Ski / Banana Ride</div><div class="cs">Prince of Sal · Mobor · ⭐4.8</div><div class="cd">Most family-safe water sports. No pushy staff. Parasailing, jet ski, banana, ringo ride.</div><div class="cp">📞 +91 99211 44420</div></div>
+</div>
+</div>
+</section>
+
+<!-- ═══ RENTALS ═══ -->
+<section id="rentals" class="ss">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">🛵 Bike & Car Rentals</h2>
+<p style="color:var(--muted);font-size:.87rem;margin-bottom:1.5rem;">All deliver to The Bay Agonda. WhatsApp the evening before. All rated 4.9–5.0 ⭐.</p>
+<div class="rg">
+<div class="rb">
+<h3>🛵 Scooter / Bike</h3>
+<div class="ri"><div class="rn">Teju — Bike for Rent, Agonda</div><div class="rd">⭐5.0 · 225 reviews. Closest to The Bay. Delivers to your room. Also arranges dolphin trips, cabs, boat rides.</div><div class="rp">📞 +91 97646 32421</div></div>
+<div class="ri"><div class="rn">Rohan — South Goa Scooter Rentals</div><div class="rd">⭐5.0 · 306 reviews. Palolem. 24/7. Delivers and picks up. Arranges 5:30 AM railway taxis.</div><div class="rp">📞 +91 90220 68454 (24/7)</div></div>
+<div class="ri"><div class="rn">Rahul — Speed Scooter Rental</div><div class="rd">⭐5.0 · 91 reviews. Palolem. Flexible pickup. Great long-term rates.</div><div class="rp">📞 +91 80872 61884</div></div>
+<div class="ri"><div class="rn">Prashant — Talpona Beach</div><div class="rd">⭐4.9 · 176 reviews. Also does kayaking + boat trips. One contact for multiple activities.</div><div class="rp">📞 +91 79727 83898</div></div>
+</div>
+<div class="rb">
+<h3>🚗 Car Rental / Driver</h3>
+<div class="ri"><div class="rn">Nanu Rent a Car — Palolem</div><div class="rd">⭐5.0 · 79 reviews. Best self-drive. Thar, Swift, Activa. Ultra-responsive.</div><div class="rp">📞 +91 70666 04097</div></div>
+<div class="ri"><div class="rn">Diljit Car Rental — Palolem</div><div class="rd">⭐5.0 · 61 reviews. Self-drive Baleno Automatic. Got car in 30 mins, no prior booking. No hidden charges.</div><div class="rp">📞 +91 96659 04207</div></div>
+<div class="ri"><div class="rn">Lavesh — Love Star Cab</div><div class="rd">⭐4.9 · 360 reviews. Best dedicated driver in South Goa. Takes photos, gives recommendations, honest pricing.</div><div class="rp">📞 +91 83907 50874</div></div>
+<div class="ri"><div class="rn">Palolem Rent Car</div><div class="rd">⭐4.9 · 45 reviews. New Baleno Automatic with hill-start assist. No hidden charges. Good airport runs.</div><div class="rp">📞 +91 77099 35532</div></div>
+</div>
+</div>
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:1rem 1.2rem;margin-top:1.2rem;font-size:.83rem;color:#166534;">
+💡 <strong>With a kid:</strong> Self-drive car (Nanu or Diljit) is more practical than 2 scooters for day trips. For beach-hopping near Agonda, Teju's scooter is 5 min from The Bay. Lavesh as a dedicated full-day driver means you relax while he navigates.
+</div>
+</div>
+</section>
+
+<!-- ═══ SHOPPING ═══ -->
+<section id="shopping" class="ws">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">🛍️ Shopping Guide</h2>
+<div class="cg">
+<div class="card"><div class="ce">🌊</div><div class="cn">Palolem Beach Road</div><div class="cs">Best shopping in South Goa</div><div class="cd">Silver jewellery, Goan cotton clothing, boho beachwear, spice kits, feni bottles, sarongs. Lively market. Bargain: start at 40% of asking price.</div><span class="tag to">Bargain Hard</span></div>
+<div class="card"><div class="ce">🥜</div><div class="cn">Royale Goan Cashews</div><div class="cs">Benaulim ⭐5.0 · 343 reviews</div><div class="cd">Best cashew shop. Drum-roasted cashews, Goan bebinca, cashew chocolates (wine/rum/mango). Also at Colva branch ⭐4.9.</div><div class="cp">📞 +91 72799 04444</div></div>
+<div class="card"><div class="ce">🌶️</div><div class="cn">M.S. Masala — Margao</div><div class="cs">Gandhi Market Rd · ⭐4.8</div><div class="cd">Best Goan spices at local prices. Homemade garam masala, xacuti mix, kokum, fresh pepper. Take home to Chennai.</div><div class="cp">📞 +91 92700 73547</div></div>
+<div class="card"><div class="ce">🛒</div><div class="cn">Margao Municipal Market</div><div class="cs">Margao · 45 min from Agonda</div><div class="cd">Real local prices. Coconut oil, cashews, Goan sweets (bebinca, dodol), spices, clothing. Go weekday mornings.</div><span class="tag tg">Local Prices · No Tourist Markup</span></div>
+<div class="card"><div class="ce">🍾</div><div class="cn">Vaz Enterprises, Colva</div><div class="cs">⭐4.6 · 1,731 reviews · Mon–Sat 9:30 AM–8 PM</div><div class="cd">South Goa's best liquor supermarket. 2 floors. Full feni, whisky, rum, gin, wine. Bulk discounts on 3+ same bottles.</div><div class="cp">📞 +91 86050 08185</div></div>
+<div class="card"><div class="ce">🥃</div><div class="cn">Cazulo Feni Boutique</div><div class="cs">Cuelim · Day 5 route</div><div class="cd">Premium bottled feni + cashew wine from the maker. Ask for travel-sealed packaging for your flight back.</div><span class="tag to">Travel Packaging Available</span></div>
+</div>
+</div>
+</section>
+
+
+<!-- ═══ NATURE SECTION ═══ -->
+<section id="nature" class="ss">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">🌿 Nature, Hills & Waterfalls — Add-On Guide</h2>
+<p style="color:var(--muted);font-size:.87rem;margin-bottom:.5rem;">South Goa is backed by the Western Ghats — a UNESCO World Heritage landscape. These are the best day trips and add-ons beyond the beaches. All within 1–2.5 hours of Agonda.</p>
+
+<div class="ntabs">
+  <button class="ntab active" onclick="showNTab(this,'nt-waterfalls')">💧 Waterfalls</button>
+  <button class="ntab" onclick="showNTab(this,'nt-wildlife')">🦋 Sanctuaries</button>
+  <button class="ntab" onclick="showNTab(this,'nt-hills')">⛰️ Hills & Viewpoints</button>
+  <button class="ntab" onclick="showNTab(this,'nt-heritage')">🏛️ Ancient Sites</button>
+</div>
+
+<!-- WATERFALLS -->
+<div id="nt-waterfalls" class="ntab-content active">
+
+<div class="ncg">
+
+<div class="ncard ncard-hero">
+<div class="ncard-emoji">🌊</div>
+<div class="ncard-info">
+<div class="ncard-name">Dudhsagar Falls — Sea of Milk</div>
+<div class="ncard-sub">⭐ 4.6 · 31,876 reviews · Mollem, North of Agonda · ~2.5 hrs</div>
+<div class="ncard-body">One of India's tallest waterfalls at 310 metres — a four-tiered cascade that turns white as it falls, hence "Sea of Milk." Located on the Goa-Karnataka border inside Bhagwan Mahavir Wildlife Sanctuary. Watch the train cross the railway bridge above the falls — one of the most photographed moments in Goa. Swimming is allowed at the base with life jackets provided.<br><br>
+<strong>How to visit:</strong> Jeep safari from Kulem Station (₹860/person, includes jeep + life jacket, ~45 min drive). Private vehicles not allowed into the forest. Option to trek 12 km one way if you start before 8 AM.<br><br>
+<strong>Honest notes:</strong> The road is rough. Monkeys will steal your things — beware. Don't bring kids under 5. Go early (reach Kulem by 7:30 AM) — afternoon entries are restricted. Worth it for nature lovers but plan a full day.</div>
+<div class="ncard-tags"><span class="tag to">Full Day Trip</span><span class="tag tb">Go Before 8 AM</span><span class="tag tr">No Private Vehicles</span></div>
+<div class="ncard-dist">⏱ ~2.5 hrs from Agonda · Direction: North via Ponda/Mollem</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">💦</div>
+<div class="ncard-info">
+<div class="ncard-name">Savari Waterfall — Netravali</div>
+<div class="ncard-sub">⭐ 4.5 · Netravali Wildlife Sanctuary · ~1 hr from Agonda</div>
+<div class="ncard-body">The most dramatic of the Netravali waterfalls. 15–20 min trek through jungle from the parking area. Multiple tiers, lush forest surroundings, very few people. The drive through Netravali to get here is itself beautiful — dense canopy, zero traffic, birdcall.</div>
+<div class="ncard-tags"><span class="tag tg">15–20 Min Trek</span><span class="tag tb">Wear Closed Shoes</span></div>
+<div class="ncard-dist">⏱ ~1 hr from Agonda · Open 8:30 AM–4:30 PM · Download offline map!</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🏊</div>
+<div class="ncard-info">
+<div class="ncard-name">Bhupar Waterfall — Netravali</div>
+<div class="ncard-sub">Netravali · Road access · Safe to swim</div>
+<div class="ncard-body">The most family-friendly waterfall in South Goa. Road access — no trek required. Safe for swimming, shallow entry. Great for kids. First stop on the Netravali waterfall trail. Combine with Bamanbudo, Savari, and Bubbling Lake on the same morning.</div>
+<div class="ncard-tags"><span class="tag tg">Kid Safe · No Trek</span><span class="tag tb">Safe Swimming</span></div>
+<div class="ncard-dist">⏱ ~1 hr from Agonda · Part of Netravali sanctuary</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌿</div>
+<div class="ncard-info">
+<div class="ncard-name">Mainapi (Minapi) Waterfall — Netravali</div>
+<div class="ncard-sub">⭐ 4.7 · 419 reviews · Netravali · Open 8:30 AM–2 PM</div>
+<div class="ncard-body">A 3.75 km one-way trek through serene forest trails. Well-marked path with benches to rest. Sounds of birds and flowing water throughout. Views from the top (can't go into the water at base — slippery rocks). Government jeep safari also available for ₹1,640/couple (20 min off-road + 500m walk) if you don't want to trek. A 4-year-old did the safari version successfully.</div>
+<div class="ncard-tags"><span class="tag tb">3.75 km Trek or Jeep Safari</span><span class="tag to">Closes 2 PM</span></div>
+<div class="ncard-dist">⏱ ~1.5 hrs from Agonda · 📞 +91 832 243 7433</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌊</div>
+<div class="ncard-info">
+<div class="ncard-name">Bamanbudo Waterfall — Netravali</div>
+<div class="ncard-sub">Netravali · Roadside · Easy access</div>
+<div class="ncard-body">On the roadside between Bhupar and Savari waterfalls — a quick, beautiful stop. No trek, just park and admire. Great for photos. Usually clear and visually striking even in drier months. Don't skip it as you drive between the other two falls.</div>
+<div class="ncard-tags"><span class="tag tg">No Trek · Roadside</span><span class="tag tb">Great Photos</span></div>
+<div class="ncard-dist">⏱ ~1 hr from Agonda · Between Bhupar and Savari</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌊</div>
+<div class="ncard-info">
+<div class="ncard-name">Kakolem Beach Waterfall (Tiger Beach)</div>
+<div class="ncard-sub">⭐ 4.7 · Canacona · On route to Cabo de Rama</div>
+<div class="ncard-body">Not a forest waterfall but unique — a waterfall flows directly onto the beach sand. 10-minute jungle hike down through forest. Spray hits you at the base. Almost zero crowd. Best visited on the same day as Cabo de Rama fort (they're 15 min apart). Don't swim — sea currents are strong.</div>
+<div class="ncard-tags"><span class="tag tb">Waterfall on Beach</span><span class="tag to">10 Min Hike Down</span></div>
+<div class="ncard-dist">⏱ ~35 min from Agonda · En route to Cabo de Rama</div>
+</div>
+</div>
+
+</div>
+
+<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:1rem 1.2rem;margin-top:1.2rem;font-size:.83rem;color:#1e40af;">
+💡 <strong>Best Waterfall Day (Full Day Plan):</strong> Start at 7 AM from Agonda → Bhupar (swim) → Bamanbudo (photos) → Savari (trek) → Bubbling Lake → Tanshikar Spice Farm lunch. All in the Netravali zone. Download offline map the night before — zero signal inside the sanctuary.
+</div>
+</div>
+
+<!-- WILDLIFE SANCTUARIES -->
+<div id="nt-wildlife" class="ntab-content">
+<div class="ncg">
+
+<div class="ncard ncard-hero">
+<div class="ncard-emoji">🐆</div>
+<div class="ncard-info">
+<div class="ncard-name">Bhagwan Mahavir Wildlife Sanctuary & Mollem National Park</div>
+<div class="ncard-sub">⭐ 4.4 · 3,417 reviews · Mollem · ~2 hrs from Agonda</div>
+<div class="ncard-body">Goa's largest protected forest — 240 sq km of Western Ghats biodiversity. Home to leopards, gaur (Indian bison), sambar deer, flying squirrels, pangolin, king cobra, and 200+ bird species. The sanctuary contains Dudhsagar Falls inside it. Even without the falls, the drive through the forest is stunning — dense canopy roads, river crossings, and bird spotting at every bend.<br><br>
+Best visited as a full day: enter early, drive through the forest, see Dudhsagar Falls, exit by 2 PM. Jeep safaris available from the forest gate.</div>
+<div class="ncard-tags"><span class="tag to">Full Day · Start Early</span><span class="tag tp">Leopards · Bison · King Cobra</span></div>
+<div class="ncard-dist">⏱ ~2 hrs from Agonda · Direction: North via Ponda</div>
+</div>
+</div>
+
+<div class="ncard ncard-hero">
+<div class="ncard-emoji">🦋</div>
+<div class="ncard-info">
+<div class="ncard-name">Netravali Wildlife Sanctuary</div>
+<div class="ncard-sub">⭐ 4.5 · 782 reviews · Netravali · ~1 hr from Agonda</div>
+<div class="ncard-body">The closest sanctuary to Agonda and the most rewarding for a family. Three waterfalls, a sacred bubbling lake, dense canopy roads with birdcall, and the best spice farm in Goa (Tanshikar) all inside the same zone. Open 8:30 AM–4:30 PM. No network inside — download everything offline. Reviewers consistently call it "magical" and "like another world." A family with a 4-year-old did the jeep safari and loved it.</div>
+<div class="ncard-tags"><span class="tag tr">Download Offline Map!</span><span class="tag tg">Kid Friendly</span><span class="tag tb">Waterfalls + Farm + Lake</span></div>
+<div class="ncard-dist">⏱ ~1 hr from Agonda · Open 8:30 AM–4:30 PM · 📞 +91 832 243 7433</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌿</div>
+<div class="ncard-info">
+<div class="ncard-name">Cotigao Wildlife Sanctuary</div>
+<div class="ncard-sub">⭐ 4.2 · 769 reviews · Canacona · 35 min from Palolem</div>
+<div class="ncard-body">Goa's most serene and least-visited sanctuary — zero tourist buses. Drive through dense forest and spot flying squirrels, slender loris, four-horned antelope, Indian pangolin, kingfishers, hornbills, and sometimes leopards. Butterfly park shows the full lifecycle — kids love it. Treehouse watchtower for dawn wildlife watching. Plastic-free zone, music prohibited — enforced silence creates an extraordinary atmosphere.<br><br>
+Entry ₹100/adult + ₹100/vehicle. Open 7 AM–5:30 PM. No network inside.</div>
+<div class="ncard-tags"><span class="tag tg">Best for Families · Butterfly Park</span><span class="tag tp">Leopards · Pangolin</span><span class="tag tb">7 AM–5:30 PM · ₹100/adult</span></div>
+<div class="ncard-dist">⏱ 35 min from Palolem · 📞 +91 832 275 0246 or +91 832 249 4204</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🫧</div>
+<div class="ncard-info">
+<div class="ncard-name">Netravali Bubbling Lake (Budbudyachi Tali)</div>
+<div class="ncard-sub">Netravali · Inside the sanctuary</div>
+<div class="ncard-body">A sacred Krishna temple pond that mysteriously bubbles when you clap near it — believed to be a natural spring underneath. Crystal-clear water, peacocks spotted nearby, total silence. More of a spiritual curiosity than a tourist site. 10 min from Tanshikar Spice Farm. Don't make a dedicated trip — combine it with Savari waterfall and Tanshikar on the same morning.</div>
+<div class="ncard-tags"><span class="tag tp">Sacred Site</span><span class="tag tb">Crystal Clear Water</span></div>
+<div class="ncard-dist">⏱ ~1 hr from Agonda · Open 9 AM–6:30 PM · Free</div>
+</div>
+</div>
+
+</div>
+<div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:1rem 1.2rem;margin-top:1.2rem;font-size:.83rem;color:#166534;">
+🐆 <strong>Wildlife Tip:</strong> Best sighting times in all sanctuaries are 7–9 AM and 4–5 PM. Carry binoculars. Silence is rewarded — talk softly, move slowly, and wait. Cotigao is the easiest for families with a toddler. Netravali is the most rewarding overall. Mollem/Dudhsagar is a full-day commitment.
+</div>
+</div>
+
+<!-- HILLS & VIEWPOINTS -->
+<div id="nt-hills" class="ntab-content">
+<div class="ncg">
+
+<div class="ncard ncard-hero">
+<div class="ncard-emoji">⛩️</div>
+<div class="ncard-info">
+<div class="ncard-name">Chandranath Hill — Paroda (Chandreshwar Temple)</div>
+<div class="ncard-sub">⭐ 4.7 · 1,497 reviews · Paroda, Quepem · 45 min from Agonda</div>
+<div class="ncard-body">The best hilltop in South Goa — and it has a 2,500-year-old Shiva temple at the top. Drive up a winding scenic road through a grand gateway, then a short walk to the temple. Sweeping sunrise views over South Goa's villages, forests, and backwaters. Almost zero tourists. Morning puja is deeply peaceful. The Shiva linga is said to seep water droplets on full moon nights.<br><br>
+<strong>Best time:</strong> Sunrise (6–7 AM). Go on a weekday. Bring a shawl — cool at dawn. Beware of monkeys (don't carry open food). Temple has a relaxed, spiritual atmosphere — not a commercial tourist site.</div>
+<div class="ncard-tags"><span class="tag to">Best at Sunrise 6 AM</span><span class="tag tp">2,500 Year Old Temple</span><span class="tag tb">Panoramic Views</span></div>
+<div class="ncard-dist">⏱ 45 min from Agonda via Quepem · Free entry</div>
+</div>
+</div>
+
+<div class="ncard ncard-hero">
+<div class="ncard-emoji">🏰</div>
+<div class="ncard-info">
+<div class="ncard-name">Cabo de Rama Viewpoint & Fort</div>
+<div class="ncard-sub">⭐ 4.7 · 2,870 reviews · Canaguinim · 40 min from Agonda</div>
+<div class="ncard-body">"Breathtaking views — easily the best sunset spot in South Goa." Panoramic vista of the Arabian Sea from crumbling Portuguese fort walls and the cliff viewpoint. 180° unobstructed sea view with no buildings in sight — raw, windswept, magnificent. The cave viewpoint nearby (15 min walk from fort) gives a crystal-blue cove view at sea level. The fort has cannons, a small church, and a history going back to 1510.<br><br>
+<strong>Best time:</strong> Arrive by 4:30 PM and stay for sunset (5–6 PM). One of the best sunset experiences in all of Goa.</div>
+<div class="ncard-tags"><span class="tag to">Best Sunset in South Goa</span><span class="tag tb">Portuguese Fort · Free Entry</span><span class="tag tg">Cliff + Beach + Cave</span></div>
+<div class="ncard-dist">⏱ 40 min from Agonda · Open 9 AM–5:50 PM</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌄</div>
+<div class="ncard-info">
+<div class="ncard-name">Western Ghats Scenic Drive — Agonda to Netravali</div>
+<div class="ncard-sub">The road itself is the experience</div>
+<div class="ncard-body">The drive from Agonda south-east toward Netravali takes you through the edge of the Western Ghats — dense forest canopy, zero traffic, winding hill roads, valley views, occasional river crossings. Even without stopping at waterfalls, this is one of the most beautiful drives in Goa. Best in early morning when mist hangs in the valleys. Take your time — there's no rush.</div>
+<div class="ncard-tags"><span class="tag tg">Scenic Drive · No Entry Fee</span><span class="tag tb">Best in Early Morning</span></div>
+<div class="ncard-dist">⏱ ~45 min–1 hr from Agonda · Self-drive recommended</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌊</div>
+<div class="ncard-info">
+<div class="ncard-name">Sadolxem Bridge — Jungle Backwater</div>
+<div class="ncard-sub">⭐ 4.5 · Delem Village, Canacona</div>
+<div class="ncard-body">A gorgeous old colonial bridge over a tidal creek framed by dense jungle — one of the most photogenic, off-map spots in South Goa. Almost no tourists ever. Boating and kayaking on the river (₹1,500/boat, negotiate). Best in soft morning light. Narrow bridge — park before it and walk across. Go on a weekday for full solitude. A completely different energy from the beaches.</div>
+<div class="ncard-tags"><span class="tag tg">Offbeat · Almost Zero Tourists</span><span class="tag tb">Kayaking Available</span></div>
+<div class="ncard-dist">⏱ ~30 min from Agonda · No entry fee</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌲</div>
+<div class="ncard-info">
+<div class="ncard-name">Galgibaga & Talpona River Mouth</div>
+<div class="ncard-sub">Southernmost beaches of Goa · ~40 min south</div>
+<div class="ncard-body">The Galgibaga and Talpona rivers meet the sea here — creating serene estuary landscapes backed by forest and paddy fields. Walk along the river mouth at golden hour. The Talpona bridge gives a beautiful view of the river winding into the sunset. Almost no development. The most "end of the world" feeling in Goa.</div>
+<div class="ncard-tags"><span class="tag tg">Golden Hour Walks</span><span class="tag tp">Turtle Beach · Dec–Jan</span></div>
+<div class="ncard-dist">⏱ ~40 min south from Agonda · Free</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🌅</div>
+<div class="ncard-info">
+<div class="ncard-name">Cola Beach Lagoon — Freshwater Meets Sea</div>
+<div class="ncard-sub">⭐ 4.6 · 11,900+ reviews · ~30 min from Agonda</div>
+<div class="ncard-body">Not just a beach — a nature phenomenon. A freshwater river flows through a jungle lagoon and meets the Arabian Sea at the same point. Kayaking on the lagoon at sunrise, with mist on the water and birds overhead, is one of the most serene natural experiences in South Goa. Go before 9 AM for zero crowd.</div>
+<div class="ncard-tags"><span class="tag tb">Freshwater Lagoon · Kayaking</span><span class="tag to">Go Before 9 AM</span></div>
+<div class="ncard-dist">⏱ ~30 min from Agonda · ₹800/hr kayaking</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- ANCIENT SITES & HERITAGE IN NATURE -->
+<div id="nt-heritage" class="ntab-content">
+<div class="ncg">
+
+<div class="ncard ncard-hero">
+<div class="ncard-emoji">🏛️</div>
+<div class="ncard-info">
+<div class="ncard-name">Tambdi Surla Mahadev Temple — 12th Century Forest Temple</div>
+<div class="ncard-sub">⭐ 4.8 · 5,529 reviews · Sanguem · ~1.5 hrs from Agonda</div>
+<div class="ncard-body">One of the most extraordinary places in Goa — and almost nobody knows it exists. A perfectly preserved 12th-century Kadamba-dynasty Shiva temple built from black basalt, hidden deep inside Bhagwan Mahavir Wildlife Sanctuary. So remote that it survived the Portuguese Inquisition. Surrounded by dense forest, with a small stream flowing beside it.<br><br>
+The architecture — intricate carved stone panels, Nandi bull at the entrance, a Shiva linga inside — is reminiscent of the great temples of Aihole in Karnataka. It is an ASI-protected Monument of National Importance. Completely peaceful. No priests, no hawkers, no crowds. Reviewers describe a feeling of "sacred secrets preserved by nature itself."<br><br>
+Best visited on the way to or from Dudhsagar Falls — they're in the same forest belt.</div>
+<div class="ncard-tags"><span class="tag tp">12th Century · Heritage Monument</span><span class="tag tg">Inside Wildlife Sanctuary</span><span class="tag tb">Free Entry · Open 8:30–5:30 PM</span></div>
+<div class="ncard-dist">⏱ ~1.5 hrs from Agonda · Direction: North via Ponda/Mollem</div>
+</div>
+</div>
+
+<div class="ncard ncard-hero">
+<div class="ncard-emoji">⛩️</div>
+<div class="ncard-info">
+<div class="ncard-name">Chandreshwar Bhootnath Temple — Paroda Hill</div>
+<div class="ncard-sub">⭐ 4.7 · 1,497 reviews · Paroda, Quepem · 45 min from Agonda</div>
+<div class="ncard-body">Already in your Day 5 itinerary — but worth highlighting as a heritage + nature experience too. 2,500 years of continuous worship on a hilltop with panoramic forest views. The approach road winds through a grand stone gateway into forest — as dramatic as any temple approach in India. The temple compound itself feels ancient, spiritual, and removed from the modern world.</div>
+<div class="ncard-tags"><span class="tag tp">2,500 Year Old Temple</span><span class="tag tg">Hilltop Forest Setting</span></div>
+<div class="ncard-dist">⏱ 45 min from Agonda · Best at sunrise · Free entry</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🕌</div>
+<div class="ncard-info">
+<div class="ncard-name">Rivona Buddhist Caves</div>
+<div class="ncard-sub">⭐ 4.1 · 322 reviews · Rivona, Sanguem · ~1.5 hrs from Agonda</div>
+<div class="ncard-body">Ancient rock-cut caves where Buddhist monks meditated, believed to date from the 6th–7th century AD — predating the arrival of Hinduism and Christianity in Goa. The caves are simple but the setting is beautiful: the stream alongside, a small forest trail, and complete silence. The original sculptures were moved to the Panaji museum, but the caves still carry an atmospheric stillness.<br><br>
+<strong>Honest note:</strong> The caves themselves are minimal — two small rock-cut chambers. Worth it only if you're interested in history and anthropology, or if you're already passing through the area. The stream and trail make it a nice nature stop.</div>
+<div class="ncard-tags"><span class="tag tp">6th Century Buddhist Caves</span><span class="tag tg">Forest + Stream Setting</span></div>
+<div class="ncard-dist">⏱ ~1.5 hrs from Agonda · Combine with Tambdi Surla on the same day</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🏰</div>
+<div class="ncard-info">
+<div class="ncard-name">Cabo de Rama Fort — 1510 AD Portuguese Ruin</div>
+<div class="ncard-sub">⭐ 4.4 · 16,300+ reviews · Canaguinim · 40 min from Agonda</div>
+<div class="ncard-body">The oldest Portuguese fort in Goa, originally a Hindu-era sea fortress taken by the Portuguese in 1510. Now a dramatic ruin — crumbling ramparts, old cannons, a whitewashed church inside the fort compound, and the cliff edge above the Arabian Sea. No crowds, no entry fee, no tourist infrastructure — just history and wind.</div>
+<div class="ncard-tags"><span class="tag tp">1510 AD Portuguese Fort</span><span class="tag tb">Free Entry</span><span class="tag to">Best Sunset in South Goa</span></div>
+<div class="ncard-dist">⏱ 40 min from Agonda · Open 9 AM–5:50 PM</div>
+</div>
+</div>
+
+<div class="ncard">
+<div class="ncard-emoji">🏛️</div>
+<div class="ncard-info">
+<div class="ncard-name">Big Foot Ancestral Goa Museum — Loutolim</div>
+<div class="ncard-sub">⭐ 4.1 · 8,753 reviews · Loutolim, Salcete · 45 min from Agonda</div>
+<div class="ncard-body">A living heritage museum in a quiet South Goa village showing traditional Goan village life through life-sized sculptures, Portuguese-era houses, folk art, tools, and a working cashew feni distillery model. Audio guide available. Very good for kids — interactive and visual. Walk past the nearby Figueiredo Mansion (400-year-old Portuguese ancestral home) on the same village road.</div>
+<div class="ncard-tags"><span class="tag tg">Great for Kids</span><span class="tag tp">Heritage + Culture</span><span class="tag tb">₹150/person · 9 AM–6 PM</span></div>
+<div class="ncard-dist">⏱ 45 min from Agonda via Margao</div>
+</div>
+</div>
+
+</div>
+
+<div style="background:#fff9f0;border:1px solid #fde8cc;border-radius:10px;padding:1rem 1.2rem;margin-top:1.2rem;font-size:.83rem;color:#9a3412;">
+🗺️ <strong>Heritage Day Plan:</strong> Tambdi Surla Temple (morning, 1.5 hrs drive) → Rivona Buddhist Caves (1 hr) → return via Loutolim's Big Foot Museum (1 hr) → Chandreshwar Temple sunset (45 min from there). A full loop of South Goa's oldest landmarks in one day.
+</div>
+</div>
+
+</div><!-- end section inner -->
+</div>
+</section>
+
+<!-- ═══ LIQUOR ═══ -->
+<section id="liquor" class="ds">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">🍾 Liquor Guide — Goa to Tamil Nadu</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;">
+<div class="card"><div class="ce">🏪</div><div class="cn">Vaz Enterprises, Colva</div><div class="cs">⭐4.6 · 1,731 reviews · Mon–Sat 9:30 AM–8 PM</div><div class="cd">2-floor supermarket. Full range — feni, whisky, rum, gin, wine, international. Bulk discounts 3+ same-type bottles.</div><div class="cp">📞 +91 86050 08185</div></div>
+<div class="card"><div class="ce">🥃</div><div class="cn">Spec's Liquor Stores, Orlim</div><div class="cs">⭐4.8 · 119 reviews · Daily 10 AM–10:30 PM</div><div class="cd">Sells at MRP. Great feni and wine selection. Knowledgeable staff. Near Cavelossim.</div><div class="cp">📞 +91 70303 98745</div></div>
+</div>
+<div class="lbox">
+<h3>✈️ Taking Liquor from Goa to Tamil Nadu</h3>
+<div class="lrule"><strong>✅ Legal limit:</strong> 2 litres per adult. 2 adults = <strong>4 litres total</strong> comfortably within limits.</div>
+<div class="lrule"><strong>✈️ How to carry:</strong> <strong>Checked-in baggage only</strong> — never cabin/hand luggage. Wrap in clothes or bubble wrap. Keep sealed.</div>
+<div class="lrule"><strong>📦 Travel packing:</strong> Ask Cazulo and Vaz for <strong>travel-sealed gift packaging</strong> specifically for flights.</div>
+<div class="lrule"><strong>🎁 Best buys:</strong> Cashew Feni (GI product, unique to Goa) · Coconut Feni · Paul John Indian Single Malt (40–50% cheaper than TN) · Old Monk.</div>
+<div class="lwarn">⚠️ Beyond 2L/adult is legally liable to confiscation under TN Prohibition Act. Stick to 2L per adult.</div>
+</div>
+</div>
+</section>
+
+<!-- ═══ TIPS ═══ -->
+<section id="tips" class="ss">
+<div style="max-width:980px;margin:0 auto;">
+<h2 class="st">💡 Practical Tips</h2>
+<div class="cg">
+<div class="card" style="background:var(--white);"><div class="ce">📅</div><div class="cn">Best Season</div><div class="cd">Oct–Mar ideal. Nov: bioluminescence peak. Dec: turtle nesting at Galgibaga. April: quieter + cheaper. June–Sept: monsoon — beaches close, avoid.</div></div>
+<div class="card" style="background:var(--white);"><div class="ce">📱</div><div class="cn">Offline Maps — Critical</div><div class="cd">Download TONIGHT before Day 3: Netravali area, Butterfly Beach road, Cola Beach road, Kakolem. Zero signal in these areas.</div></div>
+<div class="card" style="background:var(--white);"><div class="ce">🏡</div><div class="cn">The Bay Agonda Tips</div><div class="cd">Ask for sea-facing room. Talk to Johnny Bhai for local tips. Treetop Tava is genuinely excellent. Staff arrange activities — use them.</div></div>
+<div class="card" style="background:var(--white);"><div class="ce">🌙</div><div class="cn">Bioluminescence Timing</div><div class="cd">Check timeanddate.com before travel. Schedule on your darkest night (new moon ±3 days). Confirm with operator 2 days ahead.</div></div>
+<div class="card" style="background:var(--white);"><div class="ce">📞</div><div class="cn">Book in Advance</div><div class="cd">Must pre-book: Cazulo Feni · Tanshikar Farm · Dolphin boat (night before) · Ourem 88 · Bioluminescence kayak.</div></div>
+<div class="card" style="background:var(--white);"><div class="ce">☀️</div><div class="cn">Beach Timing</div><div class="cd">Cola, Butterfly, Kakolem before 9:30 AM. Dolphin trips depart 6:30 AM. Afternoon: Agonda/Patnem swimming. Cabo de Rama sunset 5–6 PM.</div></div>
+<div class="card" style="background:var(--white);"><div class="ce">🧒</div><div class="cn">Best for Your Kid</div><div class="cd">Mumu Surf (5+) · Horse riding (7+) · Bhupar waterfall swim · Tanshikar farm · Cola lagoon kayak · Butterfly Beach · Cabo de Rama fort ruins.</div></div>
+<div class="card" style="background:var(--white);"><div class="ce">🎧</div><div class="cn">Silent Disco Tips</div><div class="cd">Ask at Palolem beach on arrival for current night and location — it moves. Runs ~10 PM–2 AM. Entry ~₹300–500. Peak season Nov–Mar.</div></div>
+</div>
+</div>
+</section>
+
+<footer>
+<em>"South Goa doesn't ask you to do more. It asks you to do less, and feel everything."</em><br><br>
+<span style="opacity:.6;font-size:.7rem;">Complete Guide v4.0 · The Bay Agonda · 5 Days · 2 Adults + 1 Kid · Airport Lunch · 30+ Restaurants · 10+ Beaches · All Activities · Rentals · Shopping · Liquor Guide</span>
+</footer>
+
+<script>
+function toggleDay(h){h.closest('.dc').classList.toggle('open');}
+document.querySelectorAll('section[id]').forEach(s=>{
+new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){document.querySelectorAll('.np').forEach(p=>p.classList.remove('active'));const a=document.querySelector('.np[href="#'+x.target.id+'"]');if(a)a.classList.add('active');}});},{threshold:.2}).observe(s);});
+
+function showTab(btn, tabId) {
+  document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.ftab-content').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+
+function showNTab(btn, tabId) {
+  document.querySelectorAll('.ntab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.ntab-content').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+</script>
+</body>
+</html>
